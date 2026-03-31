@@ -2,6 +2,6 @@
 set -e
 cd "$(dirname "$0")"
 echo "Installing dependencies..."
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 echo "Starting TODC VB Dashboard..."
-streamlit run main.py
+exec python3 -m streamlit run main.py

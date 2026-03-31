@@ -1,14 +1,11 @@
 """
-Store ID mapping matrix: compare store IDs in data files vs Airtable.
+Store ID mapping: compare each data file’s store IDs to Airtable (three views).
 
-Airtable: same table, three views (DoorDash / Uber Eats / Grubhub). Each file row is matched
-against the ID set from that platform’s view and field:
+- DoorDash files: column "Store ID" ↔ Airtable DD view field "Doordash StoreID"
+- Uber Eats files: "Shop ID" and/or "External Store ID" ↔ Airtable UE view "UberEats UUID"
+- Grubhub files: "grubhub_store_id" ↔ Airtable GH view "Grubhub CID"
 
-- DoorDash: "Store ID" in files <-> Doordash StoreID (DD view)
-- Grubhub: "grubhub_store_id" in files <-> Grubhub CID (GH view)
-- Uber Eats: "Shop ID" or "External Store ID" in files <-> UberEats UUID (UE view)
-
-Primary source: Airtable API via fetch_store_mapping_three_views().
+Airtable: fetch_store_mapping_three_views() in airtable.py
 """
 
 import io
@@ -24,7 +21,6 @@ def _normalize_id(val: Any) -> Optional[str]:
     if val is None or (isinstance(val, float) and pd.isna(val)):
         return None
     s = str(val).strip()
-    # CSV exports numeric IDs as floats (e.g. "5143504.0") — strip the .0
     if s.endswith(".0") and s[:-2].isdigit():
         s = s[:-2]
     return s if s and s.upper() != "NAN" and s != "None" else None
@@ -55,7 +51,6 @@ def get_store_ids_from_file(
 ) -> Set[str]:
     """
     Extract unique store IDs from a single file based on platform.
-    Returns set of normalized non-empty ID strings.
     """
     df = _read_file_to_df(file_or_path)
     if df is None or df.empty:
@@ -101,9 +96,8 @@ def get_store_ids_from_file(
 
 def get_store_mapping_df() -> Tuple[Optional[pd.DataFrame], Optional[Dict[str, pd.DataFrame]], Optional[str]]:
     """
-    Get merged store mapping + per-platform view DataFrames from Airtable API.
-    Returns (merged_df, view_dfs_by_platform, error_message).
-    view_dfs keys: "DoorDash", "Uber Eats", "Grubhub" — each is that Airtable view's rows.
+    Fetch Airtable: three views + DoorDash view as preview DataFrame.
+    Returns (preview_df, view_dfs_by_platform, error_message).
     """
     try:
         import os
@@ -113,59 +107,16 @@ def get_store_mapping_df() -> Tuple[Optional[pd.DataFrame], Optional[Dict[str, p
         if not pat:
             return None, None, "AIRTABLE_PAT is not set. Add it to .env to fetch store mappings."
         from airtable import fetch_store_mapping_three_views
-        merged, view_dfs, err = fetch_store_mapping_three_views()
+        preview, view_dfs, err = fetch_store_mapping_three_views()
         if err:
             return None, None, err
-        return merged, view_dfs, None
+        return preview, view_dfs, None
     except Exception as e:
         return None, None, f"Failed to fetch store mapping from Airtable: {e}"
 
 
-def get_airtable_store_id_sets(mapping_df: pd.DataFrame) -> Dict[str, Set[str]]:
-    """
-    From the store mapping DataFrame (CSV or Airtable),
-    build sets of store IDs per platform. Handles various column names.
-    """
-    result: Dict[str, Set[str]] = {
-        "DoorDash": set(),
-        "Grubhub": set(),
-        "Uber Eats": set(),
-    }
-    if mapping_df is None or mapping_df.empty:
-        return result
-
-    for col in mapping_df.columns:
-        c = str(col).strip().lower()
-        if c == "doordash_store_id" or c == "doordash storeid" or ("doordash" in c and "store" in c):
-            for v in mapping_df[col].dropna().astype(str):
-                x = _normalize_id(v)
-                if x:
-                    result["DoorDash"].add(x)
-        elif c == "grubhub_cid" or c == "grubhub cid" or ("grubhub" in c and ("cid" in c or "id" in c)):
-            for v in mapping_df[col].dropna().astype(str):
-                x = _normalize_id(v)
-                if x:
-                    result["Grubhub"].add(x)
-        elif c == "ubereats_uuid" or c == "ubereats uuid" or ("uber" in c and ("uuid" in c or "eats" in c)):
-            for v in mapping_df[col].dropna().astype(str):
-                x = _normalize_id(v)
-                if x:
-                    result["Uber Eats"].add(x)
-
-    return result
-
-
-def airtable_sets_from_platform_views(
-    view_dfs: Dict[str, pd.DataFrame],
-    filtered_airtable_ids: Optional[Set[str]] = None,
-) -> Dict[str, Set[str]]:
-    """
-    Build DoorDash / Uber Eats / Grubhub ID sets from the three Airtable view tables.
-    Each platform uses its view's rows and the mapped column (Doordash StoreID, UberEats UUID, Grubhub CID).
-
-    If filtered_airtable_ids is set, only rows whose _airtable_id is in that set contribute IDs
-    (for QA/CSA filters applied on merged_df).
-    """
+def airtable_sets_from_platform_views(view_dfs: Dict[str, pd.DataFrame]) -> Dict[str, Set[str]]:
+    """Build DoorDash / Uber Eats / Grubhub ID sets from each view using env field names."""
     from airtable import (
         STORE_FIELD_DOORDASH,
         STORE_FIELD_GRUBHUB,
@@ -175,9 +126,9 @@ def airtable_sets_from_platform_views(
     )
 
     explicit_fields = {
-        "DoorDash": STORE_FIELD_DOORDASH,
-        "Uber Eats": STORE_FIELD_UBER,
-        "Grubhub": STORE_FIELD_GRUBHUB,
+        "DoorDash": STORE_FIELD_DOORDASH or None,
+        "Uber Eats": STORE_FIELD_UBER or None,
+        "Grubhub": STORE_FIELD_GRUBHUB or None,
     }
     result: Dict[str, Set[str]] = {
         "DoorDash": set(),
@@ -188,50 +139,31 @@ def airtable_sets_from_platform_views(
         df = view_dfs.get(plat) if view_dfs else None
         if df is None or df.empty:
             continue
-        sub = df
-        if filtered_airtable_ids is not None and "_airtable_id" in sub.columns:
-            sub = sub[sub["_airtable_id"].astype(str).isin(filtered_airtable_ids)]
-        col = resolve_store_id_column(sub, plat, explicit_fields.get(plat))
-        result[plat] = extract_store_ids_from_column(sub, col)
+        ex = explicit_fields.get(plat)
+        col = resolve_store_id_column(df, plat, ex if ex else None)
+        result[plat] = extract_store_ids_from_column(df, col)
     return result
 
 
 def build_store_mapping_matrix(
     file_items: List[Dict[str, Any]],
-    mapping_df: Optional[pd.DataFrame] = None,
     view_dfs: Optional[Dict[str, pd.DataFrame]] = None,
-    filtered_airtable_ids: Optional[Set[str]] = None,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """
-    Build the matching matrix for display.
+    Per uploaded/data file: unique IDs in file vs Airtable for that platform’s view.
 
-    file_items: list of dicts with keys:
-        - "name": display file name
-        - "platform": "DoorDash" | "Grubhub" | "Uber Eats"
-        - "path" or "content": path (str) or file-like with .getvalue() (e.g. from review_data)
-    mapping_df: Optional pre-loaded merged store mapping DataFrame (for fallback sets).
-    view_dfs: If provided, Airtable ID sets come from the three platform views (recommended).
-    filtered_airtable_ids: Optional subset of _airtable_id values when QA/CSA filters apply.
-
-    Returns (matrix_rows, error_message).
-    Each matrix_row has: file_name, platform, store_ids_in_data, store_ids_in_airtable,
-    only_in_data_count, only_in_airtable_count, matched_count,
-    only_in_data_sample, only_in_airtable_sample, matched_sample (for display).
+    Matrix row keys: file_name, platform, store_ids_in_data, store_ids_in_airtable,
+    matched_count, only_in_data_count, only_in_airtable_count,
+    matched_sample, only_in_data_sample, only_in_airtable_sample.
     """
-    if mapping_df is None or mapping_df.empty:
-        mapping_df, view_dfs, err = get_store_mapping_df()
+    if view_dfs is None:
+        _preview, view_dfs, err = get_store_mapping_df()
         if err:
             return [], err
-        if mapping_df is None or mapping_df.empty:
-            return [], "Store mapping returned no records. Ensure AIRTABLE_PAT is set in .env."
+        if not view_dfs or all(df is None or df.empty for df in view_dfs.values()):
+            return [], "Airtable returned no rows for the three views. Check PAT and view IDs."
 
-    if view_dfs:
-        airtable_sets = airtable_sets_from_platform_views(view_dfs, filtered_airtable_ids=filtered_airtable_ids)
-    else:
-        sub_df = mapping_df
-        if filtered_airtable_ids is not None and "_airtable_id" in mapping_df.columns:
-            sub_df = mapping_df[mapping_df["_airtable_id"].astype(str).isin(filtered_airtable_ids)]
-        airtable_sets = get_airtable_store_id_sets(sub_df)
+    airtable_sets = airtable_sets_from_platform_views(view_dfs)
     matrix: List[Dict[str, Any]] = []
 
     for item in file_items:
@@ -280,137 +212,3 @@ def build_store_mapping_matrix(
         })
 
     return matrix, None
-
-
-def build_store_mapping_matrix_with_debug(
-    file_items: List[Dict[str, Any]],
-    mapping_df: Optional[pd.DataFrame] = None,
-    view_dfs: Optional[Dict[str, pd.DataFrame]] = None,
-    filtered_airtable_ids: Optional[Set[str]] = None,
-) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], Optional[str]]:
-    """
-    Same as build_store_mapping_matrix but also returns a list of debug steps
-    for UI display. Returns (matrix_rows, debug_steps, error_message).
-    Each debug step: {"step": str, "status": "ok"|"fail"|"info", "detail": str, "extra": optional}
-    """
-    debug: List[Dict[str, Any]] = []
-
-    # Step 1: Load store mapping from Airtable API (three views)
-    if mapping_df is None or mapping_df.empty:
-        try:
-            import os
-            from dotenv import load_dotenv
-            load_dotenv(_PROJECT_ROOT / ".env")
-            pat = os.environ.get("AIRTABLE_PAT", "").strip()
-            if not pat:
-                debug.append({"step": "Airtable PAT", "status": "fail", "detail": "AIRTABLE_PAT not set in .env."})
-                return [], debug, "AIRTABLE_PAT is not set. Add it to .env to fetch store mappings."
-            debug.append({"step": "Airtable PAT", "status": "ok", "detail": f"Set ({len(pat)} chars)"})
-            from airtable import fetch_store_mapping_three_views
-            mapping_df, view_dfs, err = fetch_store_mapping_three_views()
-            if err:
-                debug.append({"step": "Fetch Airtable (3 views)", "status": "fail", "detail": err})
-                return [], debug, err
-            if mapping_df is None or mapping_df.empty:
-                debug.append({"step": "Fetch Airtable (3 views)", "status": "fail", "detail": "No records returned."})
-                return [], debug, "Airtable returned no records."
-            debug.append({
-                "step": "Fetch Airtable (3 views)",
-                "status": "ok",
-                "detail": f"Merged {len(mapping_df)} unique records (DoorDash / Uber Eats / Grubhub views).",
-            })
-        except Exception as e:
-            debug.append({"step": "Airtable fetch", "status": "fail", "detail": str(e)})
-            return [], debug, str(e)
-    else:
-        debug.append({"step": "Store mapping", "status": "ok", "detail": f"Using provided table ({len(mapping_df)} records)."})
-
-    # Step 2: Show columns (merged)
-    cols = list(mapping_df.columns)
-    debug.append({"step": "Merged mapping columns", "status": "info", "detail": ", ".join(cols) if cols else "(none)", "extra": cols})
-
-    if view_dfs:
-        for plat, vdf in view_dfs.items():
-            debug.append({
-                "step": f"Airtable view: {plat}",
-                "status": "ok",
-                "detail": f"{len(vdf)} row(s) in this view",
-            })
-
-    # Step 3: Store ID sets (per platform column from each view when view_dfs present)
-    if view_dfs:
-        airtable_sets = airtable_sets_from_platform_views(view_dfs, filtered_airtable_ids=filtered_airtable_ids)
-    else:
-        sub_df = mapping_df
-        if filtered_airtable_ids is not None and "_airtable_id" in mapping_df.columns:
-            sub_df = mapping_df[mapping_df["_airtable_id"].astype(str).isin(filtered_airtable_ids)]
-        airtable_sets = get_airtable_store_id_sets(sub_df)
-    debug.append({
-        "step": "Store IDs (per platform view / column)",
-        "status": "ok",
-        "detail": f"DoorDash: {len(airtable_sets['DoorDash'])} | Grubhub: {len(airtable_sets['Grubhub'])} | Uber Eats: {len(airtable_sets['Uber Eats'])}",
-        "extra": {k: len(v) for k, v in airtable_sets.items()},
-    })
-
-    # Step 5: Files to compare
-    debug.append({
-        "step": "Files to compare",
-        "status": "info",
-        "detail": f"{len(file_items)} file(s)",
-        "extra": [f"{item.get('name', '?')} ({item.get('platform', '')})" for item in file_items],
-    })
-
-    matrix: List[Dict[str, Any]] = []
-    for item in file_items:
-        name = item.get("name", "?")
-        platform = item.get("platform", "")
-        file_obj = item.get("content") or item.get("path")
-        if isinstance(file_obj, bytes):
-            b = io.BytesIO(file_obj)
-            b.name = name
-            file_obj = b
-        if file_obj is None:
-            matrix.append({
-                "file_name": name,
-                "platform": platform,
-                "store_ids_in_data": 0,
-                "store_ids_in_airtable": len(airtable_sets.get(platform, set())),
-                "only_in_data_count": 0,
-                "only_in_airtable_count": 0,
-                "matched_count": 0,
-                "only_in_data_sample": [],
-                "only_in_airtable_sample": [],
-                "matched_sample": [],
-            })
-            debug.append({"step": f"Read: {name[:50]}", "status": "fail", "detail": "No path or content."})
-            continue
-
-        data_ids = get_store_ids_from_file(file_obj, platform)
-        at_set = airtable_sets.get(platform, set())
-        matched = data_ids & at_set
-        only_data = data_ids - at_set
-        only_airtable = at_set - data_ids
-
-        def _all_sorted(s: Set[str]) -> List[str]:
-            return sorted(s)
-
-        matrix.append({
-            "file_name": name,
-            "platform": platform,
-            "store_ids_in_data": len(data_ids),
-            "store_ids_in_airtable": len(at_set),
-            "only_in_data_count": len(only_data),
-            "only_in_airtable_count": len(only_airtable),
-            "matched_count": len(matched),
-            "only_in_data_sample": _all_sorted(only_data),
-            "only_in_airtable_sample": _all_sorted(only_airtable),
-            "matched_sample": _all_sorted(matched),
-        })
-        debug.append({
-            "step": f"Match: {name[:50]}",
-            "status": "ok",
-            "detail": f"Data: {len(data_ids)} IDs | Airtable: {len(at_set)} | Matched: {len(matched)}",
-            "extra": {"in_data": len(data_ids), "in_airtable": len(at_set), "matched": len(matched)},
-        })
-
-    return matrix, debug, None

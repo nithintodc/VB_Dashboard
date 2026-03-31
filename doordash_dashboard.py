@@ -227,14 +227,14 @@ def render_dd_sales(data):
     store_df = df[display_cols].copy()
     store_df = store_df.sort_values(gross_col, ascending=False)
     st.markdown("#### Store-Level Sales")
-    st.dataframe(store_df, use_container_width=True, height=400)
+    st.dataframe(store_df, width="stretch", height=400)
 
     col_a, col_b = st.columns(2)
     with col_a:
         top20 = store_df.head(20)
         fig = _plotly_bar(top20, store_col, gross_col, "Top 20 Stores by Gross Sales")
         fig.update_layout(xaxis_tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
 
     with col_b:
         # Revenue waterfall
@@ -253,7 +253,7 @@ def render_dd_sales(data):
             totals=dict(marker=dict(color=COLORS[0])),
         ))
         fig.update_layout(**PLOTLY_THEME, title="Revenue Waterfall", margin=dict(t=40, b=0))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
 
     # Sales distribution histogram
     if gross_col in df.columns:
@@ -262,7 +262,7 @@ def render_dd_sales(data):
             fig = px.histogram(active, x=gross_col, nbins=30, title="Sales Distribution Across Stores",
                                color_discrete_sequence=[COLORS[0]])
             fig.update_layout(**PLOTLY_THEME, margin=dict(t=40, b=0))
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
 
 def render_dd_marketing(data):
@@ -318,10 +318,10 @@ def render_dd_marketing(data):
             col_a, col_b = st.columns(2)
             with col_a:
                 st.markdown("#### By Promotion Type")
-                st.dataframe(type_pivot, use_container_width=True)
+                st.dataframe(type_pivot, width="stretch")
             with col_b:
                 fig = _plotly_pie(type_pivot, "Type of promotion", "Sales", "Sales by Promotion Type")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
         # By Store pivot
         store_col = "Store name" if "Store name" in df.columns else "Store Name"
@@ -334,7 +334,7 @@ def render_dd_marketing(data):
             ).reset_index().sort_values("Sales", ascending=False)
             store_pivot["Avg_ROAS"] = store_pivot["Avg_ROAS"].round(2)
             st.markdown("#### By Store (Promotions)")
-            st.dataframe(store_pivot.head(50), use_container_width=True, height=350)
+            st.dataframe(store_pivot.head(50), width="stretch", height=350)
 
         # Daily trend
         if "Date" in df.columns or "_date" in df.columns:
@@ -344,7 +344,7 @@ def render_dd_marketing(data):
             ).reset_index()
             daily["Avg_ROAS"] = daily["Avg_ROAS"].round(2)
             fig = _plotly_line(daily, date_col, "Sales", "Daily Promo Sales & ROAS", y2="Avg_ROAS")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
         # ROAS distribution
         if "ROAS" in df.columns:
@@ -356,7 +356,7 @@ def render_dd_marketing(data):
                 fig.add_vline(x=4, line_dash="dash", line_color="red",
                               annotation_text="Target ROAS = 4x")
                 fig.update_layout(**PLOTLY_THEME, margin=dict(t=40, b=0))
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
         # Low ROAS campaigns
         if "ROAS" in df.columns and store_col in df.columns:
@@ -368,7 +368,7 @@ def render_dd_marketing(data):
                 ).reset_index().sort_values("Avg_ROAS")
                 low_agg["Avg_ROAS"] = low_agg["Avg_ROAS"].round(2)
                 with st.expander(f"Stores with ROAS < 4x ({len(low_agg)} stores)"):
-                    st.dataframe(low_agg, use_container_width=True, height=300)
+                    st.dataframe(low_agg, width="stretch", height=300)
 
     # === SPONSORED LISTINGS ===
     if ads_df is not None and not ads_df.empty:
@@ -409,7 +409,7 @@ def render_dd_marketing(data):
             fig = px.funnel(funnel_df, x="Count", y="Stage", title="Ads Conversion Funnel",
                             color_discrete_sequence=[COLORS[0]])
             fig.update_layout(**PLOTLY_THEME, margin=dict(t=40, b=0))
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
         with col_b:
             # Daily ad trend
@@ -420,7 +420,7 @@ def render_dd_marketing(data):
                     Orders=("Orders", "sum"), Sales=("Sales", "sum"),
                 ).reset_index()
                 fig = _plotly_line(daily, date_col, "Impressions", "Daily Ads Performance", y2="Orders")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
         # By Store
         store_col = "Store name" if "Store name" in df.columns else "Store Name"
@@ -436,7 +436,7 @@ def render_dd_marketing(data):
             store_ads["Avg_ROAS"] = store_ads["Avg_ROAS"].round(2)
             store_ads = store_ads.sort_values("Sales", ascending=False)
             st.markdown("#### By Store (Ads)")
-            st.dataframe(store_ads.head(50), use_container_width=True, height=350)
+            st.dataframe(store_ads.head(50), width="stretch", height=350)
 
 
 def render_dd_operations(data):
@@ -503,18 +503,18 @@ def render_dd_operations(data):
             if cat_col:
                 cat_pivot = cancel_df.groupby(cat_col)["Count of Orders"].sum().reset_index().sort_values("Count of Orders", ascending=False)
                 fig = _plotly_bar(cat_pivot, cat_col, "Count of Orders", "Cancellations by Category")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         with col_b:
             if desc_col:
                 desc_pivot = cancel_df.groupby(desc_col)["Count of Orders"].sum().reset_index().sort_values("Count of Orders", ascending=True).tail(10)
                 fig = _plotly_bar(desc_pivot, desc_col, "Count of Orders", "Top 10 Cancellation Reasons", horizontal=True)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
         # Store pivot
         if store_col in cancel_df.columns:
             store_cancel = cancel_df.groupby(store_col)["Count of Orders"].sum().reset_index().sort_values("Count of Orders", ascending=False)
             with st.expander(f"Cancellations by Store ({len(store_cancel)} stores)"):
-                st.dataframe(store_cancel.head(50), use_container_width=True, height=300)
+                st.dataframe(store_cancel.head(50), width="stretch", height=300)
 
     # === Downtime ===
     if downtime_df is not None and not downtime_df.empty:
@@ -528,17 +528,17 @@ def render_dd_operations(data):
             if cat_col:
                 cat_pivot = downtime_df.groupby(cat_col)["Minutes Downtime"].sum().reset_index().sort_values("Minutes Downtime", ascending=False)
                 fig = _plotly_bar(cat_pivot, cat_col, "Minutes Downtime", "Downtime by Category")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         with col_b:
             if desc_col:
                 desc_pivot = downtime_df.groupby(desc_col)["Minutes Downtime"].sum().reset_index().sort_values("Minutes Downtime", ascending=True).tail(10)
                 fig = _plotly_bar(desc_pivot, desc_col, "Minutes Downtime", "Top 10 Downtime Reasons", horizontal=True)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
         if store_col in downtime_df.columns:
             store_dt = downtime_df.groupby(store_col)["Minutes Downtime"].sum().reset_index().sort_values("Minutes Downtime", ascending=False)
             with st.expander(f"Downtime by Store ({len(store_dt)} stores)"):
-                st.dataframe(store_dt.head(50), use_container_width=True, height=300)
+                st.dataframe(store_dt.head(50), width="stretch", height=300)
 
     # === Missing / Incorrect ===
     if missing_df is not None and not missing_df.empty:
@@ -551,13 +551,13 @@ def render_dd_operations(data):
             if err_col:
                 err_pivot = missing_df.groupby(err_col)["Count of Item Errors"].sum().reset_index().sort_values("Count of Item Errors", ascending=False)
                 fig = _plotly_pie(err_pivot, err_col, "Count of Item Errors", "Errors by Category")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         with col_b:
             if store_col in missing_df.columns:
                 store_err = missing_df.groupby(store_col)["Count of Item Errors"].sum().reset_index().sort_values("Count of Item Errors", ascending=False).head(15)
                 fig = _plotly_bar(store_err, store_col, "Count of Item Errors", "Top 15 Stores by Item Errors")
                 fig.update_layout(xaxis_tickangle=-45)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
 
 # =============================================================================
@@ -605,10 +605,10 @@ def render_gh_sales(data):
         col_a, col_b = st.columns(2)
         with col_a:
             fig = _plotly_bar(weekly, date_col, "Sales", "Weekly Sales Trend")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
         with col_b:
             fig = _plotly_line(weekly, date_col, "Orders", "Weekly Orders", y2="Net")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # By Store
     if "store_name" in df.columns:
@@ -623,13 +623,13 @@ def render_gh_sales(data):
         store_pivot = store_pivot.sort_values("Sales", ascending=False)
 
         st.markdown("#### Store Performance")
-        st.dataframe(store_pivot.head(50), use_container_width=True, height=350)
+        st.dataframe(store_pivot.head(50), width="stretch", height=350)
 
         col_a, col_b = st.columns(2)
         with col_a:
             fig = _plotly_bar(store_pivot.head(20), "store_name", "Sales", "Top 20 Stores by Sales")
             fig.update_layout(xaxis_tickangle=-45)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
         with col_b:
             # By State
             if "state" in df.columns:
@@ -637,7 +637,7 @@ def render_gh_sales(data):
                     Orders=("total_orders", "sum"), Sales=("subtotal_sales", "sum"),
                 ).reset_index().sort_values("Sales", ascending=False)
                 fig = _plotly_bar(state_pivot.head(15), "state", "Sales", "Sales by State")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
     # Revenue waterfall
     waterfall_data = {
@@ -655,7 +655,7 @@ def render_gh_sales(data):
         totals=dict(marker=dict(color=COLORS[0])),
     ))
     fig.update_layout(**PLOTLY_THEME, title="Revenue Waterfall", margin=dict(t=40, b=0))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
 
 def render_gh_operations(data):
@@ -712,10 +712,10 @@ def render_gh_operations(data):
         col_a, col_b = st.columns(2)
         with col_a:
             fig = _plotly_bar(weekly, date_col, "Canceled", "Weekly Cancellations")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
         with col_b:
             fig = _plotly_line(weekly, date_col, "New_Customers", "Weekly Customer Mix", y2="GHPlus")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # Store-level ops
     if "store_name" in df.columns:
@@ -730,13 +730,13 @@ def render_gh_operations(data):
         store_ops = store_ops.sort_values("Cancel_Rate", ascending=False)
 
         st.markdown("#### Store Operations Scorecard")
-        st.dataframe(store_ops.head(50), use_container_width=True, height=350)
+        st.dataframe(store_ops.head(50), width="stretch", height=350)
 
         worst = store_ops[store_ops["Orders"] >= 3].head(15)
         if not worst.empty:
             fig = _plotly_bar(worst, "store_name", "Cancel_Rate", "Highest Cancellation Rate Stores (3+ orders)")
             fig.update_layout(xaxis_tickangle=-45)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # Ratings distribution
     if "ratings_5_stars" in df.columns:
@@ -746,7 +746,7 @@ def render_gh_operations(data):
             rating_totals = {c.replace("ratings_", "").replace("_stars", "").replace("_star", "") + " Star": int(df[c].sum()) for c in existing}
             rating_df = pd.DataFrame(list(rating_totals.items()), columns=["Rating", "Count"])
             fig = _plotly_bar(rating_df, "Rating", "Count", "Ratings Distribution", color=COLORS[2])
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
 
 def render_gh_marketing(_data):
@@ -812,10 +812,10 @@ def render_ue_sales(data):
         col_a, col_b = st.columns(2)
         with col_a:
             fig = _plotly_line(daily, "Date", "Orders", "Daily Orders & AOV", y2="AOV")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
         with col_b:
             fig = _plotly_bar(daily, "Date", "Sales", "Daily Sales")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # Order status breakdown
     if "Order Status" in df.columns:
@@ -824,14 +824,14 @@ def render_ue_sales(data):
         col_a, col_b = st.columns(2)
         with col_a:
             fig = _plotly_pie(status_counts, "Status", "Count", "Order Status Breakdown")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
         with col_b:
             # Channel breakdown
             if "Order Channel" in df.columns:
                 channel_counts = df["Order Channel"].value_counts().reset_index()
                 channel_counts.columns = ["Channel", "Count"]
                 fig = _plotly_pie(channel_counts, "Channel", "Count", "Orders by Channel")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
     # Subscription impact
     if "Subscription Pass" in df.columns:
@@ -841,7 +841,7 @@ def render_ue_sales(data):
         sub_pivot.columns = ["Subscription", "Orders", "Avg_Ticket"]
         sub_pivot["Avg_Ticket"] = sub_pivot["Avg_Ticket"].round(2)
         st.markdown("#### Subscription Impact")
-        st.dataframe(sub_pivot, use_container_width=True)
+        st.dataframe(sub_pivot, width="stretch")
 
     # By Store
     if store_col in df.columns:
@@ -853,11 +853,11 @@ def render_ue_sales(data):
         store_pivot = store_pivot.sort_values("Sales", ascending=False)
 
         st.markdown("#### Store Performance")
-        st.dataframe(store_pivot.head(50), use_container_width=True, height=350)
+        st.dataframe(store_pivot.head(50), width="stretch", height=350)
 
         fig = _plotly_bar(store_pivot.head(20), store_col, "Sales", "Top 20 Stores by Sales")
         fig.update_layout(xaxis_tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
 
     # By City
     city_col = "City" if "City" in df.columns else None
@@ -870,18 +870,18 @@ def render_ue_sales(data):
         with col_a:
             fig = _plotly_bar(city_pivot.head(15), city_col, "Sales", "Sales by City")
             fig.update_layout(xaxis_tickangle=-45)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
         with col_b:
             fig = _plotly_bar(city_pivot.head(15), city_col, "Orders", "Orders by City")
             fig.update_layout(xaxis_tickangle=-45)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # Fulfillment type
     if "Fulfillment Type" in df.columns:
         ft = df["Fulfillment Type"].value_counts().reset_index()
         ft.columns = ["Type", "Count"]
         fig = _plotly_pie(ft, "Type", "Count", "Fulfillment Type")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
 
 
 def render_ue_operations(data):
@@ -929,7 +929,7 @@ def render_ue_operations(data):
                 issue_counts = df["Order Issue"].value_counts().reset_index()
                 issue_counts.columns = ["Issue", "Count"]
                 fig = _plotly_pie(issue_counts, "Issue", "Count", "Issue Type Breakdown")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         with col_b:
             # Refund liability split
             liability = pd.DataFrame({
@@ -937,7 +937,7 @@ def render_ue_operations(data):
                 "Amount": [merchant_liable, platform_liable],
             })
             fig = _plotly_pie(liability, "Party", "Amount", "Refund Liability Split")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
         # By Store
         store_col = "Store" if "Store" in df.columns else "Store name"
@@ -948,14 +948,14 @@ def render_ue_operations(data):
                 Merchant_Liable=("Refund Covered by Merchant", "sum"),
             ).reset_index().sort_values("Issues", ascending=False)
             st.markdown("#### By Store")
-            st.dataframe(store_inacc.head(30), use_container_width=True, height=300)
+            st.dataframe(store_inacc.head(30), width="stretch", height=300)
 
         # Item issues
         if "Item Issue Details" in df.columns:
             item_issues = df["Item Issue Details"].value_counts().reset_index().head(15)
             item_issues.columns = ["Issue Detail", "Count"]
             fig = _plotly_bar(item_issues, "Issue Detail", "Count", "Top Item Issues", horizontal=True)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # === Paused Details ===
     if pause_df is not None and not pause_df.empty:
@@ -986,7 +986,7 @@ def render_ue_operations(data):
                 reason_counts = df["Reason For Pausing"].value_counts().reset_index()
                 reason_counts.columns = ["Reason", "Count"]
                 fig = _plotly_pie(reason_counts, "Reason", "Count", "Pause Reasons")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         with col_b:
             if "Store" in df.columns:
                 store_pauses = df.groupby("Store").agg(
@@ -995,11 +995,11 @@ def render_ue_operations(data):
                 ).reset_index().sort_values("Pauses", ascending=False).head(15)
                 fig = _plotly_bar(store_pauses, "Store", "Pauses", "Most Paused Stores")
                 fig.update_layout(xaxis_tickangle=-45)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
         st.markdown("#### Pause Details")
         show_cols = [c for c in ["Store", "City", "Pause Start", "Pause Duration", "Reason For Pausing"] if c in df.columns]
-        st.dataframe(df[show_cols] if show_cols else df, use_container_width=True, height=300)
+        st.dataframe(df[show_cols] if show_cols else df, width="stretch", height=300)
 
 
 def render_ue_marketing(_data):
@@ -1053,10 +1053,10 @@ def render_cross_platform_summary(all_data):
     col_a, col_b = st.columns(2)
     with col_a:
         fig = _plotly_bar(summary, "Platform", "Sales", "Sales by Platform")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
     with col_b:
         fig = _plotly_bar(summary, "Platform", "Orders", "Orders by Platform", color=COLORS[2])
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
     st.markdown("---")
 
 
@@ -1110,51 +1110,8 @@ def _build_mapping_excel(matrix, mapping_df):
 
 
 # =============================================================================
-# App shell: Airtable filter helpers + orchestration (called from main())
+# App shell (called from main())
 # =============================================================================
-QA_COL = "QA Auditor (from Account Name)"
-CSA_COL = "CSA Name (from Account Name)"
-
-
-def _dict_to_label(d: dict) -> str:
-    """Airtable linked records may appear as dicts like {\"id\": \"...\", \"name\": \"...\"}."""
-    if not isinstance(d, dict):
-        return str(d)
-    for k in ("name", "Name", "label", "Label", "value", "Value", "id", "Id"):
-        v = d.get(k)
-        if isinstance(v, str) and v.strip():
-            return v.strip()
-    try:
-        import json
-
-        return json.dumps(d, sort_keys=True)
-    except Exception:
-        return str(d)
-
-
-def _cell_to_str_list(x):
-    if x is None:
-        return []
-    try:
-        if pd.isna(x):
-            return []
-    except Exception:
-        pass
-
-    if isinstance(x, str):
-        s = x.strip()
-        return [s] if s else []
-    if isinstance(x, dict):
-        s = _dict_to_label(x)
-        return [s] if s else []
-    if isinstance(x, (list, tuple, set)):
-        out = []
-        for item in x:
-            out.extend(_cell_to_str_list(item))
-        return [s for s in out if isinstance(s, str) and s.strip()]
-    return [str(x)]
-
-
 class _BytesFile:
     """Wrap stored upload bytes as a file-like for data_loader."""
 
@@ -1215,9 +1172,47 @@ def _render_sidebar_upload():
         st.session_state["_last_folder_key"] = None
         st.rerun()
     st.sidebar.markdown("---")
-    run_btn = st.sidebar.button("Run Analysis", type="primary", use_container_width=True, key="run_analysis_main")
+    run_btn = st.sidebar.button("Run Analysis", type="primary", width="stretch", key="run_analysis_main")
     st.sidebar.caption("Loads data, fetches Airtable mapping, and runs full analysis.")
     return accumulated, all_uploads, run_btn
+
+
+def _render_sidebar_airtable_filters(merged: pd.DataFrame):
+    """
+    Multi-select filters from unique Airtable dimension values.
+    Returns (selections dict column->values, filtering_active bool).
+    """
+    import airtable_filters as af
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### Airtable filters")
+    mapping_err = st.session_state.get("mapping_error")
+    if mapping_err:
+        st.sidebar.warning("Store mapping could not load; filters are unavailable.")
+        return {}, False
+    if merged is None or merged.empty:
+        st.sidebar.caption("Run **Run Analysis** to load Airtable rows, then filter by account dimensions.")
+        return {}, False
+
+    st.sidebar.caption(
+        "Leave all empty to use every store. Pick values to **narrow** rows (AND across fields, "
+        "OR within one field). Charts and mapping use store IDs from the matching Airtable records."
+    )
+    options_by_col = af.unique_options_for_dimensions(merged)
+    selections: dict = {}
+    for label in af.FILTER_DIMENSION_LABELS:
+        col = af.resolve_filter_column(merged, label)
+        if not col or col not in options_by_col:
+            continue
+        picked = st.sidebar.multiselect(
+            label,
+            options=options_by_col[col],
+            default=[],
+            key=af.multiselect_widget_key(f"{label}|{col}"),
+        )
+        selections[col] = list(picked)
+    filtering_active = any(bool(v) for v in selections.values())
+    return selections, filtering_active
 
 
 def _handle_run_analysis_click(accumulated, all_uploads, run_btn):
@@ -1255,24 +1250,8 @@ def _handle_run_analysis_click(accumulated, all_uploads, run_btn):
             mapping_df_cached, mapping_view_dfs, _mapping_err = store_mapping.get_store_mapping_df()
             st.session_state["mapping_df"] = mapping_df_cached
             st.session_state["mapping_view_dfs"] = mapping_view_dfs
-
-            build_fn = getattr(store_mapping, "build_store_mapping_matrix_with_debug", None)
-            if build_fn:
-                mapping_matrix, debug_steps, err = build_fn(
-                    file_items,
-                    mapping_df=mapping_df_cached,
-                    view_dfs=mapping_view_dfs,
-                )
-            else:
-                mapping_matrix, err = store_mapping.build_store_mapping_matrix(
-                    file_items,
-                    mapping_df=mapping_df_cached,
-                    view_dfs=mapping_view_dfs,
-                )
-                debug_steps = []
-            st.session_state["mapping_matrix"] = mapping_matrix
-            st.session_state["mapping_debug"] = debug_steps
-            st.session_state["mapping_error"] = err
+            st.session_state["file_items_for_mapping"] = file_items
+            st.session_state["mapping_error"] = _mapping_err
 
         st.sidebar.success("Analysis loaded.")
         st.rerun()
@@ -1283,86 +1262,7 @@ def _handle_run_analysis_click(accumulated, all_uploads, run_btn):
             st.code(traceback.format_exc())
 
 
-def _render_airtable_sidebar_filters(mapping_df_cached):
-    """QA / CSA multiselects when mapping columns exist. Returns (selected_qa, selected_csa)."""
-    selected_qa = []
-    selected_csa = []
-    if mapping_df_cached is None or mapping_df_cached.empty:
-        return selected_qa, selected_csa
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### Filters")
-    if QA_COL in mapping_df_cached.columns:
-        qa_values = sorted(
-            {v for x in mapping_df_cached[QA_COL].dropna().tolist() for v in _cell_to_str_list(x)}
-        )
-        if qa_values:
-            selected_qa = st.sidebar.multiselect("QA Auditor", options=qa_values, key="filter_qa")
-    if CSA_COL in mapping_df_cached.columns:
-        csa_values = sorted(
-            {v for x in mapping_df_cached[CSA_COL].dropna().tolist() for v in _cell_to_str_list(x)}
-        )
-        if csa_values:
-            selected_csa = st.sidebar.multiselect("CSA Name", options=csa_values, key="filter_csa")
-    return selected_qa, selected_csa
-
-
-def _compute_filtered_mapping_df(mapping_df_cached, selected_qa, selected_csa):
-    filtered_mapping_df = mapping_df_cached
-    if mapping_df_cached is None or mapping_df_cached.empty:
-        return filtered_mapping_df
-    if selected_qa and QA_COL in mapping_df_cached.columns:
-        mask = mapping_df_cached[QA_COL].apply(
-            lambda x: bool(set(_cell_to_str_list(x)) & set(selected_qa))
-        )
-        filtered_mapping_df = filtered_mapping_df[mask]
-    if selected_csa and CSA_COL in mapping_df_cached.columns:
-        mask = filtered_mapping_df[CSA_COL].apply(
-            lambda x: bool(set(_cell_to_str_list(x)) & set(selected_csa))
-        )
-        filtered_mapping_df = filtered_mapping_df[mask]
-    return filtered_mapping_df
-
-
-def _rebuild_mapping_matrix_if_filters(
-    accumulated, review_source, review_data, filtered_mapping_df, selected_qa, selected_csa
-):
-    """When QA/CSA filters apply, recompute matrix against filtered Airtable record IDs."""
-    if not (selected_qa or selected_csa) or filtered_mapping_df is None or not review_data:
-        return None
-    try:
-        import importlib, store_mapping
-
-        importlib.reload(store_mapping)
-        name_to_content = {x["name"]: x["content"] for x in accumulated} if review_source == "uploads" else {}
-        file_items = []
-        for item in review_data:
-            content = item.get("content") or (name_to_content.get(item.get("name")) if name_to_content else None)
-            file_items.append({"name": item.get("name", "?"), "platform": item.get("platform", ""), "path": item.get("path"), "content": content})
-        fids = None
-        if "_airtable_id" in filtered_mapping_df.columns:
-            fids = set(filtered_mapping_df["_airtable_id"].dropna().astype(str))
-        vdfs = st.session_state.get("mapping_view_dfs")
-        build_fn = getattr(store_mapping, "build_store_mapping_matrix_with_debug", None)
-        if build_fn:
-            matrix, _, _ = build_fn(
-                file_items,
-                mapping_df=filtered_mapping_df,
-                view_dfs=vdfs,
-                filtered_airtable_ids=fids,
-            )
-            return matrix
-        matrix, _ = store_mapping.build_store_mapping_matrix(
-            file_items,
-            mapping_df=filtered_mapping_df,
-            view_dfs=vdfs,
-            filtered_airtable_ids=fids,
-        )
-        return matrix
-    except Exception:
-        return None
-
-
-def _render_tab_data_verification(review_data, review_source, mapping_df_cached):
+def _render_tab_data_verification(review_data, review_source):
     if not review_data:
         st.info("Click **Run Analysis** in the sidebar to load and verify data.")
         return
@@ -1377,32 +1277,27 @@ def _render_tab_data_verification(review_data, review_source, mapping_df_cached)
             "Rows": item.get("rows", 0),
             "Size": f"{size_kb:.1f} KB" if size_kb < 1024 else f"{size_kb / 1024:.1f} MB",
         })
-    st.dataframe(pd.DataFrame(file_summary_rows), use_container_width=True)
+    st.dataframe(pd.DataFrame(file_summary_rows), width="stretch")
     for item in review_data:
         name = item.get("name", "?")
         platform = item.get("platform", "—")
         rows = item.get("rows", 0)
         with st.expander(f"{name} — {platform} — {rows:,} rows"):
             st.code(", ".join(item.get("columns", [])))
-    st.markdown("---")
-    debug_steps = st.session_state.get("mapping_debug", [])
-    mapping_err = st.session_state.get("mapping_error")
-    if debug_steps:
-        with st.expander("Debug: Airtable Fetch Steps", expanded=bool(mapping_err)):
-            for d in debug_steps:
-                status = d.get("status", "info")
-                fn = st.success if status == "ok" else (st.error if status == "fail" else st.info)
-                fn(f"**{d.get('step', '?')}** — {d.get('detail', '')}")
-            st.markdown("**First 5 rows (Airtable store mapping)**")
-            if mapping_df_cached is not None and not mapping_df_cached.empty:
-                st.dataframe(mapping_df_cached.head(5), use_container_width=True)
-            else:
-                st.caption("No mapping table in session — run **Run Analysis** after a successful Airtable fetch.")
 
 
-def _render_tab_mapping(
-    mapping_matrix, mapping_df_cached, filtered_mapping_df, selected_qa, selected_csa
-):
+def _mapping_preview_for_export(mapping_df_cached, record_ids, filtering_active):
+    if mapping_df_cached is None or mapping_df_cached.empty:
+        return mapping_df_cached
+    if not filtering_active or record_ids is None:
+        return mapping_df_cached
+    if "_airtable_id" not in mapping_df_cached.columns:
+        return mapping_df_cached
+    sub = mapping_df_cached[mapping_df_cached["_airtable_id"].astype(str).isin(record_ids)].copy()
+    return sub
+
+
+def _render_tab_mapping(mapping_matrix, mapping_df_cached):
     if not mapping_matrix:
         mapping_err = st.session_state.get("mapping_error")
         if mapping_err:
@@ -1430,7 +1325,7 @@ def _render_tab_mapping(
             "Only in file": r["only_in_data_count"],
             "Only in Airtable": r["only_in_airtable_count"],
         })
-    st.dataframe(pd.DataFrame(summary_rows), use_container_width=True)
+    st.dataframe(pd.DataFrame(summary_rows), width="stretch")
     st.markdown("---")
     for r in mapping_matrix:
         with st.expander(
@@ -1442,41 +1337,32 @@ def _render_tab_mapping(
                 st.markdown("**Intersection**")
                 matched_ids = r.get("matched_sample", [])
                 if matched_ids:
-                    st.dataframe(pd.DataFrame({"Store ID": matched_ids}), use_container_width=True, height=200)
+                    st.dataframe(pd.DataFrame({"Store ID": matched_ids}), width="stretch", height=200)
                 else:
                     st.caption("No matched IDs")
             with col_b:
                 st.markdown("**Only in file**")
                 data_only_ids = r.get("only_in_data_sample", [])
                 if data_only_ids:
-                    st.dataframe(pd.DataFrame({"Store ID": data_only_ids}), use_container_width=True, height=200)
+                    st.dataframe(pd.DataFrame({"Store ID": data_only_ids}), width="stretch", height=200)
                 else:
                     st.caption("None — all data IDs found in Airtable")
             with col_c:
                 st.markdown("**Only in Airtable**")
                 airtable_only_ids = r.get("only_in_airtable_sample", [])
                 if airtable_only_ids:
-                    st.dataframe(pd.DataFrame({"Store ID": airtable_only_ids}), use_container_width=True, height=200)
+                    st.dataframe(pd.DataFrame({"Store ID": airtable_only_ids}), width="stretch", height=200)
                 else:
                     st.caption("None — all Airtable IDs found in data")
     st.markdown("---")
-    if selected_qa or selected_csa:
-        filter_parts = []
-        if selected_qa:
-            filter_parts.append(f"QA Auditor: {', '.join(selected_qa)}")
-        if selected_csa:
-            filter_parts.append(f"CSA Name: {', '.join(selected_csa)}")
-        st.info(
-            f"Filtered by: {' | '.join(filter_parts)} — showing {len(filtered_mapping_df)} of {len(mapping_df_cached)} Airtable records"
-        )
-    excel_data = _build_mapping_excel(mapping_matrix, filtered_mapping_df)
+    excel_data = _build_mapping_excel(mapping_matrix, mapping_df_cached)
     st.download_button(
         label="Download Mapping Report (Excel)",
         data=excel_data,
         file_name="TODC_Store_Mapping_Report.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.document",
         type="primary",
-        use_container_width=True,
+        width="stretch",
     )
 
 
@@ -1535,8 +1421,11 @@ def _render_tab_analysis(data_loaded):
 def main():
     """
     Orchestrate the Streamlit app:
-    1) Header  2) Sidebar upload + Run Analysis  3) Airtable filters  4) Main tabs
+    header → sidebar upload + Run Analysis → Data Verification | Mapping | Analysis
     """
+    import airtable_filters as af
+    import store_mapping as store_mapping_mod
+
     _render_header_banner()
     accumulated, all_uploads, run_btn = _render_sidebar_upload()
     _handle_run_analysis_click(accumulated, all_uploads, run_btn)
@@ -1544,17 +1433,51 @@ def main():
     review_data = st.session_state.get("review_data")
     review_source = st.session_state.get("review_source")
     data_loaded = st.session_state.get("analysis_data")
-    mapping_matrix = st.session_state.get("mapping_matrix")
     mapping_df_cached = st.session_state.get("mapping_df")
+    view_dfs_base = st.session_state.get("mapping_view_dfs") or {}
+    merged_airtable = af.merge_store_mapping_views_for_filters(view_dfs_base)
+    filter_selections, filtering_active = _render_sidebar_airtable_filters(merged_airtable)
 
-    selected_qa, selected_csa = _render_airtable_sidebar_filters(mapping_df_cached)
-    filtered_mapping_df = _compute_filtered_mapping_df(mapping_df_cached, selected_qa, selected_csa)
-
-    rebuilt = _rebuild_mapping_matrix_if_filters(
-        accumulated, review_source, review_data, filtered_mapping_df, selected_qa, selected_csa
+    filtered_merged = (
+        af.apply_dimension_filters(merged_airtable, filter_selections)
+        if filtering_active
+        else merged_airtable
     )
-    if rebuilt is not None:
-        mapping_matrix = rebuilt
+    record_ids_for_views = None
+    if filtering_active:
+        if "_airtable_id" in filtered_merged.columns:
+            record_ids_for_views = set(filtered_merged["_airtable_id"].astype(str).dropna().tolist())
+        else:
+            record_ids_for_views = set()
+    allowed_ids = (
+        af.allowed_platform_store_ids_from_merged(filtered_merged)
+        if filtering_active
+        else {}
+    )
+    mapping_preview_export = _mapping_preview_for_export(
+        mapping_df_cached, record_ids_for_views, filtering_active
+    )
+
+    file_items = st.session_state.get("file_items_for_mapping", [])
+    mapping_matrix = None
+    mapping_err_state = st.session_state.get("mapping_error")
+    if file_items and view_dfs_base:
+        view_dfs_eff = af.filter_view_dfs_by_record_ids(view_dfs_base, record_ids_for_views)
+        mapping_matrix, mapping_err_state = store_mapping_mod.build_store_mapping_matrix(
+            file_items, view_dfs=view_dfs_eff
+        )
+        st.session_state["mapping_error"] = mapping_err_state
+    elif file_items:
+        mapping_matrix, mapping_err_state = store_mapping_mod.build_store_mapping_matrix(
+            file_items, view_dfs=None
+        )
+        st.session_state["mapping_error"] = mapping_err_state
+
+    data_for_analysis = af.filter_analysis_data(
+        data_loaded,
+        allowed_ids,
+        filtering_active,
+    )
 
     if not data_loaded and not review_data:
         st.info("Upload your data folder in the sidebar, then click **Run Analysis**. Without uploads, the bundled **data/** folder is used.")
@@ -1562,13 +1485,17 @@ def main():
 
     top_tabs = st.tabs(["Data Verification", "Mapping", "Analysis"])
     with top_tabs[0]:
-        _render_tab_data_verification(review_data, review_source, mapping_df_cached)
+        _render_tab_data_verification(review_data, review_source)
     with top_tabs[1]:
-        _render_tab_mapping(
-            mapping_matrix, mapping_df_cached, filtered_mapping_df, selected_qa, selected_csa
-        )
+        _render_tab_mapping(mapping_matrix, mapping_preview_export)
     with top_tabs[2]:
-        if _render_tab_analysis(data_loaded):
+        if filtering_active:
+            nrec = len(filtered_merged) if filtered_merged is not None else 0
+            st.caption(
+                f"Airtable filters active — **{nrec}** matching record(s); "
+                "analysis is limited to store IDs from those rows."
+            )
+        if _render_tab_analysis(data_for_analysis):
             return
 
     st.markdown("---")
