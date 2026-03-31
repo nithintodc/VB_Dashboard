@@ -1,0 +1,384 @@
+Start Date,End Date,Store ID,Store Name,Merchant Supplied ID,Cancellation Category - Short,Cancellation Category - Description,Count of Orders
+2026-02-01,2026-02-28,63275,Cheers on Demand (Fillmore St),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,129914,The Ice Cream Lab (Fillmore St),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,129914,The Ice Cream Lab (Fillmore St),NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,394811,Food & Liquor World,NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,457017,Times Square Pizza Boy,NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,635466,The Ice Cream Snob,NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,635466,The Ice Cream Snob,NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,799976,Riya's Indian Restaurant (Roosevelt Ave),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,799976,Riya's Indian Restaurant (Roosevelt Ave),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,799976,Riya's Indian Restaurant (Roosevelt Ave),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,833127,Stella's Pancake Bar (937 1st Ave),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,839909,Jay's Breakfast Bar (Washington Blvd),NULL,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,839909,Jay's Breakfast Bar (Washington Blvd),NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,842313,Village Breakfast Snob (4th Ave),NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,842313,Village Breakfast Snob (4th Ave),NULL,NULL,NULL,1
+2026-02-01,2026-02-28,842327,The American Cheesesteaks (4th Ave),NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,844991,Jamaica Breakfast Bar (Jamaica Ave),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,872655,Indian Chop House (16th Street),NULL,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,873421,The Milk Snob (Post Street),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,873421,The Milk Snob (Post Street),NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,873421,The Milk Snob (Post Street),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,873424,Halal Chicken Gyros Co. (Mowry Ave),NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,943687,Curry Curry Curry (S Abbott Ave),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,966668,BBQ Ribs Co.,NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,969305,The Burger Trilogy  (San Francisco),NULL,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,969305,The Burger Trilogy  (San Francisco),NULL,Customer Cancellations,Customer needed to modify order cart contents,1
+2026-02-01,2026-02-28,1008261,Joe's Chicken and Waffles,NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,1008526,Mia's Breakfast Bar,NULL,Other,Other,1
+2026-02-01,2026-02-28,1194035,The Pancake Snob (1st Ave),NULL,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,1194035,The Pancake Snob (1st Ave),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1194035,The Pancake Snob (1st Ave),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,1245290,"Prime Burger Lounge (West Chester, PA)",NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,1245296,"The Wings Express (West Chester, PA)",NULL,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,1332271,Charlie's Chicken Wings (New York),NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,1339730,"Olivia's Breakfast Cafe (New York, NY)",NULL,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,1451913,Halal Chicken Spot (244 W. 14th street),NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,1455616,Philly Cheesesteak Snob (Bronxdale Ave),NULL,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,1458742,Danny's Desserts (1147 West Chester Pike),NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,3
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Avoidable Store Operations,Item out of stock,2
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,NULL,NULL,2
+2026-02-01,2026-02-28,1477944,BBQ Ribs Co. (Virtual Brand)(228 George Street),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,1477944,BBQ Ribs Co. (Virtual Brand)(228 George Street),NULL,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,1477969,The Gyro Bar (1969 Bronxdale Ave),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1478850,The Salad Snob (Virtual Brand)(3846 Mowry Ave Fremont),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1497405,Halal Gyro Lab (Virtual Brand)(1760 3rd Ave),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,1518350,The Burger Blade,NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1518350,The Burger Blade,NULL,Other,Other,1
+2026-02-01,2026-02-28,1556211,The Breakfast Dream (1117 Broadway),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,1556279,The Gyro Shop(Virtual Brand),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,1556279,The Gyro Shop(Virtual Brand),NULL,Customer Cancellations,Customer needed to modify order cart contents,1
+2026-02-01,2026-02-28,1556279,The Gyro Shop(Virtual Brand),NULL,NULL,NULL,1
+2026-02-01,2026-02-28,1567795,The Pancake Spot,NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,1580568,Amore Italian Desserts,NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,1580568,Amore Italian Desserts,NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,1581202,Ice Cream and Cake Shop(Virtual Brand),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1591183,Cheesecake And Dessert Bar,NULL,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,1595687,The Burrito Snob,128,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,1608749,Bosscat Breakfast,NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,1725679,Smoothie And Dessert Bar,NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,1725679,Smoothie And Dessert Bar,NULL,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,1725776,Empire State Panini,NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1743858,Mario's Italian Ristorante,NULL,POS Error Cancellations,Timeout,1
+2026-02-01,2026-02-28,1785496,The Minister Wraps,NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,1803495,The Sandwich Slut,NULL,Avoidable Store Operations,Store operations issue,3
+2026-02-01,2026-02-28,1877090,Salvatore's Parmigiana Sandwiches (43 W Flagler St),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,1909205,The Sandwich Cafe (2841 E Anaheim St),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2110247,Dangerous Ice Cream (867 FIllmore Street),NULL,Customer Cancellations,Customer needed to modify order cart contents,1
+2026-02-01,2026-02-28,2110247,Dangerous Ice Cream (867 FIllmore Street),NULL,NULL,NULL,1
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Customer Cancellations,Long order fulfillment time,3
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Customer Cancellations,Customer requested - Unspecified reason,4
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Other,Other,1
+2026-02-01,2026-02-28,2145966,Rooftop Sandwiches (169-03 Jamaica Ave),169-03,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,2145966,Rooftop Sandwiches (169-03 Jamaica Ave),169-03,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,2255754,Breakfast Burrito Floozy (S 101st E Ave),NULL,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,2255754,Breakfast Burrito Floozy (S 101st E Ave),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2255754,Breakfast Burrito Floozy (S 101st E Ave),NULL,Other,Other,1
+2026-02-01,2026-02-28,2272718,The Dessert Dream (Hoover Rd),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2272718,The Dessert Dream (Hoover Rd),NULL,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,2290794,Bagel Dynasty (330 W Broadway),NULL,Avoidable Store Operations,Store operations issue,3
+2026-02-01,2026-02-28,2290794,Bagel Dynasty (330 W Broadway),NULL,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,2290794,Bagel Dynasty (330 W Broadway),NULL,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,2
+2026-02-01,2026-02-28,2291104,Mary's Omelette Bar (330 W Broadway),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2291104,Mary's Omelette Bar (330 W Broadway),NULL,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,2291104,Mary's Omelette Bar (330 W Broadway),NULL,Other,Other,1
+2026-02-01,2026-02-28,2291140,The Burger Stack (330 W Broadway),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2291140,The Burger Stack (330 W Broadway),NULL,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,2291200,The Smoothie Squeeze (330 W Broadway),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2291207,Top Notch Sandwiches (330 W Broadway),NULL,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,2
+2026-02-01,2026-02-28,2291207,Top Notch Sandwiches (330 W Broadway),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,2291215,Hyde's Grilled Cheese (330 W Broadway),NULL,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,2291215,Hyde's Grilled Cheese (330 W Broadway),NULL,Avoidable Store Operations,Store operations issue,3
+2026-02-01,2026-02-28,2291215,Hyde's Grilled Cheese (330 W Broadway),NULL,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,2291215,Hyde's Grilled Cheese (330 W Broadway),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,2291226,Luca's Chicken Wings (330 W Broadway),NULL,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,2291401,Big E's Wraps (330 W Broadway),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2291401,Big E's Wraps (330 W Broadway),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,2459220,Toss N' Chop Salad Bar (Smith Rd),NULL,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,2459220,Toss N' Chop Salad Bar (Smith Rd),NULL,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,2589150,Avocado N Toast Snob (Broadway),NULL,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,2849774,Penny's Pancakes (Hillside Ave),2849774,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,22988449,Fiona's Breakfast Burritos (Michelson Dr),22988449,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,23007066,The Smoothie Squeeze (450 9th Ave),23007066,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23007130,NY Dessert Bar (9th Ave),23007130,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23026068,Arifs Mediterranean Grill (Bedford Ave),23026068,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,23045921,Pita Sandwich Bite (George St),23045921,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,23056011,The Gyro Brothers (E 125th St),23056011,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,23056011,The Gyro Brothers (E 125th St),23056011,Avoidable Store Operations,Item out of stock,2
+2026-02-01,2026-02-28,23059274,Halal Chicken Spot (Jamaica Ave),23059274,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23060296,Bain's Burger Bar (Jamaica Ave),23060296,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,23060370,Grilled Cheese Ecstatic (9th Ave),23060370,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23085594,Nakamura Ramen House (W Greenway Rd),23085594,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23085594,Nakamura Ramen House (W Greenway Rd),23085594,Customer Cancellations,Customer requested - Unspecified reason,2
+2026-02-01,2026-02-28,23085625,Chef Hanoka Sushi (W Peoria Ave),23085625,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,23085637,Kung Fu Chinese Kitchen (W Greenway Rd),23085637,NULL,NULL,1
+2026-02-01,2026-02-28,23085638,Nakamura Ramen House (W Peoria Ave),23085638,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,23085638,Nakamura Ramen House (W Peoria Ave),23085638,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,23085638,Nakamura Ramen House (W Peoria Ave),23085638,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,23085722,Nakamura Ramen House (W Indian School Rd),23085722,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,23085722,Nakamura Ramen House (W Indian School Rd),23085722,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,23087616,The Chinese Noodle Palace (S Higley Rd),23087616,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,23087616,The Chinese Noodle Palace (S Higley Rd),23087616,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23087659,Noodle And Rice Bar (W Camelback Rd),23087659,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,23087862,Chinese Fried Rice Spot (S Higley Rd),23087862,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,23087862,Chinese Fried Rice Spot (S Higley Rd),23087862,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,23106174,The Minister Wraps (Broadway),23106174,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23106184,High Life Breakfast Sandwiches (Chapel St),23106184,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,23106184,High Life Breakfast Sandwiches (Chapel St),23106184,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,23106184,High Life Breakfast Sandwiches (Chapel St),23106184,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23134903,Muf's Muffin Shop (Hillside Ave),23134903,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,23268648,Bri's Breakfast Bar (Lee Hwy),23268648,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,23367234,Jewel's Breakfast Joint (Broadway),23367234,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,23367264,General's French Toast (W Chester Pike),23367264,Other,Other,1
+2026-02-01,2026-02-28,23423347,Big Ease Smoothies  (1117 Broadway),23423347,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,23532702,The Burger Bae (Van Nuys Blvd),23532702,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,23532702,The Burger Bae (Van Nuys Blvd),23532702,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,23532713,Danny's Desserts (Van Nuys Blvd),23532713,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,23549497,Brenda's Panini Palace (83 Canal St #6019),23549497,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,23549534,The Sandwich Doctor (83 Canal St #6019),23549534,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,2
+2026-02-01,2026-02-28,23549534,The Sandwich Doctor (83 Canal St #6019),23549534,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,23549667,Marty's Wraps Shack (433 W 34th st),23549667,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,23556864,NY Dessert Bar (34-02 30th St),23556864,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,23556864,NY Dessert Bar (34-02 30th St),23556864,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,23557659,Farmer Girl Salad (301 W 96th St),23557659,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,23785266,Chicken Tenders Bar (4249 Washington St),23785266,NULL,NULL,1
+2026-02-01,2026-02-28,24051979,The Breakfast Dream (6611 S 101st E Ave),24051979,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,24099355,Casa De Quesadilla (730 Astor Ave),24099355,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,24099355,Casa De Quesadilla (730 Astor Ave),24099355,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,24194631,The Gyro Bar (319 Rogers Ave),24194631,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24257608,Mediterranean Salad Chop (197 Havemeyer St.),24257608,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24270691,Fiesta Vegan Mexican (4955 Voltaire St),24270691,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,24328785,Henry's Chicken Wings (4663 Trousdale Dr),24328785,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24387449,First Light Breakfast Cafe (3907 Lee Hwy),24387449,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,24387449,First Light Breakfast Cafe (3907 Lee Hwy),24387449,Customer Cancellations,Long order fulfillment time,2
+2026-02-01,2026-02-28,24387639,Casa Pasta Ristorante (1 Kedron Ave Unit 4),24387639,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24506648,Livia's Mediterranean Table (1849 N Scottsdale Rd),24506648,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24506648,Livia's Mediterranean Table (1849 N Scottsdale Rd),24506648,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,24556145,Glorious Panini Snob (330 W Broadway),24556145,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24556145,Glorious Panini Snob (330 W Broadway),24556145,Other,Other,2
+2026-02-01,2026-02-28,24556355,Gourmet Omelette Bar (226 1/2 Newark Ave),24556355,NULL,NULL,1
+2026-02-01,2026-02-28,24606197,Hassan's Mediterranean Flatbreads (1849 N Scottsdale Rd),24606197,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,24606369,Amal's Flatbread Recipe (1849 N Scottsdale Rd),24606369,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24637043,Taco Paradiso (514 Main St),24637043,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,24703825,Middle East Wraps - 750 East Main St,24703825,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,24770396,Cameron's Breakfast Cafe (38-01 Vernon Boulevard),24770396,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,24770405,Tessa's Fruity Treats  (1741 1st Avenue),24770405,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,24770405,Tessa's Fruity Treats  (1741 1st Avenue),24770405,NULL,NULL,1
+2026-02-01,2026-02-28,24770450,Evan's Burger Empire (143 Grand Street),24770450,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,24770490,Carmen's Breakfast Burritos (143 Grand Street),24770490,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,24770490,Carmen's Breakfast Burritos (143 Grand Street),24770490,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,24770490,Carmen's Breakfast Burritos (143 Grand Street),24770490,Customer Cancellations,Long order fulfillment time,2
+2026-02-01,2026-02-28,24770490,Carmen's Breakfast Burritos (143 Grand Street),24770490,Other,Other,1
+2026-02-01,2026-02-28,24800989,Quatro's Quesadilla Bar (3618 N Pennsylvania Ave),24800989,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,24854759,Queen's Quesadillas (689 Broadway),24854759,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,24974708,Nancy's Desserts (555 CA-17),24974708,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,25079045,Kung Fu Fried Rice (4957 Winters Chapel Rd Suite B),25079045,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,25079045,Kung Fu Fried Rice (4957 Winters Chapel Rd Suite B),25079045,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,25079045,Kung Fu Fried Rice (4957 Winters Chapel Rd Suite B),25079045,Other,Other,1
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,25092392,Times French Fries (1715 Sicklerville Rd),25092392,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,25092392,Times French Fries (1715 Sicklerville Rd),25092392,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,25130156,Evan's Burger Empire (877 10th Ave),25130156,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,25130156,Evan's Burger Empire (877 10th Ave),25130156,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,25294190,Ali's Mediterranean Sandwiches (114 East Main Street),25294190,Avoidable Store Operations,Wrong order handed to dasher,1
+2026-02-01,2026-02-28,25294875,Ramen Noodle Empire (2521 Durant Ave Suite D),25294875,Other,Other,1
+2026-02-01,2026-02-28,25295448,Amanda's Breakfast Lounge (111 E 161 St),25295448,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,25295637,Big Famous Deli & Grill (244 W. 14th street),25295637,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,26000460,Gooey Mac N cheez (W Jefferson),26000460,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,26000460,Gooey Mac N cheez (W Jefferson),26000460,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,26000460,Gooey Mac N cheez (W Jefferson),26000460,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,26000460,Gooey Mac N cheez (W Jefferson),26000460,POS Error Cancellations,Technical error,4
+2026-02-01,2026-02-28,26000640,Sandwich On Fleek (W Jefferson),26000640,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,26000640,Sandwich On Fleek (W Jefferson),26000640,POS Error Cancellations,Technical error,1
+2026-02-01,2026-02-28,26000771,The Indian Spice Palace (3005 36th Ave),26000771,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,26153026,Fine Line Desserts (12453 Oxnard St),26153026,POS Error Cancellations,Timeout,1
+2026-02-01,2026-02-28,26174718,SugarSlice Cakes,26174718,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,26174821,Chicken Sandwich Loft,26174821,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,26174821,Chicken Sandwich Loft,26174821,NULL,NULL,1
+2026-02-01,2026-02-28,26175096,The Mac and Cheese Co,26175096,Avoidable Store Operations,Store operations issue,4
+2026-02-01,2026-02-28,26175160,Frank's Philly Cheesesteaks,26175160,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,26292114,Bosscat Breakfast - 8886 (Knott Ave),26292114,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,27456448,NextBagel (1225 Amsterdam Ave),27456448,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,27556354,Prima Panini Bar (16965 Monterey Hwy #106D),27556354,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,27682605,Luna's Loaded Fries (4352 E Speedway Blvd),27682605,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,27682621,Fiesta Vegan Mexican (3917 4th Ave),27682621,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,27741795,Casa De Quesadilla (415 E Windmill Ln),27741795,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,27833963,The Acai Dream (34-02 30th St),27833963,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,28607208,The Pasta Story (43 W Flagler St),28607208,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,28607943,Breakfast Burrito Joint (128 East 4th Street),28607943,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,31313343,BigLeaf Salads (18300 Vanowen Street Suite 3),31313343,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,31313829,Leon's Legendary Pizza (1595 Seminole Blvd),31313829,POS Error Cancellations,Timeout,2
+2026-02-01,2026-02-28,31313981,Antonio's Quesadilla Shack (4352 E Speedway Blvd),31313981,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,31314269,FirstBite Breakfast Sandwiches (370 Main St),31314269,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,31535783,Scotty's Bagel Express (Chapel St),31535783,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,31535791,The Pasta Twins (Chestnut St),31535791,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,31547931,Luke's Breakfast Club (Caton Ave),31547931,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,31561737,Luca's Philly Cheesesteak (Metropolitan Ave),31561737,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,31564187,Slapjack Pancakes (Chapel St),31564187,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,31564187,Slapjack Pancakes (Chapel St),31564187,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,31577141,Addictive Burger Bar (1428 Polk St),31577141,NULL,NULL,1
+2026-02-01,2026-02-28,31577153,The Kabob Snob (57 sip ave),31577153,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,31619812,The Smoothie Squeeze (128 East 4th Street),31619812,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,31619827,The Farmers Salad (28501 Hoover Rd),31619827,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,31672379,The Fried Chicken Crave (1741 1st Ave),31672379,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,32863674,Luigi's Pasta Ristorante,32863674,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,32863729,The Burger Blade (4234 Broadway),32863729,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,32863770,Amore Pasta Ristorante (2909A Queens Plaza North),32863770,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,32863770,Amore Pasta Ristorante (2909A Queens Plaza North),32863770,NULL,NULL,1
+2026-02-01,2026-02-28,32863865,Mary's Chicken Sandwiches (Chestnut St),32863865,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,32918455,Wonderland Wraps  (3661 Broadway),32918455,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,NULL,NULL,1
+2026-02-01,2026-02-28,32923019,Beeman's Burger Bar (93 Avenue A),32923019,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,32923083,Blanca's Breakfast Bites (4083 Broadway),32923083,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,32923293,Breakfast N Vibe (4234 Broadway),32923293,NULL,NULL,1
+2026-02-01,2026-02-28,32926571,EZ Cheesesteaks (3846 Mowry Ave),32926571,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,32927450,Grandma's Breakfast Sandwiches (330 W Broadway),32927450,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,32927450,Grandma's Breakfast Sandwiches (330 W Broadway),32927450,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,32927450,Grandma's Breakfast Sandwiches (330 W Broadway),32927450,Customer Cancellations,Long order fulfillment time,2
+2026-02-01,2026-02-28,32927450,Grandma's Breakfast Sandwiches (330 W Broadway),32927450,Other,Other,1
+2026-02-01,2026-02-28,32961985,Italian Pasta Lounge (4115 Concord Blvd Suite 70),32961985,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,32973053,Mia's Quesadillas (296 3rd Ave),32973053,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,32986919,Queen's Quesadillas (330 W Broadway),32986919,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,32986919,Queen's Quesadillas (330 W Broadway),32986919,Customer Cancellations,Long order fulfillment time,2
+2026-02-01,2026-02-28,32987257,Roll N Chop Sushi's (1401 E Arapaho Rd #F),32987257,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,33017373,The Pasta Story (2138 W National Ave),33017373,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33017373,The Pasta Story (2138 W National Ave),33017373,Customer Cancellations,Long order fulfillment time,3
+2026-02-01,2026-02-28,33017373,The Pasta Story (2138 W National Ave),33017373,Other,Other,2
+2026-02-01,2026-02-28,33415771,Amanda's Breakfast Lounge (3661 Broadway),33415771,Avoidable Store Operations,Store operations issue,5
+2026-02-01,2026-02-28,33415839,Top Notch Sandwiches (9061 Van Nuys Blvd),33415839,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33885415,Chanel's Coffee House (2051 Frederick Douglass Blvd),33885415,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,33885415,Chanel's Coffee House (2051 Frederick Douglass Blvd),33885415,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,33886671,Casa Pasta Ristorante (9061 Van Nuys Blvd),33886671,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33886909,Fiona's Breakfast Burritos (433 W 34th st),33886909,Customer Cancellations,Customer needed to modify order cart contents,1
+2026-02-01,2026-02-28,33894883,The Indian Spice Palace,33894883,Other,Other,1
+2026-02-01,2026-02-28,33895231,Luke's Breakfast Club (7825 EASTERN AVE),33895231,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33895415,Bill's Sandwich Shack (128 East 4th Street),33895415,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33895557,The Burrito Bae (916 Hempstead Turnpike),33895557,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33895844,Ariana's Vegan Spot (488 Metropolitan Ave),33895844,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33898959,The Calzone Empire (4663 Trousdale Dr),33898959,Avoidable Store Operations,Store closed,4
+2026-02-01,2026-02-28,33898961,The American Vegan Burger (5155 3rd St),33898961,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,NULL,NULL,1
+2026-02-01,2026-02-28,33899381,The Juice Empire,33899381,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,33899529,Italian Pasta Lounge,33899529,POS Error Cancellations,Technical error,3
+2026-02-01,2026-02-28,33899541,Farmers Market Salads,33899541,POS Error Cancellations,Technical error,1
+2026-02-01,2026-02-28,33948073,Exquisite Bowls,33948073,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33948073,Exquisite Bowls,33948073,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33948073,Exquisite Bowls,33948073,NULL,NULL,1
+2026-02-01,2026-02-28,33948075,Exquisite Bowls (1824 2nd Ave),33948075,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,33948287,Fry Bird Sandwiches (16224 Tuskegee Airmen Way),33948287,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33948345,Greens Salad God (6611 S 101st E Ave),33948345,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33948861,Luigi's Pasta Ristorante,33948861,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,33948861,Luigi's Pasta Ristorante,33948861,Other,Other,1
+2026-02-01,2026-02-28,33948863,Luigi's Pasta Ristorante,33948863,NULL,NULL,1
+2026-02-01,2026-02-28,33948931,Marty's Wraps Shack,33948931,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33950127,Sicily's Calzone House,33950127,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,33950295,The Calzone Empire,33950295,Other,Other,1
+2026-02-01,2026-02-28,33951729,Toretto's Breakfast Cafe,33951729,Avoidable Store Operations,Store closed,5
+2026-02-01,2026-02-28,33951729,Toretto's Breakfast Cafe,33951729,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33963529,The Italian Pasta Bar,33963529,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33963677,Wraps On Tap (4410 Bergen Tpke),33963677,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33963677,Wraps On Tap (4410 Bergen Tpke),33963677,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33963911,Classic Cheeseburger Bar (560 E 149th St),33963911,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33964025,Headlines Mexican Spot,33964025,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,33967403,Philly Cheesesteak Company,33967403,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33970427,The Montage Vegetarian (253 E 172nd St),33970427,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,33970497,The Gyro Shop,33970497,NULL,NULL,1
+2026-02-01,2026-02-28,33971791,The Bagel Savage,33971791,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,33972175,Chelsea's Breakfast Bar,33972175,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,34248810,Celebrity Vegan Burger,34248810,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,34249041,Christina's Vegan Cafe (1201 Castle Hill Ave),34249041,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,34249041,Christina's Vegan Cafe (1201 Castle Hill Ave),34249041,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,34250513,Luigi's Pasta Ristorante,34250513,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,34250513,Luigi's Pasta Ristorante,34250513,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,34250543,The Mexican Cocina,34250543,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,34338415,Chicken Sandwich Loft,34338415,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,34339953,Public Burger Bar,34339953,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,34340507,Wonka's Smoothie Bar,34340507,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,34340507,Wonka's Smoothie Bar,34340507,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,34341025,Wraps On Tap,34341025,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,34344153,Village Quesadilla,34344153,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,34348517,Top Notch Sandwiches,34348517,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,34349143,The Chicken Affair - 135 E 125th St,34349143,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,34349143,The Chicken Affair - 135 E 125th St,34349143,Avoidable Store Operations,Item out of stock,2
+2026-02-01,2026-02-28,35117591,NY Smoothie Joint,35117591,POS Error Cancellations,Timeout,5
+2026-02-01,2026-02-28,35170821,City Life Breakfast,35170821,POS Error Cancellations,Timeout,1
+2026-02-01,2026-02-28,35171571,Cherry's Chic Desserts,35171571,POS Error Cancellations,Timeout,1
+2026-02-01,2026-02-28,35361759,101 Hummus (1174 Chapel St),35361759,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,35371677,Bri's Breakfast Bar,35371677,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,35449419,Italian Pasta Lounge (119 Park Ave),35449419,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,35457947,Sal's Smoothie Spot,35457947,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,35457947,Sal's Smoothie Spot,35457947,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,35464965,Sandwich On Fleek (2126 Caton Ave),35464965,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,35492905,Chicken Sandwich Loft,35492905,Avoidable Store Operations,Store operations issue,4
+2026-02-01,2026-02-28,35493035,Exquisite Bowls,35493035,Avoidable Store Operations,Store operations issue,4
+2026-02-01,2026-02-28,35493165,Philly Cheesesteak Artists,35493165,Avoidable Store Operations,Store operations issue,5
+2026-02-01,2026-02-28,35493370,Palm Tree Acai (717 S Battlefield Blvd),35493370,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,35637721,Chicken Sandwich Loft,35637721,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,35638047,NY Smoothie Joint,35638047,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,35638047,NY Smoothie Joint,35638047,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,35638263,Pardon My Panini,35638263,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,35648739,Divya's Indian Restaurant,35648739,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,35648739,Divya's Indian Restaurant,35648739,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,35648739,Divya's Indian Restaurant,35648739,Customer Cancellations,Long order fulfillment time,3
+2026-02-01,2026-02-28,35665478,Steph's Salad Shop,35665478,Customer Cancellations,Long order fulfillment time,2
+2026-02-01,2026-02-28,35665478,Steph's Salad Shop,35665478,Other,Other,1
+2026-02-01,2026-02-28,35669394,Arturo's Burrito Bowls,35669394,Customer Cancellations,Customer requested - Unspecified reason,1
+2026-02-01,2026-02-28,35670053,Cheesy Mac Factory,35670053,NULL,NULL,1
+2026-02-01,2026-02-28,35681661,Fierce Chicken Sandwich,35681661,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,35686889,The Hot Dog Village,35686889,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,35686889,The Hot Dog Village,35686889,Avoidable Store Operations,Store operations issue,3
+2026-02-01,2026-02-28,35808533,Sasha's Sandwiches,35808533,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,35871797,John's Pizza Den,35871797,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,36019239,Charlie's Chicken Wings,36019239,Avoidable Store Operations,Store operations issue,2
+2026-02-01,2026-02-28,36019345,Chris's Chicken Tenders,36019345,Customer Cancellations,Customer entered the wrong address,1
+2026-02-01,2026-02-28,36019785,Hill Top Sandwich,36019785,Other,Other,1
+2026-02-01,2026-02-28,36255055,High Life Breakfast Sandwiches (1213 Amsterdam Ave),36255055,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,36255933,Chicken Sandwich Loft,36255933,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,36364737,Breakfast Burrito Snob,36364737,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,36587123,Daybreak Breakfast Club,36587123,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,37412641,Luke's Breakfast Club,37412641,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,37413325,Fierce Chicken Sandwich,37413325,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,Avoidable Store Operations,Store closed,3
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,Avoidable Store Operations,Extreme dasher wait time,1
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,Other,Other,2
+2026-02-01,2026-02-28,37414009,Chicken Sandwich Loft,37414009,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,37414009,Chicken Sandwich Loft,37414009,Avoidable Store Operations,Staff requested - Busy or cannot fulfill,1
+2026-02-01,2026-02-28,37414009,Chicken Sandwich Loft,37414009,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,37414507,The Salad Dream,37414507,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,37414755,Wraps on Tap,37414755,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,37532343,Two Hand Burger,37532343,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,37565941,Addictive Burger Bar,37565941,Avoidable Store Operations,Store closed,2
+2026-02-01,2026-02-28,37566393,Erica's Shake Shack,37566393,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,37566393,Erica's Shake Shack,37566393,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,37617154,Chicken Sandwich Loft,37617154,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,37625025,The Chopped Salad,37625025,POS Error Cancellations,Timeout,1
+2026-02-01,2026-02-28,37625155,Wonka's Smoothie Bar,37625155,POS Error Cancellations,Timeout,1
+2026-02-01,2026-02-28,38057903,Fierce Chicken Sandwich,38057903,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,38058995,Local Pizza Boy,38058995,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,38214291,Angelino's Breakfast Snob,38214291,Customer Cancellations,Long order fulfillment time,1
+2026-02-01,2026-02-28,38216347,Carmen's Breakfast Burritos,38216347,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,38796180,Fierce Chicken Sandwich (18679 W Dixie Highway),38796180,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,39042013,Bosscat Breakfast,39042013,Avoidable Store Operations,Store closed,1
+2026-02-01,2026-02-28,39042013,Bosscat Breakfast,39042013,Other,Other,1
+2026-02-01,2026-02-28,39162061,Fierce Chicken Sandwich,39162061,Avoidable Store Operations,Store operations issue,6
+2026-02-01,2026-02-28,39162345,Marty's Wraps Shack,39162345,Avoidable Store Operations,Store operations issue,10
+2026-02-01,2026-02-28,39846441,Cherry's Chic Desserts,39846441,NULL,NULL,1
+2026-02-01,2026-02-28,39846735,The Crimson Gyro (1428 Polk St),39846735,Avoidable Store Operations,Item out of stock,1
+2026-02-01,2026-02-28,39846735,The Crimson Gyro (1428 Polk St),39846735,Avoidable Store Operations,Store operations issue,1
+2026-02-01,2026-02-28,40824279,Breakfast Burrito Snob,40824279,Avoidable Store Operations,Store closed,3

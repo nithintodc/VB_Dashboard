@@ -1,0 +1,915 @@
+Start Date,End Date,Store ID,Store Name,Merchant Supplied ID,Downtime Category - Short,Downtime Category - Description,Minutes Downtime
+2026-02-01,2026-02-28,129914,The Ice Cream Lab (Fillmore St),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,394811,Food & Liquor World,NULL,Store Closure,Store Closure - Dasher Reported,19
+2026-02-01,2026-02-28,457017,Times Square Pizza Boy,NULL,Store Closure,Store Closure - Merchant Reported,34
+2026-02-01,2026-02-28,457017,Times Square Pizza Boy,NULL,UNCATEGORIZED,N/A,32
+2026-02-01,2026-02-28,457017,Times Square Pizza Boy,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,17
+2026-02-01,2026-02-28,476794,The Breakfast Bar (E Houston Street),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,476794,The Breakfast Bar (E Houston Street),NULL,UNCATEGORIZED,N/A,844
+2026-02-01,2026-02-28,610571,Vegan Indian Company (New York),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,366
+2026-02-01,2026-02-28,690586,Halal Indian Monsoon (B St),NULL,UNCATEGORIZED,N/A,224
+2026-02-01,2026-02-28,768836,Jose's Burrito Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,768849,Chelsea's Breakfast Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,779913,Famous Gyro Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,799976,Riya's Indian Restaurant (Roosevelt Ave),NULL,Store Closure,Store Closure - Dasher Reported,396
+2026-02-01,2026-02-28,814583,Halal Indian Bazaar,NULL,UNCATEGORIZED,N/A,262
+2026-02-01,2026-02-28,833127,Stella's Pancake Bar (937 1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,833133,The Mexican Cocina (1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,834794,Maria's Italian Meatballs (1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,842313,Village Breakfast Snob (4th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,842313,Village Breakfast Snob (4th Ave),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,842327,The American Cheesesteaks (4th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,842380,Firenze Pasta Ristorante (4th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,844991,Jamaica Breakfast Bar (Jamaica Ave),NULL,Store Closure,Store Closure - Dasher Reported,894
+2026-02-01,2026-02-28,844991,Jamaica Breakfast Bar (Jamaica Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,849210,Kelly's Pancake Bar (Queens Plaza),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,849212,Heavens Chicken Wings (New York),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,850181,Snobby Chicken Wings (937 1st Avenue),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,850451,Big Daddy's Wings (Polk St),NULL,UNCATEGORIZED,N/A,510
+2026-02-01,2026-02-28,872655,Indian Chop House (16th Street),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,875183,The Omelette Farm (New York),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,919185,The Pancake Spot (8th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,976289,Cheers On Demand (111 Lex),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,158
+2026-02-01,2026-02-28,978430,Mary's Bagel Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1008261,Joe's Chicken and Waffles,NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,1008360,Fiona's Pancake Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,1008526,Mia's Breakfast Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,1042619,"Taco Paradiso (New York, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,1045862,Celebrity Vegan Burger,NULL,UNCATEGORIZED,N/A,518
+2026-02-01,2026-02-28,1050862,Breakfast Burrito Snob (1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,1166202,The Pancake Snob (Virtual Brand)(West Chester Pike),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,1180434,"The Pancake Snob (Virtual Brand)(New York, NY)",NULL,UNCATEGORIZED,N/A,1527
+2026-02-01,2026-02-28,1180434,"The Pancake Snob (Virtual Brand)(New York, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,851
+2026-02-01,2026-02-28,1184943,"The Pancake Snob (Brooklyn, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,753
+2026-02-01,2026-02-28,1185887,"The Pasta Twins (New York, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1194035,The Pancake Snob (1st Ave),NULL,Store Closure,Store Closure - Dasher Reported,1027
+2026-02-01,2026-02-28,1194035,The Pancake Snob (1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,491
+2026-02-01,2026-02-28,1209803,"NY Burger Spot (Jamaica, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,1245783,"NY Breakfast Spot (Virtual Brand)(New York, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,1245783,"NY Breakfast Spot (Virtual Brand)(New York, NY)",NULL,UNCATEGORIZED,N/A,766
+2026-02-01,2026-02-28,1245783,"NY Breakfast Spot (Virtual Brand)(New York, NY)",NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,90
+2026-02-01,2026-02-28,1248514,Prime Burger Lounge,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,1303675,The Pancake Snob (The Bronx),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1303675,The Pancake Snob (The Bronx),NULL,Store Closure,Store Closure - Out of Business,120
+2026-02-01,2026-02-28,1332271,Charlie's Chicken Wings (New York),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,1339730,"Olivia's Breakfast Cafe (New York, NY)",NULL,UNCATEGORIZED,N/A,933
+2026-02-01,2026-02-28,1339730,"Olivia's Breakfast Cafe (New York, NY)",NULL,Store Closure,Store Closure - Dasher Reported,463
+2026-02-01,2026-02-28,1340523,"Breakfast Burrito Snob(San Francisco, CA)",NULL,UNCATEGORIZED,N/A,79
+2026-02-01,2026-02-28,1355159,"Mary's Breakfast Burritos (New York, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1367068,Breakfast Burrito Snob (Long Island City),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,1389556,"Pardon My Panini (New York, NY)",NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1413372,"Fat Cheesesteaks  (The Bronx, NY)",NULL,UNCATEGORIZED,N/A,10669
+2026-02-01,2026-02-28,1421484,"Italian Panini Bar (New York, NY)",NULL,UNCATEGORIZED,N/A,1307
+2026-02-01,2026-02-28,1451913,Halal Chicken Spot (244 W. 14th street),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1455616,Philly Cheesesteak Snob (Bronxdale Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1455616,Philly Cheesesteak Snob (Bronxdale Ave),NULL,Store Closure,Store Closure - Out of Business,120
+2026-02-01,2026-02-28,1456061,Fiona's Breakfast Burritos -  (Polk St),NULL,UNCATEGORIZED,N/A,551
+2026-02-01,2026-02-28,1459219,The Burger Trilogy (1969 Bronxdale Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1459219,The Burger Trilogy (1969 Bronxdale Ave),NULL,Store Closure,Store Closure - Out of Business,120
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Store Closure,Store Closure - Dasher Reported,1222
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,UNCATEGORIZED,N/A,974
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Store Closure,Store Closure - Merchant Reported,816
+2026-02-01,2026-02-28,1459266,Halal Gyro Lab (Jamaica Ave),NULL,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,460
+2026-02-01,2026-02-28,1465058,Charlie's Chicken Wings (Virtual Brand)(Bronxdale Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,664
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,1477944,BBQ Ribs Co. (Virtual Brand)(228 George Street),NULL,Store Closure,Store Closure - Dasher Reported,99
+2026-02-01,2026-02-28,1477969,The Gyro Bar (1969 Bronxdale Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,1477969,The Gyro Bar (1969 Bronxdale Ave),NULL,Store Closure,Store Closure - Out of Business,120
+2026-02-01,2026-02-28,1497405,Halal Gyro Lab (Virtual Brand)(1760 3rd Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,1497417,Penny's Pancakes (1760 3rd Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,1518316,Local Breakfast Spot (755 9th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,1518324,Patricia's Paninis (Virtual Brand)(1760 3rd Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,1518347,Smoothie And Dessert Bar (755 9th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,1518350,The Burger Blade,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,1533181,Mary's Omelette Bar (300),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1533372,The Sandwich Cafe,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1556211,The Breakfast Dream (1117 Broadway),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,1556279,The Gyro Shop(Virtual Brand),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,1556279,The Gyro Shop(Virtual Brand),NULL,Store Closure,Store Closure - Dasher Reported,95
+2026-02-01,2026-02-28,1567795,The Pancake Spot,NULL,UNCATEGORIZED,N/A,9865
+2026-02-01,2026-02-28,1580519,Addictive Burger Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1580550,The Salad God(Virtual Brand),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1580568,Amore Italian Desserts,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1580759,Mama's Buffalo Wings,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1580781,Chuck's Cheesesteaks,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1581162,Ali's Gyro Lab,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,1581202,Ice Cream and Cake Shop(Virtual Brand),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1585823,Healthy Salad Bar,5423,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,4
+2026-02-01,2026-02-28,1591153,Charlie's Chicken Wings,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,1591183,Cheesecake And Dessert Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1592282,Ice Cream and Cake Shop(Virtual Brand),NULL,UNCATEGORIZED,N/A,19
+2026-02-01,2026-02-28,1595687,The Burrito Snob,128,UNCATEGORIZED,N/A,878
+2026-02-01,2026-02-28,1595687,The Burrito Snob,128,Store Closure,Store Closure - Dasher Reported,642
+2026-02-01,2026-02-28,1608268,Halal Cheesesteak Snob,NULL,UNCATEGORIZED,N/A,565
+2026-02-01,2026-02-28,1612008,Philly Cheesesteak Company,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1619022,Nancy's Grilled Cheese,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1619091,Healthy Salad Bar,1760,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,1667941,Philly Cheesesteak Artists(Virtual Brand),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,1714540,Pardon My Panini,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,1725679,Smoothie And Dessert Bar,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,484
+2026-02-01,2026-02-28,1725776,Empire State Panini,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,484
+2026-02-01,2026-02-28,1743781,The Valley Gyro Spot,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,1743858,Mario's Italian Ristorante,NULL,UNCATEGORIZED,N/A,147
+2026-02-01,2026-02-28,1744501,Wonderland Wraps,60-84,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,1767282,Midtown Quesadillas Snob,NULL,UNCATEGORIZED,N/A,1307
+2026-02-01,2026-02-28,1769351,Wonderland Wraps,217,UNCATEGORIZED,N/A,1798
+2026-02-01,2026-02-28,1769351,Wonderland Wraps,217,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1778083,Stan's Burger Bar,NULL,UNCATEGORIZED,N/A,87
+2026-02-01,2026-02-28,1783362,Golden Bear Sandwiches,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1785496,The Minister Wraps,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1786056,Wonderland Wraps (25-02 Queens Plaza S),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1790140,Sasha's Sandwiches (60-84 Fresh Pond Rd),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,842
+2026-02-01,2026-02-28,1790189,Burrito Lovers Bar (59 4th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1795228,Wonka's Smoothie Bar (59 4th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1803495,The Sandwich Slut,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1803513,The Village Smoothie Spot,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1824090,Brenda's Panini Palace,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1827403,Alberto's Hero Sandwich Spot,NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1833053,Antonio's Quesadilla Shack (240 Sullivan St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1834080,Sam's Sandwich Spot (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1834903,Manhattan Salad Bar (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1834918,The Juice Affair (240 Sullivan St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1834934,Julia's Juice Shack (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1834947,Greek Gyro Spot (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1834983,Headlines Mexican Spot (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1836485,The Panini Project (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,1860319,The Panini Project (59 4th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,1877090,Salvatore's Parmigiana Sandwiches (43 W Flagler St),NULL,Store Closure,Store Closure - Dasher Reported,352
+2026-02-01,2026-02-28,1897971,Cheers On Demand (2310 W Chapman Ave),NULL,Store Issue,Auto Pause - Tablet Detected Offline,13833
+2026-02-01,2026-02-28,1973260,Olivia's Breakfast Cafe (226 Newark Ave),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,2077780,Aldo's Wraps Spot (589 1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,855
+2026-02-01,2026-02-28,2101672,Princess Panini (589 1st Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,855
+2026-02-01,2026-02-28,2101672,Princess Panini (589 1st Ave),NULL,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,2102745,Despicable Wraps (300 8th Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Store Issue,Auto Pause - Tablet Detected Offline,2289
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,282
+2026-02-01,2026-02-28,2145951,Princess Panini (1741 1st Avenue),NULL,UNCATEGORIZED,N/A,1076
+2026-02-01,2026-02-28,2145951,Princess Panini (1741 1st Avenue),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,480
+2026-02-01,2026-02-28,2145966,Rooftop Sandwiches (169-03 Jamaica Ave),169-03,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,2145966,Rooftop Sandwiches (169-03 Jamaica Ave),169-03,Store Closure,Store Closure - Dasher Reported,501
+2026-02-01,2026-02-28,2162544,The Sandwich Vibe (1741 1st Avenue),1741,Store Closure,Store Closure - Bad Weather or Power Outage,480
+2026-02-01,2026-02-28,2162874,The Omelette Farm (1741 1st Avenue),1741,Store Closure,Store Closure - Bad Weather or Power Outage,480
+2026-02-01,2026-02-28,2230479,Despicable Wraps (1219 1st Avenue),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,2255754,Breakfast Burrito Floozy (S 101st E Ave),NULL,UNCATEGORIZED,N/A,682
+2026-02-01,2026-02-28,2255754,Breakfast Burrito Floozy (S 101st E Ave),NULL,Store Closure,Store Closure - Dasher Reported,44
+2026-02-01,2026-02-28,2269274,Day N Night Pancakes (Sullivan St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,2272754,The Gourmet Burger (S 101st E Ave),NULL,UNCATEGORIZED,N/A,696
+2026-02-01,2026-02-28,2273066,The Omelette Farm (Sullivan St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,2290794,Bagel Dynasty (330 W Broadway),NULL,Store Closure,Store Closure - Dasher Reported,258
+2026-02-01,2026-02-28,2290857,Antonio's Quesadilla Shack (Broadway),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,2291104,Mary's Omelette Bar (330 W Broadway),NULL,Store Closure,Store Closure - Dasher Reported,239
+2026-02-01,2026-02-28,2291207,Top Notch Sandwiches (330 W Broadway),NULL,Store Closure,Store Closure - Dasher Reported,380
+2026-02-01,2026-02-28,2291215,Hyde's Grilled Cheese (330 W Broadway),NULL,Store Closure,Store Closure - Dasher Reported,328
+2026-02-01,2026-02-28,2291215,Hyde's Grilled Cheese (330 W Broadway),NULL,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,2291401,Big E's Wraps (330 W Broadway),NULL,Store Closure,Store Closure - Dasher Reported,158
+2026-02-01,2026-02-28,2355648,Slapjack Pancakes (E Houston St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,2358047,Big Belly Paninis (Queens Plaza N),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,2359023,Mia's Quesadillas (Queens Plaza N),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,2359110,Toss N' Chop Salad Bar (Queens Plaza N),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,856
+2026-02-01,2026-02-28,2361507,Sip On Smoothie (Queens Plaza N),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,2400705,The Pasta Brothers (265 Bedford Ave),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,856
+2026-02-01,2026-02-28,2400705,The Pasta Brothers (265 Bedford Ave),NULL,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,2423067,Halal Gyro Lab (W 14th),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,851
+2026-02-01,2026-02-28,2428371,Good Planet Vegan Burgers (Hillcrest Ave),NULL,UNCATEGORIZED,N/A,299
+2026-02-01,2026-02-28,2428480,Milkshake And Dessert Bar (Hillcrest Ave),NULL,UNCATEGORIZED,N/A,299
+2026-02-01,2026-02-28,2440058,The Burger Passion (Hillcrest Ave),NULL,UNCATEGORIZED,N/A,298
+2026-02-01,2026-02-28,2459220,Toss N' Chop Salad Bar (Smith Rd),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,122
+2026-02-01,2026-02-28,2459220,Toss N' Chop Salad Bar (Smith Rd),NULL,Store Closure,Store Closure - Dasher Reported,22
+2026-02-01,2026-02-28,2477395,Viva Vegan Sandwiches (30th St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,2479531,Papa's Panini (30th St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,2487028,Big Ease Smoothies (30th St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,348
+2026-02-01,2026-02-28,2487370,Breakfast Sandwich Express (30th St),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,2548384,Stella's Pancake Bar (Broadway),NULL,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,2589150,Avocado N Toast Snob (Broadway),NULL,Store Issue,Unhealthy Operations Rate,6743
+2026-02-01,2026-02-28,2589150,Avocado N Toast Snob (Broadway),NULL,UNCATEGORIZED,N/A,787
+2026-02-01,2026-02-28,2589150,Avocado N Toast Snob (Broadway),NULL,Store Closure,Store Closure - Dasher Reported,153
+2026-02-01,2026-02-28,2605686,Twin Peaks Burger (Broadway),NULL,Store Issue,Unhealthy Operations Rate,8421
+2026-02-01,2026-02-28,2605686,Twin Peaks Burger (Broadway),NULL,UNCATEGORIZED,N/A,732
+2026-02-01,2026-02-28,2705628,The Calzone Empire (Broad St),2705628,UNCATEGORIZED,N/A,1139
+2026-02-01,2026-02-28,2849774,Penny's Pancakes (Hillside Ave),2849774,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,2849804,Fiesta Mexican Spot (Hillside Ave),2849804,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,2849819,Top Panini Shop (Hillside Ave),2849819,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,2849967,The Chopped Salad (Hillside Ave),2849967,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,22921336,Toss N' Chop Salad Bar (Lawrence Expy),22921336,Store Issue,Auto Pause - Tablet Detected Offline,501
+2026-02-01,2026-02-28,22932399,The American Cheesesteaks (Polk St),22932399,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,22988570,The Minister Wraps (Michelson Dr),22988570,UNCATEGORIZED,N/A,420
+2026-02-01,2026-02-28,23007040,The Breakfast Dream (9th Ave),23007040,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,23007066,The Smoothie Squeeze (450 9th Ave),23007066,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,23007130,NY Dessert Bar (9th Ave),23007130,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,23026068,Arifs Mediterranean Grill (Bedford Ave),23026068,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23026068,Arifs Mediterranean Grill (Bedford Ave),23026068,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,23026166,Penny's Pancakes (Bedford Ave),23026166,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,23026166,Penny's Pancakes (Bedford Ave),23026166,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,23026219,Casa Pasta Ristorante (Bedford Ave),23026219,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23026219,Casa Pasta Ristorante (Bedford Ave),23026219,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,23026318,Village Quesadilla (Bedford Ave),23026318,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23026318,Village Quesadilla (Bedford Ave),23026318,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,23038686,Jr's Philly Cheesesteaks (Queens Plaza),23038686,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23038832,Amanda's Breakfast Lounge (Queens Plaza),23038832,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23038920,Firenze Pasta Ristorante (Queens Plaza),23038920,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23038937,Sal's Smoothie Spot (Queens Plaza),23038937,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23045921,Pita Sandwich Bite (George St),23045921,Store Closure,Store Closure - Dasher Reported,97
+2026-02-01,2026-02-28,23056011,The Gyro Brothers (E 125th St),23056011,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,23056011,The Gyro Brothers (E 125th St),23056011,Store Closure,Store Closure - Dasher Reported,127
+2026-02-01,2026-02-28,23056011,The Gyro Brothers (E 125th St),23056011,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,59
+2026-02-01,2026-02-28,23059274,Halal Chicken Spot (Jamaica Ave),23059274,Store Closure,Store Closure - Bad Weather or Power Outage,1451
+2026-02-01,2026-02-28,23060296,Bain's Burger Bar (Jamaica Ave),23060296,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23060304,The Juice Empire (9th Ave),23060304,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23060370,Grilled Cheese Ecstatic (9th Ave),23060370,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23085448,Chef Hanoka Sushi (W Greenway Rd),23085448,UNCATEGORIZED,N/A,15
+2026-02-01,2026-02-28,23085566,Linh's Chinese Restaurant (W Greenway Rd),23085566,UNCATEGORIZED,N/A,20
+2026-02-01,2026-02-28,23085594,Nakamura Ramen House (W Greenway Rd),23085594,UNCATEGORIZED,N/A,10
+2026-02-01,2026-02-28,23085625,Chef Hanoka Sushi (W Peoria Ave),23085625,Store Closure,Store Closure - Dasher Reported,629
+2026-02-01,2026-02-28,23085625,Chef Hanoka Sushi (W Peoria Ave),23085625,UNCATEGORIZED,N/A,33
+2026-02-01,2026-02-28,23085637,Kung Fu Chinese Kitchen (W Greenway Rd),23085637,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,23085637,Kung Fu Chinese Kitchen (W Greenway Rd),23085637,UNCATEGORIZED,N/A,10
+2026-02-01,2026-02-28,23085638,Nakamura Ramen House (W Peoria Ave),23085638,Store Closure,Store Closure - Dasher Reported,644
+2026-02-01,2026-02-28,23085638,Nakamura Ramen House (W Peoria Ave),23085638,UNCATEGORIZED,N/A,42
+2026-02-01,2026-02-28,23085722,Nakamura Ramen House (W Indian School Rd),23085722,UNCATEGORIZED,N/A,108
+2026-02-01,2026-02-28,23087583,Master Yamamoto Ramen Bar (E Bell Rd),23087583,UNCATEGORIZED,N/A,2007
+2026-02-01,2026-02-28,23087616,The Chinese Noodle Palace (S Higley Rd),23087616,Store Closure,Store Closure - Dasher Reported,589
+2026-02-01,2026-02-28,23106170,The Pancake Flip (Broadway),23106170,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23106174,The Minister Wraps (Broadway),23106174,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23106184,High Life Breakfast Sandwiches (Chapel St),23106184,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,23134804,Lola's Smoothie Mix (Hillside Ave),23134804,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,23134814,The Burger Bae (E 172nd St),23134814,UNCATEGORIZED,N/A,10668
+2026-02-01,2026-02-28,23134820,The Bagel Savage (Hillside Ave),23134820,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,23134821,Jr's Philly Cheesesteaks (Hillside Ave),23134821,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,23134862,Casa De Quesadilla (Avenue A),23134862,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,23134903,Muf's Muffin Shop (Hillside Ave),23134903,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,23135397,Pardon My Panini (Queens Plaza S),23135397,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,23268670,Fried Munchies Shack (3rd Ave),23268670,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,23280263,Julia's Juice Shack (Sullivan St),23280263,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,23280271,Chicken Salad Bar (Sullivan St),23280271,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23326403,Grilled Cheese Ecstatic (Sullivan St),23326403,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23328728,Sunrise Breakfast Club (Sullivan St),23328728,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23367132,Mighty Grilled Cheese (1760 3rd Ave),23367132,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23367234,Jewel's Breakfast Joint (Broadway),23367234,Store Closure,Store Closure - Dasher Reported,911
+2026-02-01,2026-02-28,23367290,Grilled Cheese Ecstatic (E 8th St),23367290,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,23367545,Mama's Buffalo Wings (E 8th St),23367545,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23423347,Big Ease Smoothies  (1117 Broadway),23423347,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,23423347,Big Ease Smoothies  (1117 Broadway),23423347,Store Closure,Store Closure - Dasher Reported,171
+2026-02-01,2026-02-28,23549308,Toast N Roast Breakfast Sandwiches (590 32nd St),23549308,UNCATEGORIZED,N/A,87
+2026-02-01,2026-02-28,23549395,Jewel's Breakfast Joint (937 1st Avenue),23549395,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23549534,The Sandwich Doctor (83 Canal St #6019),23549534,UNCATEGORIZED,N/A,832
+2026-02-01,2026-02-28,23549534,The Sandwich Doctor (83 Canal St #6019),23549534,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,23549635,Notch My Sandwich (147 1st Ave),23549635,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23549638,The Omelette Farm (147 1st Ave),23549638,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23549641,Angelo's Wraps Shop (147 1st Ave),23549641,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23549662,Hill Top Sandwich (433 W 34th st),23549662,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23549667,Marty's Wraps Shack (433 W 34th st),23549667,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23549668,Glorious Panini Snob (433 W 34th st),23549668,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23556050,The Burrito Bae (4th Ave),23556050,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,23556079,Doughboys Sandwiches (4th Ave),23556079,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,23556081,The French Toast Flip (4th Ave),23556081,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,23556771,Bagel Dynasty (34-02 30th St),23556771,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,23556864,NY Dessert Bar (34-02 30th St),23556864,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,23556936,Arifs Mediterranean Grill (1969 Bronxdale Ave),23556936,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23556936,Arifs Mediterranean Grill (1969 Bronxdale Ave),23556936,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,23557041,Salad Kreation (1969 Bronxdale Ave),23557041,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23557145,Chef Hanoka Sushi (2575 North Hollywood Way #107),23557145,UNCATEGORIZED,N/A,15
+2026-02-01,2026-02-28,23557148,Asian Garden Rice Bowls (2575 North Hollywood Way #107),23557148,UNCATEGORIZED,N/A,15
+2026-02-01,2026-02-28,23557166,Nakamura Ramen House (2575 North Hollywood Way #107),23557166,UNCATEGORIZED,N/A,15
+2026-02-01,2026-02-28,23557518,Savage Juice Bar (2755 Broadway),23557518,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23557521,Village Wraps Snob (2755 Broadway),23557521,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,23557659,Farmer Girl Salad (301 W 96th St),23557659,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23557660,Sunrise Coffee Express (301 W 96th St),23557660,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23557667,Che Breakfast Cafe (301 W 96th St),23557667,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23558081,Sizzlin' Hibachi (2575 North Hollywood Way #107),23558081,UNCATEGORIZED,N/A,19
+2026-02-01,2026-02-28,23558171,Prime Burger Lounge (301 W 96th St),23558171,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23692696,Alberto's Hero Sandwich Spot (1201 Randall Avenue),23692696,Store Closure,Store Closure - Bad Weather or Power Outage,405
+2026-02-01,2026-02-28,23692944,Olivia's Omelettes (1201 Randall Avenue),23692944,Store Closure,Store Closure - Bad Weather or Power Outage,375
+2026-02-01,2026-02-28,23693111,Country Southern Diner (1201 Randall Avenue),23693111,Store Closure,Store Closure - Bad Weather or Power Outage,375
+2026-02-01,2026-02-28,23693129,City Light Wraps (1201 Randall Avenue),23693129,Store Closure,Store Closure - Bad Weather or Power Outage,375
+2026-02-01,2026-02-28,23784492,Olivia's Breakfast Cafe (433 W 34th st),23784492,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23784999,Wraps On Tap (769 9th Ave #1),23784999,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23785119,Nomad's Bagels (433 W 34th st),23785119,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,23906725,Sal's Smoothie Spot (5993 Broadway),23906725,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23906729,Sam's Sandwich Spot (5993 Broadway),23906729,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23906819,The Gyro Snob (7126 N 35th ave),23906819,UNCATEGORIZED,N/A,30
+2026-02-01,2026-02-28,23906822,Nomad's Bagels (1741 1st Avenue),23906822,Store Closure,Store Closure - Bad Weather or Power Outage,490
+2026-02-01,2026-02-28,23906937,Aldo's Wraps Spot (1741 1st Avenue),23906937,Store Closure,Store Closure - Bad Weather or Power Outage,490
+2026-02-01,2026-02-28,23907042,Top Panini Shop (1424 Lexington Ave),23907042,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23907051,NY Smoothie Joint (1741 1st Avenue),23907051,Store Closure,Store Closure - Bad Weather or Power Outage,485
+2026-02-01,2026-02-28,23907282,The Gyro Bar (8770 E McDowell Rd),23907282,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,23984095,The Omelette Farm (769 9th Ave #1),23984095,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23984324,Savage Juice Bar (769 9th Ave #1),23984324,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,23984324,Savage Juice Bar (769 9th Ave #1),23984324,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,24051979,The Breakfast Dream (6611 S 101st E Ave),24051979,UNCATEGORIZED,N/A,695
+2026-02-01,2026-02-28,24099355,Casa De Quesadilla (730 Astor Ave),24099355,Store Closure,Store Closure - Dasher Reported,833
+2026-02-01,2026-02-28,24099355,Casa De Quesadilla (730 Astor Ave),24099355,Store Closure,Store Closure - Bad Weather or Power Outage,45
+2026-02-01,2026-02-28,24099579,Quick Bite Munchies (278 N. Brewster Rd),24099579,UNCATEGORIZED,N/A,268
+2026-02-01,2026-02-28,24194387,Sal's Smoothie Spot (265 Bedford Ave),24194387,Store Closure,Store Closure - Bad Weather or Power Outage,839
+2026-02-01,2026-02-28,24194630,The Minister Wraps (265 Bedford Ave),24194630,Store Closure,Store Closure - Bad Weather or Power Outage,839
+2026-02-01,2026-02-28,24194631,The Gyro Bar (319 Rogers Ave),24194631,Store Closure,Store Closure - Bad Weather or Power Outage,554
+2026-02-01,2026-02-28,24194631,The Gyro Bar (319 Rogers Ave),24194631,Store Closure,Store Closure - Dasher Reported,36
+2026-02-01,2026-02-28,24194633,Olivia's Breakfast Cafe (319 Rogers Ave),24194633,Store Closure,Store Closure - Bad Weather or Power Outage,554
+2026-02-01,2026-02-28,24227750,Dangerous Ice Cream (34-02 30th St),24227750,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,24257608,Mediterranean Salad Chop (197 Havemeyer St.),24257608,Store Closure,Store Closure - Bad Weather or Power Outage,513
+2026-02-01,2026-02-28,24257608,Mediterranean Salad Chop (197 Havemeyer St.),24257608,Store Closure,Store Closure - Dasher Reported,44
+2026-02-01,2026-02-28,24328785,Henry's Chicken Wings (4663 Trousdale Dr),24328785,Store Closure,Store Closure - Dasher Reported,121
+2026-02-01,2026-02-28,24387639,Casa Pasta Ristorante (1 Kedron Ave Unit 4),24387639,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,24387639,Casa Pasta Ristorante (1 Kedron Ave Unit 4),24387639,Store Closure,Store Closure - Dasher Reported,11
+2026-02-01,2026-02-28,24438109,Salads N Soups Station (615 Town Square Blvd),24438109,UNCATEGORIZED,N/A,1655
+2026-02-01,2026-02-28,24438169,Stromboli House (1634 W High St),24438169,UNCATEGORIZED,N/A,32
+2026-02-01,2026-02-28,24506648,Livia's Mediterranean Table (1849 N Scottsdale Rd),24506648,Store Closure,Store Closure - Dasher Reported,212
+2026-02-01,2026-02-28,24556139,House of Paninis (5993 Broadway),24556139,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,24556140,Lucy's Pancake Bar (5993 Broadway),24556140,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,24556141,Grandma's Breakfast Sandwiches (5993 Broadway),24556141,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,24556142,Marty's Wraps Shack (5993 Broadway),24556142,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,24556145,Glorious Panini Snob (330 W Broadway),24556145,Store Closure,Store Closure - Dasher Reported,533
+2026-02-01,2026-02-28,24556167,Coffee Crema Snob (769 9th Ave #1),24556167,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,24556171,Luke's Breakfast Wraps (769 9th Ave #1),24556171,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,24556258,The Cheeseburger Paradise (5993 Broadway),24556258,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,24606369,Amal's Flatbread Recipe (1849 N Scottsdale Rd),24606369,Store Closure,Store Closure - Dasher Reported,31
+2026-02-01,2026-02-28,24636919,Fresh Seafood House (226 Newark Ave),24636919,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,24637114,Farmer's Village Breakfast (34-02 30th St),24637114,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,24703825,Middle East Wraps - 750 East Main St,24703825,Store Closure,Store Closure - Dasher Reported,42
+2026-02-01,2026-02-28,24703825,Middle East Wraps - 750 East Main St,24703825,UNCATEGORIZED,N/A,5
+2026-02-01,2026-02-28,24703929,Pita Sandwich Bite (601 Shell Beach Rd),24703929,UNCATEGORIZED,N/A,60
+2026-02-01,2026-02-28,24703993,Anne's Artisan Coffee  (682 Morris Park Avenue),24703993,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,24704002,City Light Wraps (1947 E Main St),24704002,UNCATEGORIZED,N/A,642
+2026-02-01,2026-02-28,24770396,Cameron's Breakfast Cafe (38-01 Vernon Boulevard),24770396,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,24770396,Cameron's Breakfast Cafe (38-01 Vernon Boulevard),24770396,UNCATEGORIZED,N/A,93
+2026-02-01,2026-02-28,24770405,Tessa's Fruity Treats  (1741 1st Avenue),24770405,UNCATEGORIZED,N/A,1070
+2026-02-01,2026-02-28,24770405,Tessa's Fruity Treats  (1741 1st Avenue),24770405,Store Closure,Store Closure - Bad Weather or Power Outage,485
+2026-02-01,2026-02-28,24770455,Anne's Artisan Coffee (689 Broadway),24770455,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,24770466,The Acai Dream  (689 Broadway),24770466,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,24770468,Aldo's Wraps Spot (689 Broadway),24770468,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,24844776,Chanel's Coffee House (26801 Hillside Ave),24844776,Store Closure,Store Closure - Bad Weather or Power Outage,420
+2026-02-01,2026-02-28,24844871,Stella's Pancake Bar (26801 Hillside Ave),24844871,Store Closure,Store Closure - Bad Weather or Power Outage,420
+2026-02-01,2026-02-28,24844931,Sip On Smoothie (26801 Hillside Ave),24844931,Store Closure,Store Closure - Bad Weather or Power Outage,435
+2026-02-01,2026-02-28,24854759,Queen's Quesadillas (689 Broadway),24854759,Store Closure,Store Closure - Bad Weather or Power Outage,839
+2026-02-01,2026-02-28,24854827,Addictive Burger Bar (689 Broadway),24854827,Store Closure,Store Closure - Bad Weather or Power Outage,839
+2026-02-01,2026-02-28,24899866,Fierce Chicken Sandwich (226 1/2 Newark Ave),24899866,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,24899981,Bosscat Wings (226 1/2 Newark Ave),24899981,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,24920642,Jen's Burger Blaze (2560 West Chester Pike),24920642,UNCATEGORIZED,N/A,179
+2026-02-01,2026-02-28,24931355,K's Slice of Cake (26801 Hillside Ave),24931355,Store Closure,Store Closure - Bad Weather or Power Outage,419
+2026-02-01,2026-02-28,24974708,Nancy's Desserts (555 CA-17),24974708,UNCATEGORIZED,N/A,14
+2026-02-01,2026-02-28,24974719,The Calzone Empire (7121 West US Highway 90 Suite #210),24974719,UNCATEGORIZED,N/A,2273
+2026-02-01,2026-02-28,24974898,Fried Chicken Savage (555 CA-17),24974898,UNCATEGORIZED,N/A,14
+2026-02-01,2026-02-28,25079045,Kung Fu Fried Rice (4957 Winters Chapel Rd Suite B),25079045,UNCATEGORIZED,N/A,808
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,UNCATEGORIZED,N/A,808
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Store Closure,Store Closure - Dasher Reported,76
+2026-02-01,2026-02-28,25129904,High Life Breakfast Sandwiches (612 11th Ave),25129904,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,25130119,Alberto's Hero Sandwich Spot  (840 Fulton St),25130119,Store Closure,Store Closure - Bad Weather or Power Outage,427
+2026-02-01,2026-02-28,25130127,Bosscat Breakfast (1306 Atlantic Ave),25130127,Store Closure,Store Closure - Bad Weather or Power Outage,546
+2026-02-01,2026-02-28,25130156,Evan's Burger Empire (877 10th Ave),25130156,Store Closure,Store Closure - Dasher Reported,1538
+2026-02-01,2026-02-28,25130156,Evan's Burger Empire (877 10th Ave),25130156,Store Closure,Store Closure - Bad Weather or Power Outage,486
+2026-02-01,2026-02-28,25130156,Evan's Burger Empire (877 10th Ave),25130156,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,25130173,Burning Burger Stack  (1306 Atlantic Ave),25130173,Store Closure,Store Closure - Bad Weather or Power Outage,546
+2026-02-01,2026-02-28,25130177,CJ's Breakfast Sandwich (596 3rd Ave),25130177,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,25130204,Celines Salad Bar (840 Fulton St),25130204,Store Closure,Store Closure - Bad Weather or Power Outage,427
+2026-02-01,2026-02-28,25130218,Green Leaf Salads (1306 Atlantic Ave),25130218,Store Closure,Store Closure - Bad Weather or Power Outage,546
+2026-02-01,2026-02-28,25130231,The Sandwich Vibe (1306 Atlantic Ave),25130231,Store Closure,Store Closure - Bad Weather or Power Outage,546
+2026-02-01,2026-02-28,25295355,The Pizza Flip (115-20 Queens Blvd),25295355,UNCATEGORIZED,N/A,810
+2026-02-01,2026-02-28,25295355,The Pizza Flip (115-20 Queens Blvd),25295355,Store Closure,Store Closure - Bad Weather or Power Outage,375
+2026-02-01,2026-02-28,25295448,Amanda's Breakfast Lounge (111 E 161 St),25295448,Store Closure,Store Closure - Bad Weather or Power Outage,855
+2026-02-01,2026-02-28,25295455,Golden Bear Sandwiches (111 E 161 St),25295455,Store Closure,Store Closure - Bad Weather or Power Outage,855
+2026-02-01,2026-02-28,25295599,Prime Burger Lounge (111 E 161 St),25295599,Store Closure,Store Closure - Bad Weather or Power Outage,855
+2026-02-01,2026-02-28,25404572,Frankie's Burger Bar (3 West Fordham Rd.),25404572,Store Closure,Store Closure - Bad Weather or Power Outage,480
+2026-02-01,2026-02-28,25404900,Arturo's Burrito Bowls (3 West Fordham Rd),25404900,Store Closure,Store Closure - Bad Weather or Power Outage,450
+2026-02-01,2026-02-28,26000460,Gooey Mac N cheez (W Jefferson),26000460,Store Closure,Store Closure - Dasher Reported,20
+2026-02-01,2026-02-28,26000771,The Indian Spice Palace (3005 36th Ave),26000771,Store Closure,Store Closure - Dasher Reported,962
+2026-02-01,2026-02-28,26000771,The Indian Spice Palace (3005 36th Ave),26000771,Store Closure,Store Closure - Bad Weather or Power Outage,436
+2026-02-01,2026-02-28,26000771,The Indian Spice Palace (3005 36th Ave),26000771,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,26152960,Two Hand Burger (97 Lexington Ave),26152960,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,26152963,Toast N Roast Breakfast Sandwiches (97 Lexington Ave),26152963,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,26152966,Chicken Sandwich Loft (97 Lexington Ave),26152966,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,26153026,Fine Line Desserts (12453 Oxnard St),26153026,UNCATEGORIZED,N/A,147
+2026-02-01,2026-02-28,26174718,SugarSlice Cakes,26174718,UNCATEGORIZED,N/A,2712
+2026-02-01,2026-02-28,26174718,SugarSlice Cakes,26174718,Store Too Busy,Store Too Busy,676
+2026-02-01,2026-02-28,26174821,Chicken Sandwich Loft,26174821,UNCATEGORIZED,N/A,674
+2026-02-01,2026-02-28,26174821,Chicken Sandwich Loft,26174821,Store Too Busy,Store Too Busy,640
+2026-02-01,2026-02-28,26175096,The Mac and Cheese Co,26175096,Store Too Busy,Store Too Busy,995
+2026-02-01,2026-02-28,26175096,The Mac and Cheese Co,26175096,UNCATEGORIZED,N/A,675
+2026-02-01,2026-02-28,26175160,Frank's Philly Cheesesteaks,26175160,Store Too Busy,Store Too Busy,786
+2026-02-01,2026-02-28,26175160,Frank's Philly Cheesesteaks,26175160,UNCATEGORIZED,N/A,701
+2026-02-01,2026-02-28,26209885,Hyde's Grilled Cheese,26209885,UNCATEGORIZED,N/A,5
+2026-02-01,2026-02-28,26291987,Seth's Sandwiches (4083 Broadway),26291987,Store Closure,Store Closure - Bad Weather or Power Outage,253
+2026-02-01,2026-02-28,26292097,Chicken Sandwich Loft (751 Post Road),26292097,UNCATEGORIZED,N/A,541
+2026-02-01,2026-02-28,26292110,First Light Breakfast Cafe (101 Guyon Ave),26292110,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,26292279,Doughboys Sandwiches (101 Guyon Ave),26292279,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,26344247,Green Leaf Salads (2614 Lebanon Pike),26344247,UNCATEGORIZED,N/A,719
+2026-02-01,2026-02-28,27456448,NextBagel (1225 Amsterdam Ave),27456448,Store Closure,Store Closure - Bad Weather or Power Outage,479
+2026-02-01,2026-02-28,27478242,Exquisite Poke Bowls (5021 Verdugo Way #109-A),27478242,Store Too Busy,Store Too Busy,7
+2026-02-01,2026-02-28,27556052,Paulo's Pizza (16965 Monterey Hwy #106D),27556052,UNCATEGORIZED,N/A,479
+2026-02-01,2026-02-28,27556354,Prima Panini Bar (16965 Monterey Hwy #106D),27556354,UNCATEGORIZED,N/A,469
+2026-02-01,2026-02-28,27556354,Prima Panini Bar (16965 Monterey Hwy #106D),27556354,Store Closure,Store Closure - Dasher Reported,357
+2026-02-01,2026-02-28,27667568,Bosscat Wraps (309 7th Ave),27667568,Store Closure,Store Closure - Bad Weather or Power Outage,458
+2026-02-01,2026-02-28,27667595,Original Burger Bar (309 7th Ave),27667595,Store Closure,Store Closure - Bad Weather or Power Outage,463
+2026-02-01,2026-02-28,27667602,The Bagel Savage (309 7th Ave),27667602,Store Closure,Store Closure - Bad Weather or Power Outage,458
+2026-02-01,2026-02-28,27682027,Wonderland Wraps (400 Commons Way Unit 3500),27682027,Store Issue,Auto Pause - Tablet Detected Offline,562
+2026-02-01,2026-02-28,27682027,Wonderland Wraps (400 Commons Way Unit 3500),27682027,Store Too Busy,Store Too Busy,34
+2026-02-01,2026-02-28,27682605,Luna's Loaded Fries (4352 E Speedway Blvd),27682605,UNCATEGORIZED,N/A,119
+2026-02-01,2026-02-28,27682669,The Burrito Co (4352 E Speedway Blvd),27682669,UNCATEGORIZED,N/A,119
+2026-02-01,2026-02-28,27682669,The Burrito Co (4352 E Speedway Blvd),27682669,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,27741698,Chop & Dice Salads (415 E Windmill Ln),27741698,UNCATEGORIZED,N/A,268
+2026-02-01,2026-02-28,27741749,Wonderland Wraps (415 E Windmill Lane),27741749,UNCATEGORIZED,N/A,347
+2026-02-01,2026-02-28,27741754,Carmen's Breakfast Burritos (415 E Windmill Ln),27741754,UNCATEGORIZED,N/A,327
+2026-02-01,2026-02-28,27741795,Casa De Quesadilla (415 E Windmill Ln),27741795,UNCATEGORIZED,N/A,318
+2026-02-01,2026-02-28,27741795,Casa De Quesadilla (415 E Windmill Ln),27741795,Store Closure,Store Closure - Dasher Reported,55
+2026-02-01,2026-02-28,27741910,Little Italy's Calzones (415 E Windmill Lane),27741910,UNCATEGORIZED,N/A,376
+2026-02-01,2026-02-28,27741910,Little Italy's Calzones (415 E Windmill Lane),27741910,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,27833963,The Acai Dream (34-02 30th St),27833963,Store Closure,Store Closure - Bad Weather or Power Outage,301
+2026-02-01,2026-02-28,28605460,Amanda's Breakfast Lounge (277 Gold Street),28605460,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,28607208,The Pasta Story (43 W Flagler St),28607208,Store Closure,Store Closure - Dasher Reported,195
+2026-02-01,2026-02-28,28607943,Breakfast Burrito Joint (128 East 4th Street),28607943,UNCATEGORIZED,N/A,1307
+2026-02-01,2026-02-28,28607943,Breakfast Burrito Joint (128 East 4th Street),28607943,Store Closure,Store Closure - Dasher Reported,60
+2026-02-01,2026-02-28,31313343,BigLeaf Salads (18300 Vanowen Street Suite 3),31313343,UNCATEGORIZED,N/A,346
+2026-02-01,2026-02-28,31313605,Lettuce N Greens (257 Water Street),31313605,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,31313617,Chicken Sandwich Loft (196 1st Ave),31313617,UNCATEGORIZED,N/A,473
+2026-02-01,2026-02-28,31313617,Chicken Sandwich Loft (196 1st Ave),31313617,Store Closure,Store Closure - Bad Weather or Power Outage,314
+2026-02-01,2026-02-28,31313633,Bosscat Burgers (196 1st Ave),31313633,UNCATEGORIZED,N/A,473
+2026-02-01,2026-02-28,31313633,Bosscat Burgers (196 1st Ave),31313633,Store Closure,Store Closure - Bad Weather or Power Outage,314
+2026-02-01,2026-02-28,31313647,Stella's Slammin' Burgers (303 East 9th Street),31313647,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,31313749,NextBagel (196 1st Ave),31313749,UNCATEGORIZED,N/A,473
+2026-02-01,2026-02-28,31313749,NextBagel (196 1st Ave),31313749,Store Closure,Store Closure - Bad Weather or Power Outage,314
+2026-02-01,2026-02-28,31313807,Blake's Dessert Lounge (190 Hillside Rd),31313807,UNCATEGORIZED,N/A,684
+2026-02-01,2026-02-28,31313819,Jen's Burger Blaze (18300 Vanowen Street Suite 3),31313819,UNCATEGORIZED,N/A,429
+2026-02-01,2026-02-28,31313829,Leon's Legendary Pizza (1595 Seminole Blvd),31313829,UNCATEGORIZED,N/A,686
+2026-02-01,2026-02-28,31313887,Sun's Up Breakfast Wraps (257 Water Street),31313887,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,31313941,Green Vibes Salad (303 East 9th Street),31313941,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,31313963,The Fried Chicken Crave (1338 Polk St),31313963,UNCATEGORIZED,N/A,577
+2026-02-01,2026-02-28,31313981,Antonio's Quesadilla Shack (4352 E Speedway Blvd),31313981,UNCATEGORIZED,N/A,119
+2026-02-01,2026-02-28,31314233,First Light Breakfast Cafe (303 East 9th Street),31314233,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,31314345,The American Vegan Burger (1338 Polk St),31314345,UNCATEGORIZED,N/A,574
+2026-02-01,2026-02-28,31314365,The Calzone Empire (18300 Vanowen Street Suite 3),31314365,UNCATEGORIZED,N/A,430
+2026-02-01,2026-02-28,31463157,TacoTaste Mexican (1st Avenue),31463157,Store Closure,Store Closure - Bad Weather or Power Outage,480
+2026-02-01,2026-02-28,31525301,The Juice Affair (Broadway),31525301,Store Issue,Unhealthy Operations Rate,12948
+2026-02-01,2026-02-28,31535783,Scotty's Bagel Express (Chapel St),31535783,Store Closure,Store Closure - Dasher Reported,88
+2026-02-01,2026-02-28,31536859,Empire State Panini (Broadway),31536859,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,31547931,Luke's Breakfast Club (Caton Ave),31547931,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,31561737,Luca's Philly Cheesesteak (Metropolitan Ave),31561737,Store Closure,Store Closure - Merchant Reported,1425
+2026-02-01,2026-02-28,31561737,Luca's Philly Cheesesteak (Metropolitan Ave),31561737,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,31577141,Addictive Burger Bar (1428 Polk St),31577141,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,31577141,Addictive Burger Bar (1428 Polk St),31577141,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,31577147,Chicken Sandwich Loft (128 East 4th Street),31577147,UNCATEGORIZED,N/A,1307
+2026-02-01,2026-02-28,31619812,The Smoothie Squeeze (128 East 4th Street),31619812,UNCATEGORIZED,N/A,1307
+2026-02-01,2026-02-28,31619812,The Smoothie Squeeze (128 East 4th Street),31619812,Store Closure,Store Closure - Dasher Reported,60
+2026-02-01,2026-02-28,31635709,La Puebla Quesadilla (1424 Lexington Ave),31635709,UNCATEGORIZED,N/A,1289
+2026-02-01,2026-02-28,31635709,La Puebla Quesadilla (1424 Lexington Ave),31635709,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,31635793,Harry's Sandwich House (1424 Lexington Ave),31635793,UNCATEGORIZED,N/A,1289
+2026-02-01,2026-02-28,31635793,Harry's Sandwich House (1424 Lexington Ave),31635793,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,31636141,House of Paninis (1424 Lexington Ave),31636141,UNCATEGORIZED,N/A,1289
+2026-02-01,2026-02-28,31636141,House of Paninis (1424 Lexington Ave),31636141,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,31636171,The Dessert Dream (245 E Houston St),31636171,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,31636171,The Dessert Dream (245 E Houston St),31636171,UNCATEGORIZED,N/A,844
+2026-02-01,2026-02-28,31636291,The Smooth Eaze (1424 Lexington Ave),31636291,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,31636291,The Smooth Eaze (1424 Lexington Ave),31636291,UNCATEGORIZED,N/A,766
+2026-02-01,2026-02-28,31661381,Bagel Dynasty (Fulton St),31661381,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,31661381,Bagel Dynasty (Fulton St),31661381,UNCATEGORIZED,N/A,124
+2026-02-01,2026-02-28,31671729,Pedro's Burrito Bar (4352 E Speedway Blvd),31671729,UNCATEGORIZED,N/A,119
+2026-02-01,2026-02-28,31671737,The Cali Calzone (2624 Pico Blvd),31671737,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,31671943,Lola's Smoothie Mix (Metropolitan Ave),31671943,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,31671965,K's Slice of Cake (18300 Vanowen Street Suite 3),NULL,UNCATEGORIZED,N/A,419
+2026-02-01,2026-02-28,31672166,The Juice Empire (Broadway),31672166,Store Closure,Store Closure - Bad Weather or Power Outage,851
+2026-02-01,2026-02-28,31672379,The Fried Chicken Crave (1741 1st Ave),31672379,Store Closure,Store Closure - Bad Weather or Power Outage,491
+2026-02-01,2026-02-28,32863688,Salad Kreation (5993 Broadway),32863688,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863707,Sizzlin' Omelette Cafe (257 Gold St),32863707,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,32863721,Sizzlin' Omelette Cafe (101 Plaza Center),32863721,UNCATEGORIZED,N/A,321
+2026-02-01,2026-02-28,32863729,The Burger Blade (4234 Broadway),32863729,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863729,The Burger Blade (4234 Broadway),32863729,UNCATEGORIZED,N/A,16
+2026-02-01,2026-02-28,32863731,The Burger Blade (682 Morris Park Avenue),32863731,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,32863731,The Burger Blade (682 Morris Park Avenue),32863731,UNCATEGORIZED,N/A,165
+2026-02-01,2026-02-28,32863767,Local Pizza Boy (1116 Polk St),32863767,UNCATEGORIZED,N/A,77
+2026-02-01,2026-02-28,32863770,Amore Pasta Ristorante (2909A Queens Plaza North),32863770,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863821,Daybreak Breakfast Club (168 Myrtle Ave),32863821,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863823,French Omelette Bar (164-01 Hillside Ave),32863823,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863837,Fiona's Breakfast Burritos (277 Gold Street),32863837,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863839,Fresh N Fruity Smoothies (382 8th Ave),32863839,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863841,Gourmet Omelette Bar (2909A Queens Plaza North),32863841,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863849,Holly's Burger Bar,32863849,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863859,Jacks Cheesesteaks (382 8th Ave),32863859,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863867,Mary's Chicken Sandwiches (265 Bedford Ave),32863867,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863869,Mary's Chicken Sandwiches (257 Gold St),32863869,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863871,Bart's Breakfast Sandwiches (265 Bedford Ave),32863871,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32863877,Fierce Chicken Sandwich (590 32nd St),32863877,UNCATEGORIZED,N/A,87
+2026-02-01,2026-02-28,32882529,The Pasta Brothers (589 1st Avenue),32882529,Store Closure,Store Closure - Bad Weather or Power Outage,844
+2026-02-01,2026-02-28,32882529,The Pasta Brothers (589 1st Avenue),32882529,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,32918455,Wonderland Wraps  (3661 Broadway),32918455,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,32918457,Wonderland Wraps  (468 9th Ave),32918457,Store Closure,Store Closure - Bad Weather or Power Outage,513
+2026-02-01,2026-02-28,32921997,101 Hummus,NULL,Store Issue,Auto Pause - Tablet Detected Offline,209
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Store Closure,Store Closure - Dasher Reported,364
+2026-02-01,2026-02-28,32923019,Beeman's Burger Bar (93 Avenue A),32923019,Store Closure,Store Closure - Bad Weather or Power Outage,570
+2026-02-01,2026-02-28,32923077,Blake's Bubblin' Mac (3955 Bronxwood Ave),32923077,Store Closure,Store Closure - Bad Weather or Power Outage,169
+2026-02-01,2026-02-28,32923083,Blanca's Breakfast Bites (4083 Broadway),32923083,Store Closure,Store Closure - Bad Weather or Power Outage,439
+2026-02-01,2026-02-28,32923083,Blanca's Breakfast Bites (4083 Broadway),32923083,UNCATEGORIZED,N/A,57
+2026-02-01,2026-02-28,32923293,Breakfast N Vibe (4234 Broadway),32923293,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,32923301,Breakfast Sandwich Express (5993 Broadway),32923301,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,32923453,Carmen's Breakfast Burritos (1201 Randall Avenue),32923453,Store Closure,Store Closure - Bad Weather or Power Outage,375
+2026-02-01,2026-02-28,32923607,Doughboys Sandwiches (1268 W 86th St),32923607,UNCATEGORIZED,N/A,268
+2026-02-01,2026-02-28,32926571,EZ Cheesesteaks (3846 Mowry Ave),32926571,Store Closure,Store Closure - Dasher Reported,104
+2026-02-01,2026-02-28,32927159,Golden Bear Sandwiches (277 Gold Street),32927159,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,32927450,Grandma's Breakfast Sandwiches (330 W Broadway),32927450,Store Closure,Store Closure - Dasher Reported,60
+2026-02-01,2026-02-28,32927659,Green Vibes Salad (1116 Polk St),32927659,UNCATEGORIZED,N/A,77
+2026-02-01,2026-02-28,32947199,Lola's Smoothie Mix,32947199,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,32973053,Mia's Quesadillas (296 3rd Ave),32973053,Store Closure,Store Closure - Dasher Reported,443
+2026-02-01,2026-02-28,32973053,Mia's Quesadillas (296 3rd Ave),32973053,UNCATEGORIZED,N/A,359
+2026-02-01,2026-02-28,32974745,Holy Grail Omelettes (1760 3rd Ave),32974745,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,32985745,Princess Panini (937 1st Avenue),32985745,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,32986919,Queen's Quesadillas (330 W Broadway),32986919,Store Closure,Store Closure - Dasher Reported,195
+2026-02-01,2026-02-28,32988371,Sicily's Calzone House (1338 Polk St),32988371,UNCATEGORIZED,N/A,566
+2026-02-01,2026-02-28,32988371,Sicily's Calzone House (1338 Polk St),32988371,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,32988873,Stan's Burger Bar (168 Myrtle Ave),32988873,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,32989131,Stella's Slammin' Burgers,32989131,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,33015551,Sunshine Sushi Bar (400 W Indian School Rd),33015551,UNCATEGORIZED,N/A,108
+2026-02-01,2026-02-28,33016661,The Cali Calzone (1116 Polk St),33016661,UNCATEGORIZED,N/A,77
+2026-02-01,2026-02-28,33017063,The Indian Spice Kitchen (100 N Almaden Ave ste 176),33017063,UNCATEGORIZED,N/A,287
+2026-02-01,2026-02-28,33017373,The Pasta Story (2138 W National Ave),33017373,UNCATEGORIZED,N/A,375
+2026-02-01,2026-02-28,33017475,The Sandwich Vibe (257 Gold St),33017475,Store Closure,Store Closure - Bad Weather or Power Outage,843
+2026-02-01,2026-02-28,33415769,Amanda's Breakfast Lounge (44 E 8th St),33415769,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,33415771,Amanda's Breakfast Lounge (3661 Broadway),33415771,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,33436433,Pardon My Panini (93 Avenue A),33436433,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,33506133,Pardon My Panini,33506133,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,33558841,Fried Chicken Savage (1428 Polk St),33558841,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,33558959,Gina's Greens N' Things (327 Union St),33558959,UNCATEGORIZED,N/A,1775
+2026-02-01,2026-02-28,33558983,Good Planet Vegan Burgers (1428 Polk St),33558983,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,33558983,Good Planet Vegan Burgers (1428 Polk St),33558983,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,120
+2026-02-01,2026-02-28,33885415,Chanel's Coffee House (2051 Frederick Douglass Blvd),33885415,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,33885459,Big Ease Smoothies (2051 Frederick Douglass Blvd),33885459,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,33885459,Big Ease Smoothies (2051 Frederick Douglass Blvd),33885459,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,33886123,Prima Panini Bar (2755 Broadway),33886123,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,33886191,Mexiq Tacos,33886191,UNCATEGORIZED,N/A,268
+2026-02-01,2026-02-28,33886617,Amanda's Breakfast Lounge (433 W 34th st),33886617,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,33886671,Casa Pasta Ristorante (9061 Van Nuys Blvd),33886671,Store Closure,Store Closure - Dasher Reported,52
+2026-02-01,2026-02-28,33886771,Sarah's Salad Bar (589 1st Avenue),33886771,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,33886771,Sarah's Salad Bar (589 1st Avenue),33886771,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,33886909,Fiona's Breakfast Burritos (433 W 34th st),33886909,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,33894883,The Indian Spice Palace,33894883,UNCATEGORIZED,N/A,287
+2026-02-01,2026-02-28,33895033,Smoken Hot Wings Bar (1634 W High St),33895033,UNCATEGORIZED,N/A,32
+2026-02-01,2026-02-28,33895231,Luke's Breakfast Club (7825 EASTERN AVE),33895231,Store Closure,Store Closure - Merchant Reported,2011
+2026-02-01,2026-02-28,33895231,Luke's Breakfast Club (7825 EASTERN AVE),33895231,UNCATEGORIZED,N/A,173
+2026-02-01,2026-02-28,33895329,The Cheeseburger Paradise (468 9th Ave),33895329,Store Closure,Store Closure - Bad Weather or Power Outage,517
+2026-02-01,2026-02-28,33895415,Bill's Sandwich Shack (128 East 4th Street),33895415,UNCATEGORIZED,N/A,1277
+2026-02-01,2026-02-28,33895557,The Burrito Bae (916 Hempstead Turnpike),33895557,UNCATEGORIZED,N/A,135
+2026-02-01,2026-02-28,33895651,Sheila's Satisfying Salads (916 Hempstead Turnpike),33895651,UNCATEGORIZED,N/A,240
+2026-02-01,2026-02-28,33895755,Dad's Flamin' Quesadillas (916 Hempstead Turnpike),33895755,UNCATEGORIZED,N/A,135
+2026-02-01,2026-02-28,33895844,Ariana's Vegan Spot (488 Metropolitan Ave),33895844,Store Closure,Store Closure - Merchant Reported,1424
+2026-02-01,2026-02-28,33895844,Ariana's Vegan Spot (488 Metropolitan Ave),33895844,Store Closure,Store Closure - Dasher Reported,1068
+2026-02-01,2026-02-28,33895844,Ariana's Vegan Spot (488 Metropolitan Ave),33895844,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,33896087,Smokin' Burger Grille (2126 Caton Ave),33896087,Store Closure,Store Closure - Bad Weather or Power Outage,847
+2026-02-01,2026-02-28,33896877,La Puebla Quesadilla,33896877,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33898595,Mighty Grilled Cheese,33898595,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33898631,Mason's Burger Bar,33898631,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33898959,The Calzone Empire (4663 Trousdale Dr),33898959,Store Closure,Store Closure - Dasher Reported,284
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,UNCATEGORIZED,N/A,1079
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33899303,Original Burger Bar (135 E 125th St),33899303,Store Closure,Store Closure - Dasher Reported,57
+2026-02-01,2026-02-28,33899381,The Juice Empire,33899381,Store Closure,Store Closure - Dasher Reported,1267
+2026-02-01,2026-02-28,33899437,Croissant Cravings,33899437,UNCATEGORIZED,N/A,109
+2026-02-01,2026-02-28,33899529,Italian Pasta Lounge,33899529,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,33948073,Exquisite Bowls,33948073,UNCATEGORIZED,N/A,866
+2026-02-01,2026-02-28,33948073,Exquisite Bowls,33948073,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33948075,Exquisite Bowls (1824 2nd Ave),33948075,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33948075,Exquisite Bowls (1824 2nd Ave),33948075,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,33948227,Frankie's Burger Bar (1824 2nd Ave),33948227,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33948287,Fry Bird Sandwiches (16224 Tuskegee Airmen Way),33948287,Store Closure,Store Closure - Bad Weather or Power Outage,456
+2026-02-01,2026-02-28,33948287,Fry Bird Sandwiches (16224 Tuskegee Airmen Way),33948287,Store Closure,Store Closure - Dasher Reported,36
+2026-02-01,2026-02-28,33948289,Fry Bird Sandwiches,33948289,UNCATEGORIZED,N/A,2375
+2026-02-01,2026-02-28,33948289,Fry Bird Sandwiches,33948289,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33948345,Greens Salad God (6611 S 101st E Ave),33948345,UNCATEGORIZED,N/A,694
+2026-02-01,2026-02-28,33948529,Jay's breakfast bar,33948529,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33948533,Jay's Breakfast Bar,33948533,Store Closure,Store Closure - Bad Weather or Power Outage,456
+2026-02-01,2026-02-28,33948835,Local's Breakfast Snob,33948835,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33948861,Luigi's Pasta Ristorante,33948861,UNCATEGORIZED,N/A,1413
+2026-02-01,2026-02-28,33948863,Luigi's Pasta Ristorante,33948863,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33948929,Marty's Wraps Shack,33948929,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33948931,Marty's Wraps Shack,33948931,Store Closure,Store Closure - Bad Weather or Power Outage,456
+2026-02-01,2026-02-28,33949027,Original Burger Bar (16224 Tuskegee Airmen Way),33949027,Store Closure,Store Closure - Bad Weather or Power Outage,463
+2026-02-01,2026-02-28,33949029,Original Burger Bar,33949029,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33949031,Original Burger Bar (2909A Queens Plaza North),33949031,Store Closure,Store Closure - Bad Weather or Power Outage,846
+2026-02-01,2026-02-28,33950127,Sicily's Calzone House,33950127,UNCATEGORIZED,N/A,1528
+2026-02-01,2026-02-28,33950129,Sicily's Calzone House,33950129,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,58
+2026-02-01,2026-02-28,33950215,The Burger Blade (590 32nd St),33950215,UNCATEGORIZED,N/A,23
+2026-02-01,2026-02-28,33950219,The Burger Blade,33950219,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33950295,The Calzone Empire,33950295,UNCATEGORIZED,N/A,96
+2026-02-01,2026-02-28,33950295,The Calzone Empire,33950295,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,33950297,The Calzone Empire,33950297,Store Closure,Store Closure - Bad Weather or Power Outage,45
+2026-02-01,2026-02-28,33950479,The Mexican Cocina,33950479,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33950507,The Sandwich Cafe,33950507,UNCATEGORIZED,N/A,10534
+2026-02-01,2026-02-28,33950568,The Village Breakfast,33950568,UNCATEGORIZED,N/A,220
+2026-02-01,2026-02-28,33950667,Jr's Philly Cheesesteaks,33950667,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33950667,Jr's Philly Cheesesteaks,33950667,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,33950931,Salad Dream,33950931,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33951311,Antonio's Quesadilla Shack,33951311,UNCATEGORIZED,N/A,179
+2026-02-01,2026-02-28,33951481,Jacks Cheesesteaks,33951481,UNCATEGORIZED,N/A,220
+2026-02-01,2026-02-28,33951523,The Dessert Shack,33951523,UNCATEGORIZED,N/A,179
+2026-02-01,2026-02-28,33951729,Toretto's Breakfast Cafe,33951729,Store Closure,Store Closure - Dasher Reported,1497
+2026-02-01,2026-02-28,33963677,Wraps On Tap (4410 Bergen Tpke),33963677,Store Closure,Store Closure - Dasher Reported,537
+2026-02-01,2026-02-28,33963911,Classic Cheeseburger Bar (560 E 149th St),33963911,Store Closure,Store Closure - Bad Weather or Power Outage,45
+2026-02-01,2026-02-28,33964025,Headlines Mexican Spot,33964025,Store Closure,Store Closure - Bad Weather or Power Outage,45
+2026-02-01,2026-02-28,33964039,Steph's Salad Shop,33964039,UNCATEGORIZED,N/A,96
+2026-02-01,2026-02-28,33964063,NY Smoothie Joint,33964063,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,33967403,Philly Cheesesteak Company,33967403,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,29
+2026-02-01,2026-02-28,33967403,Philly Cheesesteak Company,33967403,Store Closure,Store Closure - Dasher Reported,13
+2026-02-01,2026-02-28,33970427,The Montage Vegetarian (253 E 172nd St),33970427,UNCATEGORIZED,N/A,10539
+2026-02-01,2026-02-28,33970947,Scotty's Bagel Express,33970947,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,33971791,The Bagel Savage,33971791,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,33971851,Luca's Philly Cheesesteak,33971851,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,33972041,Bart's Breakfast Sandwiches,33972041,UNCATEGORIZED,N/A,2265
+2026-02-01,2026-02-28,33972041,Bart's Breakfast Sandwiches,33972041,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,33972175,Chelsea's Breakfast Bar,33972175,UNCATEGORIZED,N/A,359
+2026-02-01,2026-02-28,33972435,Fallon's Fried Chicken,33972435,UNCATEGORIZED,N/A,359
+2026-02-01,2026-02-28,33973079,Glorious Panini Snob,33973079,UNCATEGORIZED,N/A,359
+2026-02-01,2026-02-28,33973693,Doughboys Sandwiches (105 Avenue A),33973693,Store Closure,Store Closure - Bad Weather or Power Outage,456
+2026-02-01,2026-02-28,33973783,Grandma's Breakfast Sandwiches (105 Avenue A),33973783,Store Closure,Store Closure - Bad Weather or Power Outage,464
+2026-02-01,2026-02-28,33974255,Mary's Chicken Sandwiches (1824 2nd Ave),33974255,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,33974255,Mary's Chicken Sandwiches (1824 2nd Ave),33974255,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,33974415,Philly Cheesesteak Snob,33974415,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,33974552,The Breakfast Dream (1824 2nd Ave),33974552,Store Closure,Store Closure - Bad Weather or Power Outage,845
+2026-02-01,2026-02-28,33975103,High Life Breakfast Sandwiches,33975103,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,33975155,Notch My Sandwich (31-00 47th Ave),33975155,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,34248810,Celebrity Vegan Burger,34248810,Store Closure,Store Closure - Bad Weather or Power Outage,77
+2026-02-01,2026-02-28,34248823,Celebrity Vegan Burger,34248823,Store Closure,Store Closure - Bad Weather or Power Outage,856
+2026-02-01,2026-02-28,34248825,Celebrity Vegan Burger (1726 2nd Ave),34248825,Store Closure,Store Closure - Bad Weather or Power Outage,33
+2026-02-01,2026-02-28,34249039,Christina's Vegan Cafe (1726 2nd Ave),34249039,UNCATEGORIZED,N/A,165
+2026-02-01,2026-02-28,34249041,Christina's Vegan Cafe (1201 Castle Hill Ave),34249041,Store Closure,Store Closure - Early Closure,12063
+2026-02-01,2026-02-28,34249041,Christina's Vegan Cafe (1201 Castle Hill Ave),34249041,Store Closure,Store Closure - Dasher Reported,1025
+2026-02-01,2026-02-28,34249077,"Mary's Chicken Sandwiches (116 Thomas S Boyland St, Brooklyn, NY 11233)",34249077,Store Closure,Store Closure - Bad Weather or Power Outage,496
+2026-02-01,2026-02-28,34249079,Mary's Chicken Sandwiches,34249079,UNCATEGORIZED,N/A,376
+2026-02-01,2026-02-28,34249133,Sicily's Calzone House,34249133,UNCATEGORIZED,N/A,250
+2026-02-01,2026-02-28,34249135,Sicily's Calzone House,34249135,UNCATEGORIZED,N/A,256
+2026-02-01,2026-02-28,34250013,"Big E's Wraps (116 Thomas S Boyland St, Brooklyn, NY 11233)",34250013,Store Closure,Store Closure - Bad Weather or Power Outage,466
+2026-02-01,2026-02-28,34250381,Luke's Breakfast Club,34250381,Store Closure,Store Closure - Bad Weather or Power Outage,496
+2026-02-01,2026-02-28,34250513,Luigi's Pasta Ristorante,34250513,UNCATEGORIZED,N/A,362
+2026-02-01,2026-02-28,34250513,Luigi's Pasta Ristorante,34250513,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,60
+2026-02-01,2026-02-28,34250523,Perry's Pizza Parlour,34250523,UNCATEGORIZED,N/A,376
+2026-02-01,2026-02-28,34250543,The Mexican Cocina,34250543,UNCATEGORIZED,N/A,377
+2026-02-01,2026-02-28,34250615,NY Smoothie Joint,34250615,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,34250643,Italian Pasta Joint,34250643,UNCATEGORIZED,N/A,256
+2026-02-01,2026-02-28,34250671,Suzanne's Sub Sandwiches,34250671,UNCATEGORIZED,N/A,256
+2026-02-01,2026-02-28,34250899,The Pizza Obsession,34250899,UNCATEGORIZED,N/A,256
+2026-02-01,2026-02-28,34250943,Addictive Fried Chicken,34250943,UNCATEGORIZED,N/A,250
+2026-02-01,2026-02-28,34251093,Arifs Mediterranean Grill,34251093,UNCATEGORIZED,N/A,260
+2026-02-01,2026-02-28,34251159,Haley's Heavenly Burgers,34251159,UNCATEGORIZED,N/A,250
+2026-02-01,2026-02-28,34338815,Chop & Dice Salads (3349 Mission St),34338815,UNCATEGORIZED,N/A,63
+2026-02-01,2026-02-28,34338911,Chop & Dice Salads,34338911,Store Closure,Store Closure - Bad Weather or Power Outage,553
+2026-02-01,2026-02-28,34339851,Olivia's Omelettes,34339851,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,34339953,Public Burger Bar,34339953,Store Closure,Store Closure - Dasher Reported,70
+2026-02-01,2026-02-28,34340045,Round Tower Sandwiches,34340045,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,34340098,The Burger Joint (1152 Ogden Ave #4304),34340098,Store Closure,Store Closure - Bad Weather or Power Outage,421
+2026-02-01,2026-02-28,34340106,The Burger Joint,34340106,UNCATEGORIZED,N/A,269
+2026-02-01,2026-02-28,34340355,The Salad Snob,34340355,UNCATEGORIZED,N/A,268
+2026-02-01,2026-02-28,34340507,Wonka's Smoothie Bar,34340507,Store Closure,Store Closure - Bad Weather or Power Outage,541
+2026-02-01,2026-02-28,34341025,Wraps On Tap,34341025,Store Closure,Store Closure - Dasher Reported,787
+2026-02-01,2026-02-28,34341025,Wraps On Tap,34341025,Store Issue,Auto Pause - Tablet Detected Offline,207
+2026-02-01,2026-02-28,34341891,Sunny's Sandwich Bistro,34341891,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,34342097,The Salad Prince (135 E 125th St),34342097,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,34343091,Belgian Waffle Bar,34343091,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,34343091,Belgian Waffle Bar,34343091,UNCATEGORIZED,N/A,124
+2026-02-01,2026-02-28,34343685,Leon's Legendary Pizza (3349 Mission St),34343685,UNCATEGORIZED,N/A,63
+2026-02-01,2026-02-28,34344089,Village Wraps Snob,34344089,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,34344153,Village Quesadilla,34344153,Store Closure,Store Closure - Bad Weather or Power Outage,89
+2026-02-01,2026-02-28,34344579,Big Ease Smoothies,34344579,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,34344990,Original Burger Bar,34344990,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,34345601,Kevins Cheesesteaks,34345601,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,34345716,The Hot Dog Village,34345716,UNCATEGORIZED,N/A,180
+2026-02-01,2026-02-28,34345807,Breakfast Burrito Floozy,34345807,UNCATEGORIZED,N/A,210
+2026-02-01,2026-02-28,34346369,Blake's Dessert Lounge,34346369,UNCATEGORIZED,N/A,511
+2026-02-01,2026-02-28,34346369,Blake's Dessert Lounge,34346369,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,34346511,Jolie's Mediterranean Kitchen (1338 Polk St),34346511,UNCATEGORIZED,N/A,632
+2026-02-01,2026-02-28,34346795,Fresh N Fruity Smoothies,34346795,Store Closure,Store Closure - Bad Weather or Power Outage,541
+2026-02-01,2026-02-28,34347671,Bobby's Caribbean Grill,34347671,Store Closure,Store Closure - Bad Weather or Power Outage,15
+2026-02-01,2026-02-28,34347679,Mac's Cheese Factory,34347679,Store Closure,Store Closure - Bad Weather or Power Outage,15
+2026-02-01,2026-02-28,34348517,Top Notch Sandwiches,34348517,UNCATEGORIZED,N/A,717
+2026-02-01,2026-02-28,34348517,Top Notch Sandwiches,34348517,Store Closure,Store Closure - Dasher Reported,18
+2026-02-01,2026-02-28,34348661,Mary's Chicken Sandwiches,34348661,UNCATEGORIZED,N/A,660
+2026-02-01,2026-02-28,34348667,Bird's Burger Bar,34348667,Store Closure,Store Closure - Bad Weather or Power Outage,421
+2026-02-01,2026-02-28,34348671,Olivia's Sandwich Shack,34348671,Store Closure,Store Closure - Bad Weather or Power Outage,433
+2026-02-01,2026-02-28,34348845,Aldo's Wraps Spot,34348845,Store Closure,Store Closure - Bad Weather or Power Outage,421
+2026-02-01,2026-02-28,34348849,Brenda's Panini Palace,34348849,Store Closure,Store Closure - Bad Weather or Power Outage,421
+2026-02-01,2026-02-28,34348863,The Burger Bae,34348863,Store Closure,Store Closure - Merchant Reported,1425
+2026-02-01,2026-02-28,34348863,The Burger Bae,34348863,Store Closure,Store Closure - Bad Weather or Power Outage,841
+2026-02-01,2026-02-28,34348867,The Burger Blade,34348867,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,34348867,The Burger Blade,34348867,UNCATEGORIZED,N/A,124
+2026-02-01,2026-02-28,34349143,The Chicken Affair - 135 E 125th St,34349143,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,34349143,The Chicken Affair - 135 E 125th St,34349143,Store Closure,Store Closure - Dasher Reported,21
+2026-02-01,2026-02-28,34349153,The Omelette Farm,34349153,Store Closure,Store Closure - Bad Weather or Power Outage,421
+2026-02-01,2026-02-28,34349399,Bosscat Breakfast,34349399,Store Closure,Store Closure - Bad Weather or Power Outage,105
+2026-02-01,2026-02-28,34349403,Haley's Heavenly Burgers,34349403,Store Closure,Store Closure - Bad Weather or Power Outage,105
+2026-02-01,2026-02-28,34349411,Top Panini Shop,34349411,Store Closure,Store Closure - Bad Weather or Power Outage,105
+2026-02-01,2026-02-28,35115667,Fierce Chicken Sandwich (589 1st Avenue),35115667,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35115667,Fierce Chicken Sandwich (589 1st Avenue),35115667,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,35117383,Luigi's Pasta Ristorante,35117383,UNCATEGORIZED,N/A,471
+2026-02-01,2026-02-28,35117591,NY Smoothie Joint,35117591,UNCATEGORIZED,N/A,1046
+2026-02-01,2026-02-28,35117591,NY Smoothie Joint,35117591,Store Closure,Store Closure - Bad Weather or Power Outage,757
+2026-02-01,2026-02-28,35117591,NY Smoothie Joint,35117591,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,35117657,The Smoothie Squeeze (589 1st Avenue),35117657,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35117657,The Smoothie Squeeze (589 1st Avenue),35117657,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,35170143,Big Ease Smoothies,35170143,UNCATEGORIZED,N/A,474
+2026-02-01,2026-02-28,35170821,City Life Breakfast,35170821,Store Closure,Store Closure - Bad Weather or Power Outage,461
+2026-02-01,2026-02-28,35171571,Cherry's Chic Desserts,35171571,UNCATEGORIZED,N/A,1047
+2026-02-01,2026-02-28,35171571,Cherry's Chic Desserts,35171571,Store Closure,Store Closure - Bad Weather or Power Outage,461
+2026-02-01,2026-02-28,35371505,Breakfast Sandwich Express,35371505,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35371677,Bri's Breakfast Bar,35371677,Store Closure,Store Closure - Dasher Reported,828
+2026-02-01,2026-02-28,35371677,Bri's Breakfast Bar,35371677,Store Closure,Store Closure - Bad Weather or Power Outage,255
+2026-02-01,2026-02-28,35372523,Che Breakfast Cafe (689 Broadway),35372523,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35446349,Chief's Cheesesteaks,35446349,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35449419,Italian Pasta Lounge (119 Park Ave),35449419,Store Closure,Store Closure - Bad Weather or Power Outage,75
+2026-02-01,2026-02-28,35449419,Italian Pasta Lounge (119 Park Ave),35449419,Store Closure,Store Closure - Dasher Reported,54
+2026-02-01,2026-02-28,35449925,John's Pizza Den,35449925,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,35457947,Sal's Smoothie Spot,35457947,UNCATEGORIZED,N/A,984
+2026-02-01,2026-02-28,35457947,Sal's Smoothie Spot,35457947,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,35457947,Sal's Smoothie Spot,35457947,Store Closure,Store Closure - Dasher Reported,15
+2026-02-01,2026-02-28,35458185,The Burger Bae (1201 Randall Avenue),35458185,Store Closure,Store Closure - Bad Weather or Power Outage,405
+2026-02-01,2026-02-28,35460305,Top Notch Sandwiches,35460305,UNCATEGORIZED,N/A,926
+2026-02-01,2026-02-28,35460305,Top Notch Sandwiches,35460305,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,35464155,Big E's Wraps (2126 Caton Ave),35464155,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35464965,Sandwich On Fleek (2126 Caton Ave),35464965,Store Closure,Store Closure - Bad Weather or Power Outage,850
+2026-02-01,2026-02-28,35492905,Chicken Sandwich Loft,35492905,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35492905,Chicken Sandwich Loft,35492905,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,59
+2026-02-01,2026-02-28,35493035,Exquisite Bowls,35493035,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35493165,Philly Cheesesteak Artists,35493165,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35493165,Philly Cheesesteak Artists,35493165,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,35493370,Palm Tree Acai (717 S Battlefield Blvd),35493370,UNCATEGORIZED,N/A,223
+2026-02-01,2026-02-28,35493471,Aldo's Wraps Spot,35493471,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35493879,Salad Kreation,35493879,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35493988,Top Panini Shop,35493988,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35634189,Stan's Burger Bar,35634189,UNCATEGORIZED,N/A,1074
+2026-02-01,2026-02-28,35637482,John's Pizza Den,35637482,UNCATEGORIZED,N/A,516
+2026-02-01,2026-02-28,35637721,Chicken Sandwich Loft,35637721,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35638047,NY Smoothie Joint,35638047,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35638047,NY Smoothie Joint,35638047,Store Closure,Store Closure - Dasher Reported,288
+2026-02-01,2026-02-28,35638263,Pardon My Panini,35638263,Store Closure,Store Closure - Merchant Reported,8057
+2026-02-01,2026-02-28,35638263,Pardon My Panini,35638263,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35638263,Pardon My Panini,35638263,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,60
+2026-02-01,2026-02-28,35639462,Martha's Pancake Bar,35639462,UNCATEGORIZED,N/A,93
+2026-02-01,2026-02-28,35639813,Quinten's Quinoa Bowls (937 1st Avenue),35639813,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,35647715,The Italian Pizza Co,35647715,UNCATEGORIZED,N/A,300
+2026-02-01,2026-02-28,35648661,Priyanka's Vegan Indian,35648661,UNCATEGORIZED,N/A,209
+2026-02-01,2026-02-28,35648739,Divya's Indian Restaurant,35648739,Store Closure,Store Closure - Dasher Reported,706
+2026-02-01,2026-02-28,35648739,Divya's Indian Restaurant,35648739,UNCATEGORIZED,N/A,656
+2026-02-01,2026-02-28,35652838,Japan's Bento Box,35652838,UNCATEGORIZED,N/A,94
+2026-02-01,2026-02-28,35666693,The Burger Project,35666693,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,35666855,The Calzone Empire,35666855,UNCATEGORIZED,N/A,556
+2026-02-01,2026-02-28,35667913,Bart's Breakfast Sandwiches (158 DELANCEY STREET),35667913,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35668217,Big E's Wraps,35668217,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,35668631,Gourmet Omelette Bar,35668631,Store Closure,Store Closure - Bad Weather or Power Outage,854
+2026-02-01,2026-02-28,35668744,Stan's Burger Bar (158 DELANCEY STREET),35668744,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35668945,Fierce Chicken Sandwich (6413 Hillcrest Ave),35668945,UNCATEGORIZED,N/A,299
+2026-02-01,2026-02-28,35669185,Sun's Up Breakfast Wraps,35669185,Store Closure,Store Closure - Bad Weather or Power Outage,852
+2026-02-01,2026-02-28,35670053,Cheesy Mac Factory,35670053,UNCATEGORIZED,N/A,299
+2026-02-01,2026-02-28,35681291,Suzanne's Sub Sandwiches,35681291,UNCATEGORIZED,N/A,694
+2026-02-01,2026-02-28,35681661,Fierce Chicken Sandwich,35681661,UNCATEGORIZED,N/A,694
+2026-02-01,2026-02-28,35686889,The Hot Dog Village,35686889,UNCATEGORIZED,N/A,681
+2026-02-01,2026-02-28,35686889,The Hot Dog Village,35686889,Store Closure,Store Closure - Dasher Reported,40
+2026-02-01,2026-02-28,35743615,Chicken Sandwich Loft (2138 W National Ave),35743615,UNCATEGORIZED,N/A,141
+2026-02-01,2026-02-28,35754581,Breakfast Burrito Joint (31-00 47th Ave),35754581,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35756038,CJ's Breakfast Sandwich (31-00 47th Ave),35756038,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35757955,House of Paninis,35757955,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35758085,The Salad Dream (31-00 47th Ave),35758085,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35808175,Green Leaf Salads (277 Gold Street),35808175,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,35808351,Wonka's Smoothie Bar,35808351,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,35809781,Fierce Chicken Sandwich,35809781,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35810277,Carmen's Breakfast Burritos,35810277,UNCATEGORIZED,N/A,629
+2026-02-01,2026-02-28,35853264,Louie's Cheesesteaks,35853264,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,35853343,Jewel's Breakfast Joint,35853343,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,35853477,Princess Panini (1219 1st Avenue),35853477,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,35853665,Original Burger Bar,35853665,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,35853725,The Minister Wraps,35853725,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,35853841,Notch My Sandwich,35853841,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,35854061,Fallon's Fried Chicken,35854061,UNCATEGORIZED,N/A,1775
+2026-02-01,2026-02-28,35854363,The Breakfast Skillet,35854363,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,35855559,Wonka's Smoothie Bar,35855559,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,35855567,Bart's Breakfast Sandwiches,35855567,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,35868685,The Village Breakfast,35868685,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,35868827,Sip On Smoothie,35868827,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,35869949,Stan's Burger Bar,35869949,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,35870081,Breakfast Burrito Joint,35870081,UNCATEGORIZED,N/A,239
+2026-02-01,2026-02-28,35870081,Breakfast Burrito Joint,35870081,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,59
+2026-02-01,2026-02-28,35901427,The Juice Empire,35901427,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,36017463,NY Breakfast Spot,36017463,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36018567,Local Vegetarian Cafe (1219 1st Avenue),36018567,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,36019345,Chris's Chicken Tenders,36019345,UNCATEGORIZED,N/A,1113
+2026-02-01,2026-02-28,36019785,Hill Top Sandwich,36019785,Store Closure,Store Closure - Bad Weather or Power Outage,851
+2026-02-01,2026-02-28,36019835,Danny's Desserts (4352 E Speedway Blvd),36019835,UNCATEGORIZED,N/A,239
+2026-02-01,2026-02-28,36020849,Panini Fantasy (300 The Village),36020849,Store Issue,Unhealthy Operations Rate,11730
+2026-02-01,2026-02-28,36030515,The Smoothie Savage (1404 Madison Ave),36030515,Store Closure,Store Closure - Bad Weather or Power Outage,315
+2026-02-01,2026-02-28,36030569,Breakfast N Vibe,36030569,UNCATEGORIZED,N/A,142
+2026-02-01,2026-02-28,36031239,Burrito Lovers Bar,36031239,UNCATEGORIZED,N/A,142
+2026-02-01,2026-02-28,36031291,Nino's Nacho Bar,36031291,UNCATEGORIZED,N/A,142
+2026-02-01,2026-02-28,36031368,Tia's Tortas,36031368,UNCATEGORIZED,N/A,142
+2026-02-01,2026-02-28,36031447,First Light Breakfast Cafe (877 10th Ave),36031447,Store Closure,Store Closure - Bad Weather or Power Outage,491
+2026-02-01,2026-02-28,36033683,Mary's Chicken Sandwiches,36033683,UNCATEGORIZED,N/A,694
+2026-02-01,2026-02-28,36033801,Che Breakfast Cafe,36033801,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36033935,Chicken Sandwich Loft,36033935,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36034031,Fiesta Mexican Spot,36034031,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36034113,Jen's Burger Blaze,36034113,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36118675,Antonio's Quesadilla Shack,36118675,UNCATEGORIZED,N/A,41
+2026-02-01,2026-02-28,36118791,Arturo's Burrito Bowls,36118791,UNCATEGORIZED,N/A,41
+2026-02-01,2026-02-28,36119351,Selena's Torta Shack,36119351,UNCATEGORIZED,N/A,41
+2026-02-01,2026-02-28,36237043,Aldo's Wraps Spot (93 Avenue A),36237043,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,36237363,Big Ease Smoothies (93 Avenue A),36237363,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,36238018,Halal Gyro Lab (93 Avenue A),36238018,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,36238219,Sasha's Sandwiches (93 Avenue A),36238219,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,36254687,The Burger Hole (1213 Amsterdam Ave),36254687,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36255055,High Life Breakfast Sandwiches (1213 Amsterdam Ave),36255055,Store Closure,Store Closure - Dasher Reported,433
+2026-02-01,2026-02-28,36255055,High Life Breakfast Sandwiches (1213 Amsterdam Ave),36255055,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36255253,Sam's Scrumptious Subs (1213 Amsterdam Ave),36255253,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36255933,Chicken Sandwich Loft,36255933,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,36255933,Chicken Sandwich Loft,36255933,Store Closure,Store Closure - Dasher Reported,64
+2026-02-01,2026-02-28,36256107,Local Breakfast Spot,36256107,Store Closure,Store Closure - Bad Weather or Power Outage,853
+2026-02-01,2026-02-28,36256561,Daybreak Breakfast Club,36256561,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,36256793,Top Notch Sandwiches (164-01 Hillside Ave) MAIN,36256793,Store Closure,Store Closure - Bad Weather or Power Outage,839
+2026-02-01,2026-02-28,36364633,Big Ease Smoothies,36364633,UNCATEGORIZED,N/A,22
+2026-02-01,2026-02-28,36364663,First Light Breakfast Cafe,36364663,UNCATEGORIZED,N/A,72
+2026-02-01,2026-02-28,36364727,Sarah's Salad Bar,36364727,UNCATEGORIZED,N/A,72
+2026-02-01,2026-02-28,36364737,Breakfast Burrito Snob,36364737,UNCATEGORIZED,N/A,175
+2026-02-01,2026-02-28,36364773,Fierce Chicken Sandwich,36364773,UNCATEGORIZED,N/A,147
+2026-02-01,2026-02-28,36364899,Holly's Burger Bar,36364899,UNCATEGORIZED,N/A,147
+2026-02-01,2026-02-28,36520311,Chicken Sandwich Loft,36520311,UNCATEGORIZED,N/A,556
+2026-02-01,2026-02-28,36523281,Frank's Philly Cheesesteaks,36523281,UNCATEGORIZED,N/A,556
+2026-02-01,2026-02-28,36524057,Pizza Thriller,36524057,UNCATEGORIZED,N/A,556
+2026-02-01,2026-02-28,36587123,Daybreak Breakfast Club,36587123,UNCATEGORIZED,N/A,970
+2026-02-01,2026-02-28,36587367,Aldo's Wraps Spot,36587367,UNCATEGORIZED,N/A,1035
+2026-02-01,2026-02-28,36727494,The Sandwich Cafe,36727494,UNCATEGORIZED,N/A,667
+2026-02-01,2026-02-28,37012189,The Smooth Eaze,37012189,UNCATEGORIZED,N/A,838
+2026-02-01,2026-02-28,37012189,The Smooth Eaze,37012189,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,37182777,Palm Tree Acai,37182777,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,37375303,Bosscat Burgers,37375303,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37375303,Bosscat Burgers,37375303,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,37375475,Carmen's Breakfast Burrito,37375475,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37375475,Carmen's Breakfast Burrito,37375475,Store Closure,Store Closure - Bad Weather or Power Outage,270
+2026-02-01,2026-02-28,37375655,Fierce Chicken Sandwich,37375655,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37375655,Fierce Chicken Sandwich,37375655,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,37375845,High Life Breakfast Sandwiches,37375845,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37375845,High Life Breakfast Sandwiches,37375845,Store Closure,Store Closure - Bad Weather or Power Outage,165
+2026-02-01,2026-02-28,37375983,Italian Pasta Lounge,37375983,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37375983,Italian Pasta Lounge,37375983,Store Closure,Store Closure - Bad Weather or Power Outage,270
+2026-02-01,2026-02-28,37376175,Mary's Omelette Bar,37376175,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37376175,Mary's Omelette Bar,37376175,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,37376363,Patricia's Paninis,37376363,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37376363,Patricia's Paninis,37376363,Store Closure,Store Closure - Bad Weather or Power Outage,270
+2026-02-01,2026-02-28,37376533,Sarah's Salad Bar,37376533,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37376533,Sarah's Salad Bar,37376533,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,37376751,The Smoothie Squeeze,37376751,UNCATEGORIZED,N/A,289
+2026-02-01,2026-02-28,37376751,The Smoothie Squeeze,37376751,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,37412641,Luke's Breakfast Club,37412641,Store Closure,Store Closure - Dasher Reported,248
+2026-02-01,2026-02-28,37413325,Fierce Chicken Sandwich,37413325,UNCATEGORIZED,N/A,5728
+2026-02-01,2026-02-28,37413325,Fierce Chicken Sandwich,37413325,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,UNCATEGORIZED,N/A,6108
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,Store Closure,Store Closure - Dasher Reported,1369
+2026-02-01,2026-02-28,37413841,Exquisite Bowls,37413841,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,37414009,Chicken Sandwich Loft,37414009,Store Closure,Store Closure - Dasher Reported,776
+2026-02-01,2026-02-28,37414009,Chicken Sandwich Loft,37414009,Store Closure,Store Closure - Bad Weather or Power Outage,579
+2026-02-01,2026-02-28,37414343,Despicable Wraps,37414343,UNCATEGORIZED,N/A,5728
+2026-02-01,2026-02-28,37414343,Despicable Wraps,37414343,Store Closure,Store Closure - Bad Weather or Power Outage,849
+2026-02-01,2026-02-28,37414507,The Salad Dream,37414507,Store Closure,Store Closure - Bad Weather or Power Outage,564
+2026-02-01,2026-02-28,37414755,Wraps on Tap,37414755,Store Closure,Store Closure - Dasher Reported,622
+2026-02-01,2026-02-28,37414755,Wraps on Tap,37414755,Store Closure,Store Closure - Bad Weather or Power Outage,445
+2026-02-01,2026-02-28,37530643,Chucks Cheesecakes (682 Morris Park Avenue),37530643,Store Closure,Store Closure - Bad Weather or Power Outage,345
+2026-02-01,2026-02-28,37530643,Chucks Cheesecakes (682 Morris Park Avenue),37530643,UNCATEGORIZED,N/A,165
+2026-02-01,2026-02-28,37530982,The Burger Hole (277 Gold Street) ,37530982,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,37531899,Holly's Burger Bar,37531899,UNCATEGORIZED,N/A,63
+2026-02-01,2026-02-28,37532343,Two Hand Burger,37532343,Store Closure,Store Closure - Bad Weather or Power Outage,249
+2026-02-01,2026-02-28,37532343,Two Hand Burger,37532343,Store Closure,Store Closure - Dasher Reported,178
+2026-02-01,2026-02-28,37532867,Luke's Breakfast Wraps (93 Avenue A),37532867,Store Closure,Store Closure - Bad Weather or Power Outage,848
+2026-02-01,2026-02-28,37565941,Addictive Burger Bar,37565941,Store Closure,Store Closure - Dasher Reported,1117
+2026-02-01,2026-02-28,37566393,Erica's Shake Shack,37566393,Store Closure,Store Closure - Bad Weather or Power Outage,134
+2026-02-01,2026-02-28,37566393,Erica's Shake Shack,37566393,Store Closure,Store Closure - Dasher Reported,12
+2026-02-01,2026-02-28,37619977,Holy Grail Omelettes,37619977,Store Issue,Auto Pause - Tablet Detected Offline,2751
+2026-02-01,2026-02-28,37619977,Holy Grail Omelettes,37619977,Store Closure,Store Closure - Bad Weather or Power Outage,58
+2026-02-01,2026-02-28,37620683,Olivia's Sandwich Shack,37620683,Store Issue,Auto Pause - Tablet Detected Offline,487
+2026-02-01,2026-02-28,37620683,Olivia's Sandwich Shack,37620683,Store Closure,Store Closure - Bad Weather or Power Outage,58
+2026-02-01,2026-02-28,37625025,The Chopped Salad,37625025,Store Issue,Auto Pause - Tablet Detected Offline,19711
+2026-02-01,2026-02-28,37625025,The Chopped Salad,37625025,Store Closure,Store Closure - Bad Weather or Power Outage,58
+2026-02-01,2026-02-28,37625155,Wonka's Smoothie Bar,37625155,Store Issue,Auto Pause - Tablet Detected Offline,2133
+2026-02-01,2026-02-28,37625155,Wonka's Smoothie Bar,37625155,Store Closure,Store Closure - Bad Weather or Power Outage,58
+2026-02-01,2026-02-28,37993253,Bosscat Burgers,37993253,Store Closure,Store Closure - Bad Weather or Power Outage,332
+2026-02-01,2026-02-28,37993457,Chicken Sandwich Loft,37993457,Store Closure,Store Closure - Bad Weather or Power Outage,332
+2026-02-01,2026-02-28,37993786,Green Leaf Salads (6806 Roosevelt Ave),37993786,Store Closure,Store Closure - Bad Weather or Power Outage,332
+2026-02-01,2026-02-28,37994093,Aldo's Wraps Spot,37994093,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,37994405,Fierce Chicken Sandwich,37994405,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,37994615,Holly's Burger Bar,37994615,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,37994857,Italian Pasta Lounge,37994857,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,37994992,The Calzone Empire,37994992,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,37995313,The Italian Pizza Co,37995313,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,37995477,The Sandwich Cafe,37995477,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,38055951,Stromboli House,38055951,UNCATEGORIZED,N/A,168
+2026-02-01,2026-02-28,38210463,Fierce Chicken Sandwich (766 Grand St),38210463,Store Closure,Store Closure - Bad Weather or Power Outage,376
+2026-02-01,2026-02-28,38211325,Fiona's Ultimate Wraps (766 Grand St),38211325,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,38213641,Luke's Breakfast Club (766 Grand St),38213641,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,38213973,The Smoothie Squeeze (766 Grand St),38213973,Store Closure,Store Closure - Bad Weather or Power Outage,285
+2026-02-01,2026-02-28,38214901,High Life Breakfast Sandwiches (589 1st Avenue),38214901,Store Closure,Store Closure - Bad Weather or Power Outage,840
+2026-02-01,2026-02-28,38214901,High Life Breakfast Sandwiches (589 1st Avenue),38214901,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,38215405,Original Burger Bar,38215405,Store Closure,Store Closure - Bad Weather or Power Outage,839
+2026-02-01,2026-02-28,38215405,Original Burger Bar,38215405,UNCATEGORIZED,N/A,120
+2026-02-01,2026-02-28,38215689,Fiona's Ultimate Wraps,38215689,Store Closure,Store Closure - Bad Weather or Power Outage,150
+2026-02-01,2026-02-28,38796180,Fierce Chicken Sandwich (18679 W Dixie Highway),38796180,Store Closure,Store Closure - Dasher Reported,44
+2026-02-01,2026-02-28,39042013,Bosscat Breakfast,39042013,Store Closure,Store Closure - Dasher Reported,106
+2026-02-01,2026-02-28,39161493,Carmen's Breakfast Burritos,39161493,Store Closure,Store Closure - Bad Weather or Power Outage,838
+2026-02-01,2026-02-28,39162061,Fierce Chicken Sandwich,39162061,UNCATEGORIZED,N/A,1918
+2026-02-01,2026-02-28,39162061,Fierce Chicken Sandwich,39162061,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,79
+2026-02-01,2026-02-28,39162345,Marty's Wraps Shack,39162345,UNCATEGORIZED,N/A,1785
+2026-02-01,2026-02-28,39162345,Marty's Wraps Shack,39162345,Store Issue,Auto Pause - High Avoidable and/or POS Cancellation Rate,146
+2026-02-01,2026-02-28,39846441,Cherry's Chic Desserts,39846441,UNCATEGORIZED,N/A,195
+2026-02-01,2026-02-28,39846735,The Crimson Gyro (1428 Polk St),39846735,UNCATEGORIZED,N/A,873
+2026-02-01,2026-02-28,39846735,The Crimson Gyro (1428 Polk St),39846735,Store Too Busy,Auto Pause - High Avoidable Dasher Wait Time,30
+2026-02-01,2026-02-28,40011133,Selena's Torta Shack,40011133,UNCATEGORIZED,N/A,331
+2026-02-01,2026-02-28,40050277,Sicily's Calzone House (1411 Bronx River Ave),40050277,Store Closure,Store Closure - Bad Weather or Power Outage,360
+2026-02-01,2026-02-28,40824279,Breakfast Burrito Snob,40824279,Store Closure,Store Closure - Dasher Reported,3003

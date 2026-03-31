@@ -35,14 +35,14 @@ A comprehensive Streamlit dashboard for analyzing multi-platform marketing and f
 
 ### Marketing Data
 
-- **File**: `MARKETING_PROMOTION_2025-09-22_2025-10-05_IeW4u_2025-10-07T11-22-22Z.csv`
+- **File (sample)**: `MARKETING_PROMOTION_2025-09-22_2025-10-05_IeW4u_2025-10-07T11-22-22Z.csv`
 - **Records**: 3,546 marketing campaign records
 - **Date Range**: 2025-09-22 to 2025-10-05
 - **Key Metrics**: Sales, ROAS, Orders, Customer Acquisition
 
 ### Financial Data
 
-- **File**: `FINANCIAL_DETAILED_TRANSACTIONS_2025-09-22_2025-10-05_fZY06_2025-10-07T13-11-16Z.csv`
+- **File (sample)**: `FINANCIAL_DETAILED_TRANSACTIONS_2025-09-22_2025-10-05_fZY06_2025-10-07T13-11-16Z.csv`
 - **Records**: 3,318 transaction records
 - **Date Range**: 2025-09-22 to 2025-10-05
 - **Key Metrics**: Subtotal, Net Total, Transaction Details
@@ -72,14 +72,18 @@ A comprehensive Streamlit dashboard for analyzing multi-platform marketing and f
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run the dashboard**
+3. **Run the dashboard (final app)**
 
    ```bash
    streamlit run doordash_dashboard.py
    ```
-4. **Access the dashboard**
+4. **Upload your CSVs (optional)**
 
-   - The dashboard will open in yosur default web browser
+   - Use the sidebar section **Data Input** to upload your Marketing and Financial CSV exports
+   - If you don’t upload files, the bundled sample files will be used
+5. **Access the dashboard**
+
+   - The dashboard will open in your default web browser
    - Default URL: `http://localhost:8501`
 
 ## 📁 File Structure
@@ -192,6 +196,6 @@ To update the dashboard with new data:
 2. Update date ranges in the dashboard if needed
 3. Restart the Streamlit application
 
----
-
 **TODC - DoorDash Dashboard** | Built with Streamlit | Data Analysis & Visualization Platform
+
+**Note:** `doordash_dashboard.py` consists of the unified, full‑feature application.

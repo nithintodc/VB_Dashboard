@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#FF5E1A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5EEEB"
+textColor = "#000000"
+font = "sans serif"
+
+[server]
+headless = true
+# Upload limit per file (MB). Default 200. Large folders = more RAM (uploads + parsed data).
+maxUploadSize = 200
+# Increase if the app freezes or gets killed on large data (e.g. 3 months × 3 platforms)
+# maxUploadSize = 500

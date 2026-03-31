@@ -1,0 +1,339 @@
+Start Date,End Date,Store ID,Store Name,Merchant Supplied ID,Error Category,Count of Item Errors,% of Total Item Errors
+2026-02-01,2026-02-28,35361759,101 Hummus (1174 Chapel St),35361759,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,35361759,101 Hummus (1174 Chapel St),35361759,Incorrect Size,1,33.33
+2026-02-01,2026-02-28,35361759,101 Hummus (1174 Chapel St),35361759,Missing Item,1,33.33
+2026-02-01,2026-02-28,32921995,101 Hummus (3846 Mowry Ave),32921995,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,25294190,Ali's Mediterranean Sandwiches (114 East Main Street),25294190,Incorrect Size,1,50.0
+2026-02-01,2026-02-28,25294190,Ali's Mediterranean Sandwiches (114 East Main Street),25294190,Missing Item,1,50.0
+2026-02-01,2026-02-28,25295448,Amanda's Breakfast Lounge (111 E 161 St),25295448,Ingredient Error,1,16.67
+2026-02-01,2026-02-28,25295448,Amanda's Breakfast Lounge (111 E 161 St),25295448,Missing Item,5,83.33
+2026-02-01,2026-02-28,28605460,Amanda's Breakfast Lounge (277 Gold Street),28605460,Missing Side Item,1,33.33
+2026-02-01,2026-02-28,28605460,Amanda's Breakfast Lounge (277 Gold Street),28605460,Missing Item,2,66.67
+2026-02-01,2026-02-28,33415771,Amanda's Breakfast Lounge (3661 Broadway),33415771,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,33415771,Amanda's Breakfast Lounge (3661 Broadway),33415771,Missing Item,2,66.67
+2026-02-01,2026-02-28,33886617,Amanda's Breakfast Lounge (433 W 34th st),33886617,Missing Item,1,50.0
+2026-02-01,2026-02-28,33886617,Amanda's Breakfast Lounge (433 W 34th st),33886617,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,36728189,Amore Pasta Ristorante,36728189,Missing Item,1,100.0
+2026-02-01,2026-02-28,32863770,Amore Pasta Ristorante (2909A Queens Plaza North),32863770,Missing Item,2,100.0
+2026-02-01,2026-02-28,24703993,Anne's Artisan Coffee  (682 Morris Park Avenue),24703993,Missing Item,1,50.0
+2026-02-01,2026-02-28,24703993,Anne's Artisan Coffee  (682 Morris Park Avenue),24703993,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,31313981,Antonio's Quesadilla Shack (4352 E Speedway Blvd),31313981,Missing Item,1,100.0
+2026-02-01,2026-02-28,34251093,Arifs Mediterranean Grill,34251093,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,23026068,Arifs Mediterranean Grill (Bedford Ave),23026068,Missing Item,1,100.0
+2026-02-01,2026-02-28,966668,BBQ Ribs Co.,NULL,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,1477944,BBQ Ribs Co. (Virtual Brand)(228 George Street),NULL,Missing Item,5,71.43
+2026-02-01,2026-02-28,1477944,BBQ Ribs Co. (Virtual Brand)(228 George Street),NULL,Incorrect Size,1,14.29
+2026-02-01,2026-02-28,1477944,BBQ Ribs Co. (Virtual Brand)(228 George Street),NULL,Missing Side Item,1,14.29
+2026-02-01,2026-02-28,24227486,Bagel Dynasty (7701 Garrison Road),24227486,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,33972041,Bart's Breakfast Sandwiches,33972041,Missing Item,1,100.0
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Missing Side Item,1,25.0
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,32922801,Bart's Burger Bar (3661 Broadway),32922801,Missing Item,2,50.0
+2026-02-01,2026-02-28,33885459,Big Ease Smoothies (2051 Frederick Douglass Blvd),33885459,Missing Item,1,100.0
+2026-02-01,2026-02-28,36237363,Big Ease Smoothies (93 Avenue A),36237363,Missing Item,1,100.0
+2026-02-01,2026-02-28,33947623,Bird's Burger Bar,33947623,Missing Item,2,66.67
+2026-02-01,2026-02-28,33947623,Bird's Burger Bar,33947623,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,35651435,Bird's Burger Bar,35651435,Missing Item,2,100.0
+2026-02-01,2026-02-28,34346369,Blake's Dessert Lounge,34346369,Missing Item,1,100.0
+2026-02-01,2026-02-28,27667568,Bosscat Wraps (309 7th Ave),27667568,Missing Item,1,100.0
+2026-02-01,2026-02-28,28607943,Breakfast Burrito Joint (128 East 4th Street),28607943,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,24387257,Breakfast Burrito Joint (3907 Lee Hwy),24387257,Missing Item,3,100.0
+2026-02-01,2026-02-28,35370009,Breakfast Burrito Snob,35370009,Missing Item,1,100.0
+2026-02-01,2026-02-28,1367068,Breakfast Burrito Snob (Long Island City),NULL,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,1340523,"Breakfast Burrito Snob(San Francisco, CA)",NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,32923293,Breakfast N Vibe (4234 Broadway),32923293,Missing Item,1,25.0
+2026-02-01,2026-02-28,32923293,Breakfast N Vibe (4234 Broadway),32923293,Ingredient Error,3,75.0
+2026-02-01,2026-02-28,32923301,Breakfast Sandwich Express (5993 Broadway),32923301,Missing Item,3,100.0
+2026-02-01,2026-02-28,24770396,Cameron's Breakfast Cafe (38-01 Vernon Boulevard),24770396,Missing Item,1,100.0
+2026-02-01,2026-02-28,32923453,Carmen's Breakfast Burritos (1201 Randall Avenue),32923453,Missing Item,1,100.0
+2026-02-01,2026-02-28,2455971,Carmen's Breakfast Burritos (N Citrus Ave),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,27741795,Casa De Quesadilla (415 E Windmill Ln),27741795,Missing Item,1,100.0
+2026-02-01,2026-02-28,24387639,Casa Pasta Ristorante (1 Kedron Ave Unit 4),24387639,Missing Item,8,88.89
+2026-02-01,2026-02-28,24387639,Casa Pasta Ristorante (1 Kedron Ave Unit 4),24387639,Ingredient Error,1,11.11
+2026-02-01,2026-02-28,34248810,Celebrity Vegan Burger,34248810,Missing Item,1,100.0
+2026-02-01,2026-02-28,34248823,Celebrity Vegan Burger,34248823,Missing Item,2,100.0
+2026-02-01,2026-02-28,33955797,Charlie's Calzone Co,33955797,Missing Item,1,100.0
+2026-02-01,2026-02-28,1767132,Charlie's Calzone Co.,NULL,Missing Item,3,100.0
+2026-02-01,2026-02-28,36019239,Charlie's Chicken Wings,36019239,Missing Item,2,100.0
+2026-02-01,2026-02-28,1591153,Charlie's Chicken Wings,NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,1332271,Charlie's Chicken Wings (New York),NULL,Missing Item,2,100.0
+2026-02-01,2026-02-28,1465058,Charlie's Chicken Wings (Virtual Brand)(Bronxdale Ave),NULL,Ingredient Error,3,60.0
+2026-02-01,2026-02-28,1465058,Charlie's Chicken Wings (Virtual Brand)(Bronxdale Ave),NULL,Missing Item,2,40.0
+2026-02-01,2026-02-28,63275,Cheers on Demand (Fillmore St),NULL,NULL,1,100.0
+2026-02-01,2026-02-28,1591183,Cheesecake And Dessert Bar,NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,35670053,Cheesy Mac Factory,35670053,Missing Item,2,100.0
+2026-02-01,2026-02-28,23085625,Chef Hanoka Sushi (W Peoria Ave),23085625,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,32863708,Chef's Chicken Bowls (9737 Manchester Rd),32863708,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,32863708,Chef's Chicken Bowls (9737 Manchester Rd),32863708,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,39846441,Cherry's Chic Desserts,39846441,Missing Item,2,100.0
+2026-02-01,2026-02-28,23784850,Cherry's Chic Desserts (4249 Washington St),23784850,Missing Item,1,100.0
+2026-02-01,2026-02-28,23280271,Chicken Salad Bar (Sullivan St),23280271,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,26174821,Chicken Sandwich Loft,26174821,Missing Item,2,100.0
+2026-02-01,2026-02-28,23785266,Chicken Tenders Bar (4249 Washington St),23785266,Missing Item,2,100.0
+2026-02-01,2026-02-28,22981379,Chief's Cheesesteaks (Lee Hwy),22981379,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,34338815,Chop & Dice Salads (3349 Mission St),34338815,Missing Item,1,100.0
+2026-02-01,2026-02-28,36019345,Chris's Chicken Tenders,36019345,Missing Item,1,100.0
+2026-02-01,2026-02-28,1758531,Classic Cheeseburger Bar,NULL,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,33963911,Classic Cheeseburger Bar (560 E 149th St),33963911,Missing Item,1,100.0
+2026-02-01,2026-02-28,943687,Curry Curry Curry (S Abbott Ave),NULL,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,943687,Curry Curry Curry (S Abbott Ave),NULL,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,23087632,DTLA Ramen Izakaya (W Camelback Rd),23087632,Missing Item,2,100.0
+2026-02-01,2026-02-28,2110247,Dangerous Ice Cream (867 FIllmore Street),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,1458742,Danny's Desserts (1147 West Chester Pike),NULL,Missing Item,5,100.0
+2026-02-01,2026-02-28,36019835,Danny's Desserts (4352 E Speedway Blvd),36019835,Missing Item,2,66.67
+2026-02-01,2026-02-28,36019835,Danny's Desserts (4352 E Speedway Blvd),36019835,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,23532713,Danny's Desserts (Van Nuys Blvd),23532713,Incorrect Size,1,100.0
+2026-02-01,2026-02-28,36587123,Daybreak Breakfast Club,36587123,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,32863821,Daybreak Breakfast Club (168 Myrtle Ave),32863821,Ingredient Error,3,75.0
+2026-02-01,2026-02-28,32863821,Daybreak Breakfast Club (168 Myrtle Ave),32863821,Missing Item,1,25.0
+2026-02-01,2026-02-28,26292279,Doughboys Sandwiches (101 Guyon Ave),26292279,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,32926571,EZ Cheesesteaks (3846 Mowry Ave),32926571,Missing Side Item,3,50.0
+2026-02-01,2026-02-28,32926571,EZ Cheesesteaks (3846 Mowry Ave),32926571,Ingredient Error,1,16.67
+2026-02-01,2026-02-28,32926571,EZ Cheesesteaks (3846 Mowry Ave),32926571,Missing Item,2,33.33
+2026-02-01,2026-02-28,1725776,Empire State Panini,NULL,Missing Item,2,100.0
+2026-02-01,2026-02-28,33948073,Exquisite Bowls,33948073,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,24387240,Exquisite Poke Bowls (33757 Woodward Ave),24387240,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,37994405,Fierce Chicken Sandwich,37994405,Missing Item,1,100.0
+2026-02-01,2026-02-28,24899866,Fierce Chicken Sandwich (226 1/2 Newark Ave),24899866,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,35668945,Fierce Chicken Sandwich (6413 Hillcrest Ave),35668945,Missing Item,1,100.0
+2026-02-01,2026-02-28,24270691,Fiesta Vegan Mexican (4955 Voltaire St),24270691,Missing Item,3,75.0
+2026-02-01,2026-02-28,24270691,Fiesta Vegan Mexican (4955 Voltaire St),24270691,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,32926642,Finn's Famous Fries (3846 Mowry Ave),32926642,Missing Item,1,100.0
+2026-02-01,2026-02-28,32863837,Fiona's Breakfast Burritos (277 Gold Street),32863837,Missing Item,1,100.0
+2026-02-01,2026-02-28,22988449,Fiona's Breakfast Burritos (Michelson Dr),22988449,Missing Item,3,75.0
+2026-02-01,2026-02-28,22988449,Fiona's Breakfast Burritos (Michelson Dr),22988449,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,1456061,Fiona's Breakfast Burritos -  (Polk St),NULL,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,26292110,First Light Breakfast Cafe (101 Guyon Ave),26292110,Missing Side Item,1,33.33
+2026-02-01,2026-02-28,26292110,First Light Breakfast Cafe (101 Guyon Ave),26292110,Missing Item,2,66.67
+2026-02-01,2026-02-28,24387449,First Light Breakfast Cafe (3907 Lee Hwy),24387449,Ingredient Error,1,20.0
+2026-02-01,2026-02-28,24387449,First Light Breakfast Cafe (3907 Lee Hwy),24387449,Missing Item,4,80.0
+2026-02-01,2026-02-28,31314269,FirstBite Breakfast Sandwiches (370 Main St),31314269,Missing Item,4,80.0
+2026-02-01,2026-02-28,31314269,FirstBite Breakfast Sandwiches (370 Main St),31314269,Missing Side Item,1,20.0
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Missing Item,30,85.71
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,NULL,2,5.71
+2026-02-01,2026-02-28,2140050,Flowers Bouquet Shop (171 Bleecker St),NULL,Incorrect Quantity,3,8.57
+2026-02-01,2026-02-28,394811,Food & Liquor World,NULL,Incorrect Quantity,1,100.0
+2026-02-01,2026-02-28,26175160,Frank's Philly Cheesesteaks,26175160,Missing Side Item,1,25.0
+2026-02-01,2026-02-28,26175160,Frank's Philly Cheesesteaks,26175160,Ingredient Error,2,50.0
+2026-02-01,2026-02-28,26175160,Frank's Philly Cheesesteaks,26175160,Missing Item,1,25.0
+2026-02-01,2026-02-28,32863839,Fresh N Fruity Smoothies (382 8th Ave),32863839,Missing Item,1,100.0
+2026-02-01,2026-02-28,24636919,Fresh Seafood House (226 Newark Ave),24636919,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,24974898,Fried Chicken Savage (555 CA-17),24974898,Missing Item,1,100.0
+2026-02-01,2026-02-28,33948287,Fry Bird Sandwiches (16224 Tuskegee Airmen Way),33948287,Missing Item,4,100.0
+2026-02-01,2026-02-28,33558897,Fry Bird Sandwiches (493 Old Hickory Blvd),33558897,Missing Item,1,100.0
+2026-02-01,2026-02-28,23367264,General's French Toast (W Chester Pike),23367264,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,23367264,General's French Toast (W Chester Pike),23367264,Missing Item,1,50.0
+2026-02-01,2026-02-28,23367267,Get Grilled Cheesin' (W Chester Pike),23367267,Missing Item,2,100.0
+2026-02-01,2026-02-28,33558959,Gina's Greens N' Things (327 Union St),33558959,Missing Item,1,100.0
+2026-02-01,2026-02-28,1451975,Golden Bear Sandwiches (Virtual Brand)(W Chester Pike),NULL,Missing Item,2,100.0
+2026-02-01,2026-02-28,33558983,Good Planet Vegan Burgers (1428 Polk St),33558983,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,26000460,Gooey Mac N cheez (W Jefferson),26000460,Missing Item,1,100.0
+2026-02-01,2026-02-28,24556355,Gourmet Omelette Bar (226 1/2 Newark Ave),24556355,Missing Item,1,100.0
+2026-02-01,2026-02-28,35900839,Grandma's Breakfast Sandwiches,35900839,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,35900839,Grandma's Breakfast Sandwiches,35900839,Missing Item,1,50.0
+2026-02-01,2026-02-28,33973783,Grandma's Breakfast Sandwiches (105 Avenue A),33973783,Wrong Order,3,100.0
+2026-02-01,2026-02-28,25833954,Grandma's Breakfast Sandwiches (15198 E 13 Mile Rd),25833954,Missing Item,2,50.0
+2026-02-01,2026-02-28,25833954,Grandma's Breakfast Sandwiches (15198 E 13 Mile Rd),25833954,Ingredient Error,2,50.0
+2026-02-01,2026-02-28,23549227,Grandma's Breakfast Sandwiches (315 Walter E Foran Blvd Ste 314),23549227,Missing Item,2,100.0
+2026-02-01,2026-02-28,24556141,Grandma's Breakfast Sandwiches (5993 Broadway),24556141,Missing Item,1,100.0
+2026-02-01,2026-02-28,33948345,Greens Salad God (6611 S 101st E Ave),33948345,Missing Side Item,1,33.33
+2026-02-01,2026-02-28,33948345,Greens Salad God (6611 S 101st E Ave),33948345,Ingredient Error,2,66.67
+2026-02-01,2026-02-28,23367290,Grilled Cheese Ecstatic (E 8th St),23367290,Missing Item,3,100.0
+2026-02-01,2026-02-28,873424,Halal Chicken Gyros Co. (Mowry Ave),NULL,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,24556356,Haley's Heavenly Burgers (226 1/2 Newark Ave),24556356,Missing Item,1,100.0
+2026-02-01,2026-02-28,849212,Heavens Chicken Wings (New York),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,24328785,Henry's Chicken Wings (4663 Trousdale Dr),24328785,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,36255055,High Life Breakfast Sandwiches (1213 Amsterdam Ave),36255055,Missing Item,1,100.0
+2026-02-01,2026-02-28,28605981,High Life Breakfast Sandwiches (3319 W Pico Blvd),28605981,Missing Item,4,100.0
+2026-02-01,2026-02-28,25129904,High Life Breakfast Sandwiches (612 11th Ave),25129904,Missing Item,1,100.0
+2026-02-01,2026-02-28,23106184,High Life Breakfast Sandwiches (Chapel St),23106184,Ingredient Error,2,66.67
+2026-02-01,2026-02-28,23106184,High Life Breakfast Sandwiches (Chapel St),23106184,Missing Item,1,33.33
+2026-02-01,2026-02-28,24556139,House of Paninis (5993 Broadway),24556139,Missing Item,1,50.0
+2026-02-01,2026-02-28,24556139,House of Paninis (5993 Broadway),24556139,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,1581202,Ice Cream and Cake Shop(Virtual Brand),NULL,Missing Item,3,100.0
+2026-02-01,2026-02-28,34250643,Italian Pasta Joint,34250643,Missing Item,1,100.0
+2026-02-01,2026-02-28,32961985,Italian Pasta Lounge (4115 Concord Blvd Suite 70),32961985,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,32961981,Italian Pasta Lounge (493 Old Hickory Blvd),32961981,Missing Item,1,100.0
+2026-02-01,2026-02-28,33948533,Jay's Breakfast Bar,33948533,Missing Item,1,100.0
+2026-02-01,2026-02-28,839909,Jay's Breakfast Bar (Washington Blvd),NULL,Incorrect Quantity,1,100.0
+2026-02-01,2026-02-28,1008261,Joe's Chicken and Waffles,NULL,Missing Item,6,75.0
+2026-02-01,2026-02-28,1008261,Joe's Chicken and Waffles,NULL,Ingredient Error,1,12.5
+2026-02-01,2026-02-28,1008261,Joe's Chicken and Waffles,NULL,Missing Side Item,1,12.5
+2026-02-01,2026-02-28,35871797,John's Pizza Den,35871797,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,35856397,John's Pizza Den,35856397,Missing Item,1,100.0
+2026-02-01,2026-02-28,23134821,Jr's Philly Cheesesteaks (Hillside Ave),23134821,Missing Item,2,66.67
+2026-02-01,2026-02-28,23134821,Jr's Philly Cheesesteaks (Hillside Ave),23134821,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,23038686,Jr's Philly Cheesesteaks (Queens Plaza),23038686,Missing Item,1,33.33
+2026-02-01,2026-02-28,23038686,Jr's Philly Cheesesteaks (Queens Plaza),23038686,Incorrect Size,1,33.33
+2026-02-01,2026-02-28,23038686,Jr's Philly Cheesesteaks (Queens Plaza),23038686,Missing Side Item,1,33.33
+2026-02-01,2026-02-28,31671965,K's Slice of Cake (18300 Vanowen Street Suite 3),NULL,Missing Item,3,100.0
+2026-02-01,2026-02-28,24931355,K's Slice of Cake (26801 Hillside Ave),24931355,Missing Item,1,100.0
+2026-02-01,2026-02-28,849210,Kelly's Pancake Bar (Queens Plaza),NULL,Missing Item,3,100.0
+2026-02-01,2026-02-28,23085637,Kung Fu Chinese Kitchen (W Greenway Rd),23085637,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,25079045,Kung Fu Fried Rice (4957 Winters Chapel Rd Suite B),25079045,Missing Item,3,100.0
+2026-02-01,2026-02-28,32946727,Little Italy's Calzones (1368 N Arizona Ave),32946727,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,33948835,Local's Breakfast Snob,33948835,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,1091378,"Locals Breakfast Snob (Armonk, NY)",NULL,Missing Sauce/Condiments,1,50.0
+2026-02-01,2026-02-28,1091378,"Locals Breakfast Snob (Armonk, NY)",NULL,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,23134804,Lola's Smoothie Mix (Hillside Ave),23134804,Missing Item,1,33.33
+2026-02-01,2026-02-28,23134804,Lola's Smoothie Mix (Hillside Ave),23134804,Incorrect Size,1,33.33
+2026-02-01,2026-02-28,23134804,Lola's Smoothie Mix (Hillside Ave),23134804,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,24556140,Lucy's Pancake Bar (5993 Broadway),24556140,Missing Item,1,100.0
+2026-02-01,2026-02-28,34250513,Luigi's Pasta Ristorante,34250513,Ingredient Error,3,75.0
+2026-02-01,2026-02-28,32863674,Luigi's Pasta Ristorante,32863674,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,34250513,Luigi's Pasta Ristorante,34250513,Missing Side Item,1,25.0
+2026-02-01,2026-02-28,24227611,Luke's Breakfast Club (7701 Garrison Road),24227611,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,24556171,Luke's Breakfast Wraps (769 9th Ave #1),24556171,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,24556171,Luke's Breakfast Wraps (769 9th Ave #1),24556171,Incorrect Quantity,1,50.0
+2026-02-01,2026-02-28,23268680,Martha's Breakfast Sandwiches (Lee Hwy),23268680,Missing Item,3,100.0
+2026-02-01,2026-02-28,33974255,Mary's Chicken Sandwiches (1824 2nd Ave),33974255,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,23087583,Master Yamamoto Ramen Bar (E Bell Rd),23087583,Missing Item,3,100.0
+2026-02-01,2026-02-28,24257608,Mediterranean Salad Chop (197 Havemeyer St.),24257608,Incorrect Quantity,1,100.0
+2026-02-01,2026-02-28,23367132,Mighty Grilled Cheese (1760 3rd Ave),23367132,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,23367132,Mighty Grilled Cheese (1760 3rd Ave),23367132,Missing Item,1,50.0
+2026-02-01,2026-02-28,23134903,Muf's Muffin Shop (Hillside Ave),23134903,Missing Item,14,100.0
+2026-02-01,2026-02-28,1245783,"NY Breakfast Spot (Virtual Brand)(New York, NY)",NULL,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,23007130,NY Dessert Bar (9th Ave),23007130,Missing Item,2,100.0
+2026-02-01,2026-02-28,32973693,Nakamura Ramen House (1401 E Arapaho Rd #F),32973693,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,23085594,Nakamura Ramen House (W Greenway Rd),23085594,Missing Item,3,75.0
+2026-02-01,2026-02-28,23085594,Nakamura Ramen House (W Greenway Rd),23085594,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,23085722,Nakamura Ramen House (W Indian School Rd),23085722,Ingredient Error,2,25.0
+2026-02-01,2026-02-28,23085722,Nakamura Ramen House (W Indian School Rd),23085722,Missing Item,5,62.5
+2026-02-01,2026-02-28,23085722,Nakamura Ramen House (W Indian School Rd),23085722,Missing Side Item,1,12.5
+2026-02-01,2026-02-28,23085638,Nakamura Ramen House (W Peoria Ave),23085638,Missing Item,2,100.0
+2026-02-01,2026-02-28,24974708,Nancy's Desserts (555 CA-17),24974708,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,24974708,Nancy's Desserts (555 CA-17),24974708,Missing Side Item,1,33.33
+2026-02-01,2026-02-28,24974708,Nancy's Desserts (555 CA-17),24974708,Missing Item,1,33.33
+2026-02-01,2026-02-28,1619022,Nancy's Grilled Cheese,NULL,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,36020955,Nino's Nacho Bar,36020955,Missing Item,1,100.0
+2026-02-01,2026-02-28,23087659,Noodle And Rice Bar (W Camelback Rd),23087659,Missing Item,1,50.0
+2026-02-01,2026-02-28,23087659,Noodle And Rice Bar (W Camelback Rd),23087659,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,33949029,Original Burger Bar,33949029,Incorrect Size,3,100.0
+2026-02-01,2026-02-28,33949027,Original Burger Bar (16224 Tuskegee Airmen Way),33949027,Missing Item,1,100.0
+2026-02-01,2026-02-28,37182777,Palm Tree Acai,37182777,Missing Item,1,100.0
+2026-02-01,2026-02-28,33950065,Panini's On Panini's,33950065,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,33950065,Panini's On Panini's,33950065,Missing Item,1,50.0
+2026-02-01,2026-02-28,24606324,Paz's Pupusa Pantry (4 Manorhaven Blvd # 4B),24606324,Missing Item,1,100.0
+2026-02-01,2026-02-28,1497417,Penny's Pancakes (1760 3rd Ave),NULL,Missing Side Item,1,12.5
+2026-02-01,2026-02-28,1497417,Penny's Pancakes (1760 3rd Ave),NULL,Missing Item,7,87.5
+2026-02-01,2026-02-28,2849774,Penny's Pancakes (Hillside Ave),2849774,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,1667941,Philly Cheesesteak Artists(Virtual Brand),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,1611988,Philly Cheesesteak Company,NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,33974415,Philly Cheesesteak Snob,33974415,Missing Item,1,100.0
+2026-02-01,2026-02-28,1455616,Philly Cheesesteak Snob (Bronxdale Ave),NULL,Incorrect Quantity,1,33.33
+2026-02-01,2026-02-28,1455616,Philly Cheesesteak Snob (Bronxdale Ave),NULL,Missing Item,2,66.67
+2026-02-01,2026-02-28,23045921,Pita Sandwich Bite (George St),23045921,Missing Item,3,100.0
+2026-02-01,2026-02-28,23558171,Prime Burger Lounge (301 W 96th St),23558171,Missing Item,1,100.0
+2026-02-01,2026-02-28,1245290,"Prime Burger Lounge (West Chester, PA)",NULL,Missing Item,1,50.0
+2026-02-01,2026-02-28,1245290,"Prime Burger Lounge (West Chester, PA)",NULL,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,35648661,Priyanka's Vegan Indian,35648661,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,35639813,Quinten's Quinoa Bowls (937 1st Avenue),35639813,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,32987257,Roll N Chop Sushi's (1401 E Arapaho Rd #F),32987257,Missing Item,2,100.0
+2026-02-01,2026-02-28,32987475,Roman's Pizza Oven (2898 Homestead Rd),32987475,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,32987475,Roman's Pizza Oven (2898 Homestead Rd),32987475,Missing Item,1,50.0
+2026-02-01,2026-02-28,34340045,Round Tower Sandwiches,34340045,Missing Item,2,100.0
+2026-02-01,2026-02-28,24194387,Sal's Smoothie Spot (265 Bedford Ave),24194387,Missing Item,1,100.0
+2026-02-01,2026-02-28,23906725,Sal's Smoothie Spot (5993 Broadway),23906725,Missing Item,1,100.0
+2026-02-01,2026-02-28,32863688,Salad Kreation (5993 Broadway),32863688,Missing Item,1,100.0
+2026-02-01,2026-02-28,23549040,Salvatore's Parmigiana Sandwiches (315 Walter E Foran Blvd Ste 314),23549040,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,1834080,Sam's Sandwich Spot (265 Bedford Ave),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,32987863,Sam's Sandwich Spot (493 Old Hickory Blvd),32987863,Missing Item,2,100.0
+2026-02-01,2026-02-28,35464965,Sandwich On Fleek (2126 Caton Ave),35464965,Missing Item,1,100.0
+2026-02-01,2026-02-28,31535783,Scotty's Bagel Express (Chapel St),31535783,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,31535783,Scotty's Bagel Express (Chapel St),31535783,Missing Side Item,1,50.0
+2026-02-01,2026-02-28,26291987,Seth's Sandwiches (4083 Broadway),26291987,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,32988371,Sicily's Calzone House (1338 Polk St),32988371,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,32863707,Sizzlin' Omelette Cafe (257 Gold St),32863707,Missing Item,1,100.0
+2026-02-01,2026-02-28,31564187,Slapjack Pancakes (Chapel St),31564187,Missing Item,2,66.67
+2026-02-01,2026-02-28,31564187,Slapjack Pancakes (Chapel St),31564187,Ingredient Error,1,33.33
+2026-02-01,2026-02-28,33895033,Smoken Hot Wings Bar (1634 W High St),33895033,Missing Item,2,100.0
+2026-02-01,2026-02-28,1725679,Smoothie And Dessert Bar,NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,850181,Snobby Chicken Wings (937 1st Avenue),NULL,Missing Item,2,50.0
+2026-02-01,2026-02-28,850181,Snobby Chicken Wings (937 1st Avenue),NULL,Ingredient Error,2,50.0
+2026-02-01,2026-02-28,833127,Stella's Pancake Bar (937 1st Ave),NULL,Missing Item,4,100.0
+2026-02-01,2026-02-28,33964039,Steph's Salad Shop,33964039,Missing Item,1,50.0
+2026-02-01,2026-02-28,33964039,Steph's Salad Shop,33964039,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,23087847,Stop N Shop Sushi (W Camelback Rd),23087847,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,26174718,SugarSlice Cakes,26174718,Missing Item,1,100.0
+2026-02-01,2026-02-28,23557660,Sunrise Coffee Express (301 W 96th St),23557660,Missing Item,1,100.0
+2026-02-01,2026-02-28,33015551,Sunshine Sushi Bar (400 W Indian School Rd),33015551,Missing Item,3,100.0
+2026-02-01,2026-02-28,34250671,Suzanne's Sub Sandwiches,34250671,Missing Item,1,100.0
+2026-02-01,2026-02-28,24637043,Taco Paradiso (514 Main St),24637043,Missing Item,2,100.0
+2026-02-01,2026-02-28,24770466,The Acai Dream  (689 Broadway),24770466,Ingredient Error,2,100.0
+2026-02-01,2026-02-28,22932399,The American Cheesesteaks (Polk St),22932399,Missing Item,1,100.0
+2026-02-01,2026-02-28,26210048,The Bagel Savage (415 W Gray St),26210048,Missing Item,1,100.0
+2026-02-01,2026-02-28,476794,The Breakfast Bar (E Houston Street),NULL,Missing Item,1,50.0
+2026-02-01,2026-02-28,476794,The Breakfast Bar (E Houston Street),NULL,Incorrect Size,1,50.0
+2026-02-01,2026-02-28,1556211,The Breakfast Dream (1117 Broadway),NULL,Missing Side Item,2,100.0
+2026-02-01,2026-02-28,24051979,The Breakfast Dream (6611 S 101st E Ave),24051979,Missing Item,2,100.0
+2026-02-01,2026-02-28,969305,The Burger Trilogy  (San Francisco),NULL,Missing Item,2,100.0
+2026-02-01,2026-02-28,24556258,The Cheeseburger Paradise (5993 Broadway),24556258,Missing Item,1,100.0
+2026-02-01,2026-02-28,33899219,The Chicken Dream,33899219,Missing Item,1,100.0
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Missing Item,1,50.0
+2026-02-01,2026-02-28,25079119,The Chinese Noodle Palace (4957 Winters Chapel Rd Suite B),25079119,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,1790286,The Chinese Noodle Palace (9737 Manchester Rd),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,2849967,The Chopped Salad (Hillside Ave),2849967,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,2849967,The Chopped Salad (Hillside Ave),2849967,Missing Item,3,75.0
+2026-02-01,2026-02-28,39846735,The Crimson Gyro (1428 Polk St),39846735,Missing Item,2,100.0
+2026-02-01,2026-02-28,2272718,The Dessert Dream (Hoover Rd),NULL,Missing Item,3,100.0
+2026-02-01,2026-02-28,2272754,The Gourmet Burger (S 101st E Ave),NULL,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,24194631,The Gyro Bar (319 Rogers Ave),24194631,Missing Item,1,100.0
+2026-02-01,2026-02-28,23906819,The Gyro Snob (7126 N 35th ave),23906819,Missing Item,1,100.0
+2026-02-01,2026-02-28,35686889,The Hot Dog Village,35686889,Missing Item,3,100.0
+2026-02-01,2026-02-28,129914,The Ice Cream Lab (Fillmore St),NULL,Missing Item,2,100.0
+2026-02-01,2026-02-28,635466,The Ice Cream Snob,NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,33963529,The Italian Pasta Bar,33963529,Missing Item,1,100.0
+2026-02-01,2026-02-28,23060304,The Juice Empire (9th Ave),23060304,Missing Item,2,100.0
+2026-02-01,2026-02-28,26175096,The Mac and Cheese Co,26175096,Missing Side Item,2,15.38
+2026-02-01,2026-02-28,26175096,The Mac and Cheese Co,26175096,Ingredient Error,1,7.69
+2026-02-01,2026-02-28,26175096,The Mac and Cheese Co,26175096,Missing Item,10,76.92
+2026-02-01,2026-02-28,23045828,The Mac and Cheese Co (Hoover Rd),23045828,Missing Item,1,100.0
+2026-02-01,2026-02-28,873421,The Milk Snob (Post Street),NULL,Missing Item,3,75.0
+2026-02-01,2026-02-28,873421,The Milk Snob (Post Street),NULL,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,23106174,The Minister Wraps (Broadway),23106174,Wrong Order,1,100.0
+2026-02-01,2026-02-28,24227554,The Pancake Flip (7701 Garrison Road),24227554,Incorrect Quantity,1,25.0
+2026-02-01,2026-02-28,24227554,The Pancake Flip (7701 Garrison Road),24227554,Missing Item,3,75.0
+2026-02-01,2026-02-28,1194035,The Pancake Snob (1st Ave),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,1184943,"The Pancake Snob (Brooklyn, NY)",NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,1180434,"The Pancake Snob (Virtual Brand)(New York, NY)",NULL,Missing Item,2,100.0
+2026-02-01,2026-02-28,1166202,The Pancake Snob (Virtual Brand)(West Chester Pike),NULL,Ingredient Error,2,33.33
+2026-02-01,2026-02-28,1166202,The Pancake Snob (Virtual Brand)(West Chester Pike),NULL,Incorrect Size,1,16.67
+2026-02-01,2026-02-28,1166202,The Pancake Snob (Virtual Brand)(West Chester Pike),NULL,Missing Item,2,33.33
+2026-02-01,2026-02-28,1166202,The Pancake Snob (Virtual Brand)(West Chester Pike),NULL,Missing Side Item,1,16.67
+2026-02-01,2026-02-28,1836485,The Panini Project (265 Bedford Ave),NULL,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,2400705,The Pasta Brothers (265 Bedford Ave),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,32882523,The Pasta Brothers (456 Grove St),32882523,Missing Item,2,100.0
+2026-02-01,2026-02-28,32882529,The Pasta Brothers (589 1st Avenue),32882529,Missing Item,2,100.0
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Missing Item,5,50.0
+2026-02-01,2026-02-28,1465730,The Pasta Story (1424 Lexington Ave),NULL,Ingredient Error,5,50.0
+2026-02-01,2026-02-28,33017373,The Pasta Story (2138 W National Ave),33017373,Missing Item,4,80.0
+2026-02-01,2026-02-28,33017373,The Pasta Story (2138 W National Ave),33017373,Ingredient Error,1,20.0
+2026-02-01,2026-02-28,28607208,The Pasta Story (43 W Flagler St),28607208,Ingredient Error,2,66.67
+2026-02-01,2026-02-28,28607208,The Pasta Story (43 W Flagler St),28607208,Incorrect Quantity,1,33.33
+2026-02-01,2026-02-28,1580550,The Salad God(Virtual Brand),NULL,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,34340355,The Salad Snob,34340355,Missing Item,1,100.0
+2026-02-01,2026-02-28,564064,The Salad Snob (Pico Blvd),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,1478850,The Salad Snob (Virtual Brand)(3846 Mowry Ave Fremont),NULL,Missing Side Item,2,50.0
+2026-02-01,2026-02-28,1478850,The Salad Snob (Virtual Brand)(3846 Mowry Ave Fremont),NULL,Ingredient Error,2,50.0
+2026-02-01,2026-02-28,1909205,The Sandwich Cafe (2841 E Anaheim St),NULL,Ingredient Error,1,100.0
+2026-02-01,2026-02-28,25130231,The Sandwich Vibe (1306 Atlantic Ave),25130231,Missing Item,1,100.0
+2026-02-01,2026-02-28,24800718,The Sandwich Vibe (137 S Las Posas Rd #153),24800718,Missing Item,3,100.0
+2026-02-01,2026-02-28,1245296,"The Wings Express (West Chester, PA)",NULL,Ingredient Error,2,40.0
+2026-02-01,2026-02-28,1245296,"The Wings Express (West Chester, PA)",NULL,Missing Side Item,2,40.0
+2026-02-01,2026-02-28,1245296,"The Wings Express (West Chester, PA)",NULL,Missing Item,1,20.0
+2026-02-01,2026-02-28,31492505,Toast N Roast Breakfast Sandwiches (Crenshaw Blvd),31492505,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,36256793,Top Notch Sandwiches (164-01 Hillside Ave) MAIN,36256793,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,2849819,Top Panini Shop (Hillside Ave),2849819,Missing Item,1,100.0
+2026-02-01,2026-02-28,22921336,Toss N' Chop Salad Bar (Lawrence Expy),22921336,Ingredient Error,2,40.0
+2026-02-01,2026-02-28,22921336,Toss N' Chop Salad Bar (Lawrence Expy),22921336,Missing Item,3,60.0
+2026-02-01,2026-02-28,22921640,Toss N' Chop Salad Bar (N 1st St),22921640,Missing Item,1,100.0
+2026-02-01,2026-02-28,2459220,Toss N' Chop Salad Bar (Smith Rd),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,37532343,Two Hand Burger,37532343,Missing Item,1,100.0
+2026-02-01,2026-02-28,610571,Vegan Indian Company (New York),NULL,Missing Item,1,100.0
+2026-02-01,2026-02-28,23046141,Vegetarian Sandwich Boss (George St),23046141,Missing Side Item,1,100.0
+2026-02-01,2026-02-28,842313,Village Breakfast Snob (4th Ave),NULL,Missing Item,3,75.0
+2026-02-01,2026-02-28,842313,Village Breakfast Snob (4th Ave),NULL,Ingredient Error,1,25.0
+2026-02-01,2026-02-28,2477395,Viva Vegan Sandwiches (30th St),NULL,Missing Item,1,50.0
+2026-02-01,2026-02-28,2477395,Viva Vegan Sandwiches (30th St),NULL,Ingredient Error,1,50.0
+2026-02-01,2026-02-28,32918453,Wonderland Wraps  (3846 Mowry Ave),32918453,Missing Item,3,60.0
+2026-02-01,2026-02-28,32918453,Wonderland Wraps  (3846 Mowry Ave),32918453,Missing Side Item,2,40.0
