@@ -60,7 +60,7 @@ A comprehensive Streamlit dashboard for analyzing multi-platform marketing and f
 
    ```bash
    # Ensure you have the following files in your directory:
-   # - doordash_dashboard.py
+   # - main.py (entry), doordash_dashboard.py
    # - requirements.txt
    # - data.md
    # - README.md
@@ -75,7 +75,7 @@ A comprehensive Streamlit dashboard for analyzing multi-platform marketing and f
 3. **Run the dashboard (final app)**
 
    ```bash
-   streamlit run doordash_dashboard.py
+   streamlit run main.py
    ```
 4. **Upload your CSVs (optional)**
 
@@ -89,15 +89,18 @@ A comprehensive Streamlit dashboard for analyzing multi-platform marketing and f
 ## 📁 File Structure
 
 ```
-TODC-VB-Dashboard/
-├── doordash_dashboard.py          # Main Streamlit application
-├── requirements.txt               # Python dependencies
-├── data.md                       # Data documentation
-├── README.md                     # This file
-├── marketing_2025-09-22_2025-10-05_IeW4u_2025-10-07T11-22-22Z/
-│   └── MARKETING_PROMOTION_2025-09-22_2025-10-05_IeW4u_2025-10-07T11-22-22Z.csv
-└── financial_2025-09-22_2025-10-05_fZY06_2025-10-07T13-11-16Z/
-    └── FINANCIAL_DETAILED_TRANSACTIONS_2025-09-22_2025-10-05_fZY06_2025-10-07T13-11-16Z.csv
+TODC-VB-DASHBOARD/
+├── main.py                        # Entry: streamlit run main.py
+├── doordash_dashboard.py          # Streamlit UI, charts, orchestration
+├── data_loader.py                 # Load & normalize platform CSV/XLSX
+├── store_mapping.py               # Airtable store ↔ file mapping matrix
+├── airtable.py                    # Airtable API client
+├── todc_vb/                       # Shared config (Plotly theme, colors)
+├── data/                          # Default CSV/Excel (or use sidebar upload)
+├── docs/                          # e.g. REPO_STRUCTURE.md, DATA_FILE_MAPPING.md
+├── requirements.txt
+├── run.sh
+└── README.md
 ```
 
 ## 🎨 Dashboard Features
@@ -198,4 +201,4 @@ To update the dashboard with new data:
 
 **TODC - DoorDash Dashboard** | Built with Streamlit | Data Analysis & Visualization Platform
 
-**Note:** `doordash_dashboard.py` consists of the unified, full‑feature application.
+**Note:** Run `streamlit run main.py` — `main()` in `doordash_dashboard.py` orchestrates sidebar, tabs, and the `render_*` chart functions. See `docs/REPO_STRUCTURE.md` for a layout diagram.

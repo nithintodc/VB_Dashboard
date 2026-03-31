@@ -14,14 +14,7 @@ try:
 except Exception:
     pass
 
-# TODC light theme for all Plotly charts
-PLOTLY_THEME = dict(
-    template="plotly_white",
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(color="#000000", family="Open Sans, sans-serif"),
-)
-COLORS = ["#FF5E1A", "#FE7A3B", "#282828", "#FC5304", "#4FC3F7", "#81C784", "#BA68C8", "#FF8A65"]
+from todc_vb.config import COLORS, PLOTLY_THEME
 
 st.set_page_config(page_title="TODC - Virtual Brands Dashboard", page_icon="📊", layout="wide", initial_sidebar_state="expanded")
 
@@ -1080,10 +1073,10 @@ def _build_mapping_excel(matrix, mapping_df):
             summary_rows.append({
                 "File": r["file_name"],
                 "Platform": r["platform"],
-                "IDs in Data": r["store_ids_in_data"],
-                "IDs in Airtable": r["store_ids_in_airtable"],
-                "Matched": r["matched_count"],
-                "Only in Data": r["only_in_data_count"],
+                "Unique stores in file": r["store_ids_in_data"],
+                "Unique stores in Airtable": r["store_ids_in_airtable"],
+                "Intersection": r["matched_count"],
+                "Only in file": r["only_in_data_count"],
                 "Only in Airtable": r["only_in_airtable_count"],
             })
         pd.DataFrame(summary_rows).to_excel(writer, sheet_name="Summary", index=False)
@@ -1102,9 +1095,9 @@ def _build_mapping_excel(matrix, mapping_df):
                 all_only_airtable.append({"Platform": plat, "Store ID": sid})
 
         if all_matched:
-            pd.DataFrame(all_matched).to_excel(writer, sheet_name="Matched (Data + Airtable)", index=False)
+            pd.DataFrame(all_matched).to_excel(writer, sheet_name="Intersection (Data + Airtable)", index=False)
         if all_only_data:
-            pd.DataFrame(all_only_data).to_excel(writer, sheet_name="Only in Data", index=False)
+            pd.DataFrame(all_only_data).to_excel(writer, sheet_name="Only in file", index=False)
         if all_only_airtable:
             pd.DataFrame(all_only_airtable).to_excel(writer, sheet_name="Only in Airtable", index=False)
 
@@ -1117,9 +1110,63 @@ def _build_mapping_excel(matrix, mapping_df):
 
 
 # =============================================================================
-# MAIN
+# App shell: Airtable filter helpers + orchestration (called from main())
 # =============================================================================
-def main():
+QA_COL = "QA Auditor (from Account Name)"
+CSA_COL = "CSA Name (from Account Name)"
+
+
+def _dict_to_label(d: dict) -> str:
+    """Airtable linked records may appear as dicts like {\"id\": \"...\", \"name\": \"...\"}."""
+    if not isinstance(d, dict):
+        return str(d)
+    for k in ("name", "Name", "label", "Label", "value", "Value", "id", "Id"):
+        v = d.get(k)
+        if isinstance(v, str) and v.strip():
+            return v.strip()
+    try:
+        import json
+
+        return json.dumps(d, sort_keys=True)
+    except Exception:
+        return str(d)
+
+
+def _cell_to_str_list(x):
+    if x is None:
+        return []
+    try:
+        if pd.isna(x):
+            return []
+    except Exception:
+        pass
+
+    if isinstance(x, str):
+        s = x.strip()
+        return [s] if s else []
+    if isinstance(x, dict):
+        s = _dict_to_label(x)
+        return [s] if s else []
+    if isinstance(x, (list, tuple, set)):
+        out = []
+        for item in x:
+            out.extend(_cell_to_str_list(item))
+        return [s for s in out if isinstance(s, str) and s.strip()]
+    return [str(x)]
+
+
+class _BytesFile:
+    """Wrap stored upload bytes as a file-like for data_loader."""
+
+    def __init__(self, name, content):
+        self.name = name
+        self._content = content
+
+    def getvalue(self):
+        return self._content
+
+
+def _render_header_banner():
     st.markdown("""
     <div class="main-header">
         <h1>The On Demand Company</h1>
@@ -1127,43 +1174,39 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    # ---- Sidebar: data upload ----
-    st.sidebar.markdown("### Data Upload")
-    st.sidebar.caption("Upload your CSV/Excel data folder or use the bundled **data/** folder.")
 
+def _ensure_upload_session_state():
     if "accumulated_uploads" not in st.session_state:
         st.session_state["accumulated_uploads"] = []
     if "_last_folder_key" not in st.session_state:
         st.session_state["_last_folder_key"] = None
 
-    def _set_folder_files(batch):
-        if not batch:
-            st.session_state["_last_folder_key"] = None
-            return
-        new_key = tuple(sorted(getattr(f, "name", str(f)) for f in batch))
-        if new_key != st.session_state.get("_last_folder_key"):
-            st.session_state["accumulated_uploads"] = []
-            for f in batch:
-                raw = f.getvalue() if hasattr(f, "getvalue") else (f.read() if hasattr(f, "read") else b"")
-                st.session_state["accumulated_uploads"].append({"name": getattr(f, "name", str(f)), "content": raw})
-            st.session_state["_last_folder_key"] = new_key
 
+def _sync_folder_upload_batch(batch):
+    if not batch:
+        st.session_state["_last_folder_key"] = None
+        return
+    new_key = tuple(sorted(getattr(f, "name", str(f)) for f in batch))
+    if new_key != st.session_state.get("_last_folder_key"):
+        st.session_state["accumulated_uploads"] = []
+        for f in batch:
+            raw = f.getvalue() if hasattr(f, "getvalue") else (f.read() if hasattr(f, "read") else b"")
+            st.session_state["accumulated_uploads"].append({"name": getattr(f, "name", str(f)), "content": raw})
+        st.session_state["_last_folder_key"] = new_key
+
+
+def _render_sidebar_upload():
+    """Sidebar: folder upload, clear, Run Analysis. Returns (accumulated, all_uploads, run_btn)."""
+    st.sidebar.markdown("### Data Upload")
+    st.sidebar.caption("Upload your CSV/Excel data folder or use the bundled **data/** folder.")
+    _ensure_upload_session_state()
     folder_batch = st.sidebar.file_uploader(
         "Select your data folder", type=["csv", "xlsx", "xls"],
         accept_multiple_files="directory", key="folder_uploader",
     )
-    _set_folder_files(folder_batch)
-
-    class _BytesFile:
-        def __init__(self, name, content):
-            self.name = name
-            self._content = content
-        def getvalue(self):
-            return self._content
-
+    _sync_folder_upload_batch(folder_batch)
     accumulated = st.session_state.get("accumulated_uploads", [])
     all_uploads = [_BytesFile(x["name"], x["content"]) for x in accumulated]
-
     if accumulated:
         total_mb = sum(len(x.get("content", b"")) for x in accumulated) / (1024 * 1024)
         st.sidebar.success(f"**{len(accumulated)}** file(s) ({total_mb:.1f} MB)")
@@ -1171,370 +1214,362 @@ def main():
         st.session_state["accumulated_uploads"] = []
         st.session_state["_last_folder_key"] = None
         st.rerun()
-
     st.sidebar.markdown("---")
     run_btn = st.sidebar.button("Run Analysis", type="primary", use_container_width=True, key="run_analysis_main")
     st.sidebar.caption("Loads data, fetches Airtable mapping, and runs full analysis.")
+    return accumulated, all_uploads, run_btn
 
-    # ---- Run Analysis: load data + mapping ----
+
+def _handle_run_analysis_click(accumulated, all_uploads, run_btn):
+    """Load review data, analysis payloads, Airtable mapping, and mapping matrix into session."""
+    if not run_btn:
+        return
+    try:
+        from data_loader import collect_review_from_uploads, collect_review_from_data_folder
+        from data_loader import load_from_review_data, load_all_from_data_folder
+        import importlib, store_mapping
+
+        importlib.reload(store_mapping)
+        with st.spinner("Loading data and fetching Airtable store mapping..."):
+            if all_uploads:
+                review_data = collect_review_from_uploads(all_uploads, store_content=False)
+                review_source = "uploads"
+            else:
+                review_data = collect_review_from_data_folder("data")
+                review_source = "data_folder"
+            st.session_state["review_data"] = review_data
+            st.session_state["review_source"] = review_source
+
+            if review_data and review_source == "uploads":
+                data_loaded = load_from_review_data(review_data, upload_file_lookup=all_uploads)
+            else:
+                data_loaded = load_all_from_data_folder("data")
+            st.session_state["analysis_data"] = data_loaded
+
+            name_to_content = {x["name"]: x["content"] for x in accumulated} if review_source == "uploads" else {}
+            file_items = []
+            for item in review_data:
+                content = item.get("content") or (name_to_content.get(item.get("name")) if name_to_content else None)
+                file_items.append({"name": item.get("name", "?"), "platform": item.get("platform", ""), "path": item.get("path"), "content": content})
+
+            mapping_df_cached, mapping_view_dfs, _mapping_err = store_mapping.get_store_mapping_df()
+            st.session_state["mapping_df"] = mapping_df_cached
+            st.session_state["mapping_view_dfs"] = mapping_view_dfs
+
+            build_fn = getattr(store_mapping, "build_store_mapping_matrix_with_debug", None)
+            if build_fn:
+                mapping_matrix, debug_steps, err = build_fn(
+                    file_items,
+                    mapping_df=mapping_df_cached,
+                    view_dfs=mapping_view_dfs,
+                )
+            else:
+                mapping_matrix, err = store_mapping.build_store_mapping_matrix(
+                    file_items,
+                    mapping_df=mapping_df_cached,
+                    view_dfs=mapping_view_dfs,
+                )
+                debug_steps = []
+            st.session_state["mapping_matrix"] = mapping_matrix
+            st.session_state["mapping_debug"] = debug_steps
+            st.session_state["mapping_error"] = err
+
+        st.sidebar.success("Analysis loaded.")
+        st.rerun()
+    except Exception as e:
+        st.sidebar.error(str(e))
+        import traceback
+        with st.sidebar.expander("Error details"):
+            st.code(traceback.format_exc())
+
+
+def _render_airtable_sidebar_filters(mapping_df_cached):
+    """QA / CSA multiselects when mapping columns exist. Returns (selected_qa, selected_csa)."""
+    selected_qa = []
+    selected_csa = []
+    if mapping_df_cached is None or mapping_df_cached.empty:
+        return selected_qa, selected_csa
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### Filters")
+    if QA_COL in mapping_df_cached.columns:
+        qa_values = sorted(
+            {v for x in mapping_df_cached[QA_COL].dropna().tolist() for v in _cell_to_str_list(x)}
+        )
+        if qa_values:
+            selected_qa = st.sidebar.multiselect("QA Auditor", options=qa_values, key="filter_qa")
+    if CSA_COL in mapping_df_cached.columns:
+        csa_values = sorted(
+            {v for x in mapping_df_cached[CSA_COL].dropna().tolist() for v in _cell_to_str_list(x)}
+        )
+        if csa_values:
+            selected_csa = st.sidebar.multiselect("CSA Name", options=csa_values, key="filter_csa")
+    return selected_qa, selected_csa
+
+
+def _compute_filtered_mapping_df(mapping_df_cached, selected_qa, selected_csa):
+    filtered_mapping_df = mapping_df_cached
+    if mapping_df_cached is None or mapping_df_cached.empty:
+        return filtered_mapping_df
+    if selected_qa and QA_COL in mapping_df_cached.columns:
+        mask = mapping_df_cached[QA_COL].apply(
+            lambda x: bool(set(_cell_to_str_list(x)) & set(selected_qa))
+        )
+        filtered_mapping_df = filtered_mapping_df[mask]
+    if selected_csa and CSA_COL in mapping_df_cached.columns:
+        mask = filtered_mapping_df[CSA_COL].apply(
+            lambda x: bool(set(_cell_to_str_list(x)) & set(selected_csa))
+        )
+        filtered_mapping_df = filtered_mapping_df[mask]
+    return filtered_mapping_df
+
+
+def _rebuild_mapping_matrix_if_filters(
+    accumulated, review_source, review_data, filtered_mapping_df, selected_qa, selected_csa
+):
+    """When QA/CSA filters apply, recompute matrix against filtered Airtable record IDs."""
+    if not (selected_qa or selected_csa) or filtered_mapping_df is None or not review_data:
+        return None
+    try:
+        import importlib, store_mapping
+
+        importlib.reload(store_mapping)
+        name_to_content = {x["name"]: x["content"] for x in accumulated} if review_source == "uploads" else {}
+        file_items = []
+        for item in review_data:
+            content = item.get("content") or (name_to_content.get(item.get("name")) if name_to_content else None)
+            file_items.append({"name": item.get("name", "?"), "platform": item.get("platform", ""), "path": item.get("path"), "content": content})
+        fids = None
+        if "_airtable_id" in filtered_mapping_df.columns:
+            fids = set(filtered_mapping_df["_airtable_id"].dropna().astype(str))
+        vdfs = st.session_state.get("mapping_view_dfs")
+        build_fn = getattr(store_mapping, "build_store_mapping_matrix_with_debug", None)
+        if build_fn:
+            matrix, _, _ = build_fn(
+                file_items,
+                mapping_df=filtered_mapping_df,
+                view_dfs=vdfs,
+                filtered_airtable_ids=fids,
+            )
+            return matrix
+        matrix, _ = store_mapping.build_store_mapping_matrix(
+            file_items,
+            mapping_df=filtered_mapping_df,
+            view_dfs=vdfs,
+            filtered_airtable_ids=fids,
+        )
+        return matrix
+    except Exception:
+        return None
+
+
+def _render_tab_data_verification(review_data, review_source, mapping_df_cached):
+    if not review_data:
+        st.info("Click **Run Analysis** in the sidebar to load and verify data.")
+        return
+    st.markdown("### Uploaded Files")
+    st.caption("Source: **" + ("Uploaded files" if review_source == "uploads" else "data/ folder") + "**")
+    file_summary_rows = []
+    for item in review_data:
+        size_kb = item.get("size_bytes", 0) / 1024
+        file_summary_rows.append({
+            "File Name": item.get("name", "?"),
+            "Platform": item.get("platform", "—"),
+            "Rows": item.get("rows", 0),
+            "Size": f"{size_kb:.1f} KB" if size_kb < 1024 else f"{size_kb / 1024:.1f} MB",
+        })
+    st.dataframe(pd.DataFrame(file_summary_rows), use_container_width=True)
+    for item in review_data:
+        name = item.get("name", "?")
+        platform = item.get("platform", "—")
+        rows = item.get("rows", 0)
+        with st.expander(f"{name} — {platform} — {rows:,} rows"):
+            st.code(", ".join(item.get("columns", [])))
+    st.markdown("---")
+    debug_steps = st.session_state.get("mapping_debug", [])
+    mapping_err = st.session_state.get("mapping_error")
+    if debug_steps:
+        with st.expander("Debug: Airtable Fetch Steps", expanded=bool(mapping_err)):
+            for d in debug_steps:
+                status = d.get("status", "info")
+                fn = st.success if status == "ok" else (st.error if status == "fail" else st.info)
+                fn(f"**{d.get('step', '?')}** — {d.get('detail', '')}")
+            st.markdown("**First 5 rows (Airtable store mapping)**")
+            if mapping_df_cached is not None and not mapping_df_cached.empty:
+                st.dataframe(mapping_df_cached.head(5), use_container_width=True)
+            else:
+                st.caption("No mapping table in session — run **Run Analysis** after a successful Airtable fetch.")
+
+
+def _render_tab_mapping(
+    mapping_matrix, mapping_df_cached, filtered_mapping_df, selected_qa, selected_csa
+):
+    if not mapping_matrix:
+        mapping_err = st.session_state.get("mapping_error")
+        if mapping_err:
+            st.warning(f"Could not load mapping: {mapping_err}")
+        else:
+            st.info("Click **Run Analysis** in the sidebar to fetch store mapping from Airtable.")
+        return
+    st.markdown("### Store ID Mapping — Data vs Airtable")
+    st.caption(
+        "Files are matched to **three Airtable views** of the same table: "
+        "[DoorDash view](https://airtable.com/appmSjXVMWR99duPQ/tblub3DbzKIrfh4UA/viwBofuDyDvgxnXaJ), "
+        "[Uber Eats view](https://airtable.com/appmSjXVMWR99duPQ/tblub3DbzKIrfh4UA/viwGcDUjJOjYo4WSu), "
+        "[Grubhub view](https://airtable.com/appmSjXVMWR99duPQ/tblub3DbzKIrfh4UA/viwI7x6jwp6KKHZV8). "
+        "DD: `Store ID` ↔ **Doordash StoreID** · UE: `Shop ID` / `External Store ID` ↔ **UberEats UUID** · "
+        "GH: `grubhub_store_id` ↔ **Grubhub CID**."
+    )
+    summary_rows = []
+    for r in mapping_matrix:
+        summary_rows.append({
+            "File": r["file_name"],
+            "Platform": r["platform"],
+            "Unique stores in file": r["store_ids_in_data"],
+            "Unique stores in Airtable": r["store_ids_in_airtable"],
+            "Intersection": r["matched_count"],
+            "Only in file": r["only_in_data_count"],
+            "Only in Airtable": r["only_in_airtable_count"],
+        })
+    st.dataframe(pd.DataFrame(summary_rows), use_container_width=True)
+    st.markdown("---")
+    for r in mapping_matrix:
+        with st.expander(
+            f"**{r['file_name']}** ({r['platform']}) — Intersection: {r['matched_count']}, "
+            f"Only in file: {r['only_in_data_count']}, Only in Airtable: {r['only_in_airtable_count']}"
+        ):
+            col_a, col_b, col_c = st.columns(3)
+            with col_a:
+                st.markdown("**Intersection**")
+                matched_ids = r.get("matched_sample", [])
+                if matched_ids:
+                    st.dataframe(pd.DataFrame({"Store ID": matched_ids}), use_container_width=True, height=200)
+                else:
+                    st.caption("No matched IDs")
+            with col_b:
+                st.markdown("**Only in file**")
+                data_only_ids = r.get("only_in_data_sample", [])
+                if data_only_ids:
+                    st.dataframe(pd.DataFrame({"Store ID": data_only_ids}), use_container_width=True, height=200)
+                else:
+                    st.caption("None — all data IDs found in Airtable")
+            with col_c:
+                st.markdown("**Only in Airtable**")
+                airtable_only_ids = r.get("only_in_airtable_sample", [])
+                if airtable_only_ids:
+                    st.dataframe(pd.DataFrame({"Store ID": airtable_only_ids}), use_container_width=True, height=200)
+                else:
+                    st.caption("None — all Airtable IDs found in data")
+    st.markdown("---")
+    if selected_qa or selected_csa:
+        filter_parts = []
+        if selected_qa:
+            filter_parts.append(f"QA Auditor: {', '.join(selected_qa)}")
+        if selected_csa:
+            filter_parts.append(f"CSA Name: {', '.join(selected_csa)}")
+        st.info(
+            f"Filtered by: {' | '.join(filter_parts)} — showing {len(filtered_mapping_df)} of {len(mapping_df_cached)} Airtable records"
+        )
+    excel_data = _build_mapping_excel(mapping_matrix, filtered_mapping_df)
+    st.download_button(
+        label="Download Mapping Report (Excel)",
+        data=excel_data,
+        file_name="TODC_Store_Mapping_Report.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.document",
+        type="primary",
+        use_container_width=True,
+    )
+
+
+def _render_tab_analysis(data_loaded):
+    """Render Analysis tab. Returns True if main() should stop early (matches legacy Streamlit return)."""
+    if not data_loaded:
+        st.info("Click **Run Analysis** in the sidebar to load platform data.")
+        return True
+    platforms_available = []
+    if data_loaded.get("doordash"):
+        platforms_available.append("DoorDash")
+    if data_loaded.get("uber_eats"):
+        platforms_available.append("Uber Eats")
+    if data_loaded.get("grubhub"):
+        platforms_available.append("Grubhub")
+    if not platforms_available:
+        st.warning("No platform data found.")
+        return True
+    render_cross_platform_summary(data_loaded)
+    platform_tabs = st.tabs(platforms_available)
+    for i, plat_name in enumerate(platforms_available):
+        with platform_tabs[i]:
+            if plat_name == "DoorDash":
+                dd = data_loaded["doordash"]
+                sub_tabs = st.tabs(["Sales", "Marketing", "Operations"])
+                with sub_tabs[0]:
+                    render_dd_sales(dd)
+                with sub_tabs[1]:
+                    render_dd_marketing(dd)
+                with sub_tabs[2]:
+                    render_dd_operations(dd)
+            elif plat_name == "Uber Eats":
+                ue = data_loaded["uber_eats"]
+                sub_tabs = st.tabs(["Sales", "Marketing", "Operations"])
+                with sub_tabs[0]:
+                    render_ue_sales(ue)
+                with sub_tabs[1]:
+                    render_ue_marketing(ue)
+                with sub_tabs[2]:
+                    render_ue_operations(ue)
+            elif plat_name == "Grubhub":
+                gh = data_loaded["grubhub"]
+                sub_tabs = st.tabs(["Sales", "Marketing", "Operations"])
+                with sub_tabs[0]:
+                    render_gh_sales(gh)
+                with sub_tabs[1]:
+                    render_gh_marketing(gh)
+                with sub_tabs[2]:
+                    render_gh_operations(gh)
+    return False
+
+
+# =============================================================================
+# MAIN
+# =============================================================================
+def main():
+    """
+    Orchestrate the Streamlit app:
+    1) Header  2) Sidebar upload + Run Analysis  3) Airtable filters  4) Main tabs
+    """
+    _render_header_banner()
+    accumulated, all_uploads, run_btn = _render_sidebar_upload()
+    _handle_run_analysis_click(accumulated, all_uploads, run_btn)
+
     review_data = st.session_state.get("review_data")
     review_source = st.session_state.get("review_source")
     data_loaded = st.session_state.get("analysis_data")
     mapping_matrix = st.session_state.get("mapping_matrix")
     mapping_df_cached = st.session_state.get("mapping_df")
 
-    if run_btn:
-        try:
-            from data_loader import collect_review_from_uploads, collect_review_from_data_folder
-            from data_loader import load_from_review_data, load_all_from_data_folder
-            import importlib, store_mapping
-            importlib.reload(store_mapping)
+    selected_qa, selected_csa = _render_airtable_sidebar_filters(mapping_df_cached)
+    filtered_mapping_df = _compute_filtered_mapping_df(mapping_df_cached, selected_qa, selected_csa)
 
-            with st.spinner("Loading data and fetching Airtable store mapping..."):
-                # Step 1: Build review data
-                if all_uploads:
-                    review_data = collect_review_from_uploads(all_uploads, store_content=False)
-                    review_source = "uploads"
-                else:
-                    review_data = collect_review_from_data_folder("data")
-                    review_source = "data_folder"
-                st.session_state["review_data"] = review_data
-                st.session_state["review_source"] = review_source
+    rebuilt = _rebuild_mapping_matrix_if_filters(
+        accumulated, review_source, review_data, filtered_mapping_df, selected_qa, selected_csa
+    )
+    if rebuilt is not None:
+        mapping_matrix = rebuilt
 
-                # Step 2: Load analysis data
-                if review_data and review_source == "uploads":
-                    data_loaded = load_from_review_data(review_data, upload_file_lookup=all_uploads)
-                else:
-                    data_loaded = load_all_from_data_folder("data")
-                st.session_state["analysis_data"] = data_loaded
-
-                # Step 3: Fetch Airtable mapping and build matrix
-                name_to_content = {x["name"]: x["content"] for x in accumulated} if review_source == "uploads" else {}
-                file_items = []
-                for item in review_data:
-                    content = item.get("content") or (name_to_content.get(item.get("name")) if name_to_content else None)
-                    file_items.append({"name": item.get("name", "?"), "platform": item.get("platform", ""), "path": item.get("path"), "content": content})
-
-                # Fetch mapping from Airtable
-                mapping_df_cached, mapping_err = store_mapping.get_store_mapping_df()
-                st.session_state["mapping_df"] = mapping_df_cached
-
-                build_fn = getattr(store_mapping, "build_store_mapping_matrix_with_debug", None)
-                if build_fn:
-                    mapping_matrix, debug_steps, err = build_fn(file_items, mapping_df=mapping_df_cached)
-                else:
-                    mapping_matrix, err = store_mapping.build_store_mapping_matrix(file_items, mapping_df=mapping_df_cached)
-                    debug_steps = []
-                st.session_state["mapping_matrix"] = mapping_matrix
-                st.session_state["mapping_debug"] = debug_steps
-                st.session_state["mapping_error"] = err
-
-            st.sidebar.success("Analysis loaded.")
-            st.rerun()
-        except Exception as e:
-            st.sidebar.error(str(e))
-            import traceback
-            with st.sidebar.expander("Error details"):
-                st.code(traceback.format_exc())
-
-    # ---- Sidebar: Airtable Filters ----
-    QA_COL = "QA Auditor (from Account Name)"
-    CSA_COL = "CSA Name (from Account Name)"
-    selected_qa = []
-    selected_csa = []
-
-    def _dict_to_label(d: dict) -> str:
-        # Airtable often returns linked records as dicts like {"id": "...", "name": "..."}
-        if not isinstance(d, dict):
-            return str(d)
-        for k in ("name", "Name", "label", "Label", "value", "Value", "id", "Id"):
-            v = d.get(k)
-            if isinstance(v, str) and v.strip():
-                return v.strip()
-        try:
-            import json
-
-            return json.dumps(d, sort_keys=True)
-        except Exception:
-            return str(d)
-
-    def _cell_to_str_list(x):
-        if x is None:
-            return []
-        try:
-            # handles np.nan / pd.NA
-            if pd.isna(x):
-                return []
-        except Exception:
-            pass
-
-        if isinstance(x, str):
-            s = x.strip()
-            return [s] if s else []
-        if isinstance(x, dict):
-            s = _dict_to_label(x)
-            return [s] if s else []
-        if isinstance(x, (list, tuple, set)):
-            out = []
-            for item in x:
-                out.extend(_cell_to_str_list(item))
-            return [s for s in out if isinstance(s, str) and s.strip()]
-        return [str(x)]
-
-    if mapping_df_cached is not None and not mapping_df_cached.empty:
-        st.sidebar.markdown("---")
-        st.sidebar.markdown("### Filters")
-
-        # QA Auditor filter
-        if QA_COL in mapping_df_cached.columns:
-            qa_values = sorted(
-                {
-                    v
-                    for x in mapping_df_cached[QA_COL].dropna().tolist()
-                    for v in _cell_to_str_list(x)
-                }
-            )
-            if qa_values:
-                selected_qa = st.sidebar.multiselect("QA Auditor", options=qa_values, key="filter_qa")
-
-        # CSA Name filter
-        if CSA_COL in mapping_df_cached.columns:
-            csa_values = sorted(
-                {
-                    v
-                    for x in mapping_df_cached[CSA_COL].dropna().tolist()
-                    for v in _cell_to_str_list(x)
-                }
-            )
-            if csa_values:
-                selected_csa = st.sidebar.multiselect("CSA Name", options=csa_values, key="filter_csa")
-
-    # Apply filters to mapping_df
-    filtered_mapping_df = mapping_df_cached
-    if mapping_df_cached is not None and not mapping_df_cached.empty:
-        if selected_qa and QA_COL in mapping_df_cached.columns:
-            mask = mapping_df_cached[QA_COL].apply(
-                lambda x: bool(set(_cell_to_str_list(x)) & set(selected_qa))
-            )
-            filtered_mapping_df = filtered_mapping_df[mask]
-        if selected_csa and CSA_COL in mapping_df_cached.columns:
-            mask = filtered_mapping_df[CSA_COL].apply(
-                lambda x: bool(set(_cell_to_str_list(x)) & set(selected_csa))
-            )
-            filtered_mapping_df = filtered_mapping_df[mask]
-
-    # Rebuild mapping matrix if filters are active
-    if (selected_qa or selected_csa) and filtered_mapping_df is not None and review_data:
-        try:
-            import importlib, store_mapping
-            importlib.reload(store_mapping)
-            name_to_content = {x["name"]: x["content"] for x in accumulated} if review_source == "uploads" else {}
-            file_items = []
-            for item in review_data:
-                content = item.get("content") or (name_to_content.get(item.get("name")) if name_to_content else None)
-                file_items.append({"name": item.get("name", "?"), "platform": item.get("platform", ""), "path": item.get("path"), "content": content})
-            build_fn = getattr(store_mapping, "build_store_mapping_matrix_with_debug", None)
-            if build_fn:
-                mapping_matrix, _, _ = build_fn(file_items, mapping_df=filtered_mapping_df)
-            else:
-                mapping_matrix, _ = store_mapping.build_store_mapping_matrix(file_items, mapping_df=filtered_mapping_df)
-        except Exception:
-            pass  # fall back to unfiltered matrix
-
-    # ---- Nothing loaded yet ----
     if not data_loaded and not review_data:
         st.info("Upload your data folder in the sidebar, then click **Run Analysis**. Without uploads, the bundled **data/** folder is used.")
         return
 
-    # ====================================================================
-    # TOP-LEVEL TABS: Data Verification | Mapping | Analysis
-    # ====================================================================
     top_tabs = st.tabs(["Data Verification", "Mapping", "Analysis"])
-
-    # ------------------------------------------------------------------
-    # TAB 1: DATA VERIFICATION
-    # ------------------------------------------------------------------
     with top_tabs[0]:
-        if not review_data:
-            st.info("Click **Run Analysis** in the sidebar to load and verify data.")
-        else:
-            st.markdown("### Uploaded Files")
-            st.caption("Source: **" + ("Uploaded files" if review_source == "uploads" else "data/ folder") + "**")
-
-            # File summary table
-            file_summary_rows = []
-            for item in review_data:
-                size_kb = item.get("size_bytes", 0) / 1024
-                file_summary_rows.append({
-                    "File Name": item.get("name", "?"),
-                    "Platform": item.get("platform", "—"),
-                    "Rows": item.get("rows", 0),
-                    "Size": f"{size_kb:.1f} KB" if size_kb < 1024 else f"{size_kb / 1024:.1f} MB",
-                })
-            st.dataframe(pd.DataFrame(file_summary_rows), use_container_width=True)
-
-            # Expandable column details
-            for item in review_data:
-                name = item.get("name", "?")
-                platform = item.get("platform", "—")
-                rows = item.get("rows", 0)
-                with st.expander(f"{name} — {platform} — {rows:,} rows"):
-                    st.code(", ".join(item.get("columns", [])))
-
-            st.markdown("---")
-
-            # Debug steps from mapping fetch
-            debug_steps = st.session_state.get("mapping_debug", [])
-            mapping_err = st.session_state.get("mapping_error")
-            if debug_steps:
-                with st.expander("Debug: Airtable Fetch Steps", expanded=bool(mapping_err)):
-                    for d in debug_steps:
-                        status = d.get("status", "info")
-                        fn = st.success if status == "ok" else (st.error if status == "fail" else st.info)
-                        fn(f"**{d.get('step', '?')}** — {d.get('detail', '')}")
-                    st.markdown("**First 5 rows (Airtable store mapping)**")
-                    if mapping_df_cached is not None and not mapping_df_cached.empty:
-                        st.dataframe(mapping_df_cached.head(5), use_container_width=True)
-                    else:
-                        st.caption("No mapping table in session — run **Run Analysis** after a successful Airtable fetch.")
-
-    # ------------------------------------------------------------------
-    # TAB 2: MAPPING
-    # ------------------------------------------------------------------
+        _render_tab_data_verification(review_data, review_source, mapping_df_cached)
     with top_tabs[1]:
-        if not mapping_matrix:
-            mapping_err = st.session_state.get("mapping_error")
-            if mapping_err:
-                st.warning(f"Could not load mapping: {mapping_err}")
-            else:
-                st.info("Click **Run Analysis** in the sidebar to fetch store mapping from Airtable.")
-        else:
-            st.markdown("### Store ID Mapping — Data vs Airtable")
-            st.caption("Compares store IDs in uploaded data files against the Airtable store mapping (Nithin's view). "
-                       "DD ↔ DoorDash StoreID, GH ↔ Grubhub CID, UE ↔ UberEats UUID.")
-
-            # Summary table
-            summary_rows = []
-            for r in mapping_matrix:
-                summary_rows.append({
-                    "File": r["file_name"],
-                    "Platform": r["platform"],
-                    "IDs in Data": r["store_ids_in_data"],
-                    "IDs in Airtable": r["store_ids_in_airtable"],
-                    "Matched": r["matched_count"],
-                    "Only in Data": r["only_in_data_count"],
-                    "Only in Airtable": r["only_in_airtable_count"],
-                })
-            st.dataframe(pd.DataFrame(summary_rows), use_container_width=True)
-
-            st.markdown("---")
-
-            # Detailed breakdown per file
-            for r in mapping_matrix:
-                with st.expander(f"**{r['file_name']}** ({r['platform']}) — Matched: {r['matched_count']}, Only Data: {r['only_in_data_count']}, Only Airtable: {r['only_in_airtable_count']}"):
-                    col_a, col_b, col_c = st.columns(3)
-                    with col_a:
-                        st.markdown("**Matched (Both)**")
-                        matched_ids = r.get("matched_sample", [])
-                        if matched_ids:
-                            st.dataframe(pd.DataFrame({"Store ID": matched_ids}), use_container_width=True, height=200)
-                        else:
-                            st.caption("No matched IDs")
-                    with col_b:
-                        st.markdown("**Only in Data**")
-                        data_only_ids = r.get("only_in_data_sample", [])
-                        if data_only_ids:
-                            st.dataframe(pd.DataFrame({"Store ID": data_only_ids}), use_container_width=True, height=200)
-                        else:
-                            st.caption("None — all data IDs found in Airtable")
-                    with col_c:
-                        st.markdown("**Only in Airtable**")
-                        airtable_only_ids = r.get("only_in_airtable_sample", [])
-                        if airtable_only_ids:
-                            st.dataframe(pd.DataFrame({"Store ID": airtable_only_ids}), use_container_width=True, height=200)
-                        else:
-                            st.caption("None — all Airtable IDs found in data")
-
-            st.markdown("---")
-
-            # Filter info
-            if selected_qa or selected_csa:
-                filter_parts = []
-                if selected_qa:
-                    filter_parts.append(f"QA Auditor: {', '.join(selected_qa)}")
-                if selected_csa:
-                    filter_parts.append(f"CSA Name: {', '.join(selected_csa)}")
-                st.info(f"Filtered by: {' | '.join(filter_parts)} — showing {len(filtered_mapping_df)} of {len(mapping_df_cached)} Airtable records")
-
-            # Download Excel button
-            excel_data = _build_mapping_excel(mapping_matrix, filtered_mapping_df)
-            st.download_button(
-                label="Download Mapping Report (Excel)",
-                data=excel_data,
-                file_name="TODC_Store_Mapping_Report.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.document",
-                type="primary",
-                use_container_width=True,
-            )
-
-    # ------------------------------------------------------------------
-    # TAB 3: ANALYSIS
-    # ------------------------------------------------------------------
+        _render_tab_mapping(
+            mapping_matrix, mapping_df_cached, filtered_mapping_df, selected_qa, selected_csa
+        )
     with top_tabs[2]:
-        if not data_loaded:
-            st.info("Click **Run Analysis** in the sidebar to load platform data.")
+        if _render_tab_analysis(data_loaded):
             return
-
-        # Determine which platforms have data
-        platforms_available = []
-        if data_loaded.get("doordash"):
-            platforms_available.append("DoorDash")
-        if data_loaded.get("uber_eats"):
-            platforms_available.append("Uber Eats")
-        if data_loaded.get("grubhub"):
-            platforms_available.append("Grubhub")
-
-        if not platforms_available:
-            st.warning("No platform data found.")
-            return
-
-        # Cross-platform summary
-        render_cross_platform_summary(data_loaded)
-
-        # Platform tabs (nested within Analysis)
-        platform_tabs = st.tabs(platforms_available)
-
-        for i, plat_name in enumerate(platforms_available):
-            with platform_tabs[i]:
-                if plat_name == "DoorDash":
-                    dd = data_loaded["doordash"]
-                    sub_tabs = st.tabs(["Sales", "Marketing", "Operations"])
-                    with sub_tabs[0]:
-                        render_dd_sales(dd)
-                    with sub_tabs[1]:
-                        render_dd_marketing(dd)
-                    with sub_tabs[2]:
-                        render_dd_operations(dd)
-
-                elif plat_name == "Uber Eats":
-                    ue = data_loaded["uber_eats"]
-                    sub_tabs = st.tabs(["Sales", "Marketing", "Operations"])
-                    with sub_tabs[0]:
-                        render_ue_sales(ue)
-                    with sub_tabs[1]:
-                        render_ue_marketing(ue)
-                    with sub_tabs[2]:
-                        render_ue_operations(ue)
-
-                elif plat_name == "Grubhub":
-                    gh = data_loaded["grubhub"]
-                    sub_tabs = st.tabs(["Sales", "Marketing", "Operations"])
-                    with sub_tabs[0]:
-                        render_gh_sales(gh)
-                    with sub_tabs[1]:
-                        render_gh_marketing(gh)
-                    with sub_tabs[2]:
-                        render_gh_operations(gh)
 
     st.markdown("---")
     st.caption("The On Demand Company · Virtual Brands Dashboard")
