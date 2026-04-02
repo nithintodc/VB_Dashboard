@@ -223,11 +223,34 @@ def render_dd_sales(data):
 
     # Store-level table
     store_col = "Store Name" if "Store Name" in df.columns else "Store name"
-    display_cols = [c for c in [store_col, gross_col, orders_col, orders_incl_cancel, aov_col, comm_col, promo_fee_col, ad_fee_col] if c and c in df.columns]
+    display_cols = [c for c in ["Store ID", store_col, gross_col, orders_col, orders_incl_cancel, aov_col, comm_col, promo_fee_col, ad_fee_col] if c and c in df.columns]
     store_df = df[display_cols].copy()
     store_df = store_df.sort_values(gross_col, ascending=False)
     st.markdown("#### Store-Level Sales")
     st.dataframe(store_df, width="stretch", height=400)
+
+    # Date trend (if Start Date / _date available in raw aggregate)
+    date_col_agg = None
+    for dc in ["Start Date", "_date"]:
+        if dc in df.columns:
+            date_col_agg = dc
+            break
+    if date_col_agg:
+        df[date_col_agg] = pd.to_datetime(df[date_col_agg], errors="coerce")
+        valid_dates = df[df[date_col_agg].notna()]
+        if not valid_dates.empty:
+            trend = valid_dates.groupby(date_col_agg).agg(
+                Sales=(gross_col, "sum"),
+                Orders=(orders_col, "sum") if orders_col and orders_col in df.columns else (gross_col, "count"),
+            ).reset_index().sort_values(date_col_agg)
+            trend.rename(columns={date_col_agg: "Date"}, inplace=True)
+            col_a, col_b = st.columns(2)
+            with col_a:
+                fig = _plotly_bar(trend, "Date", "Sales", "Sales by Period")
+                st.plotly_chart(fig)
+            with col_b:
+                fig = _plotly_line(trend, "Date", "Orders", "Orders by Period")
+                st.plotly_chart(fig)
 
     col_a, col_b = st.columns(2)
     with col_a:
@@ -516,6 +539,14 @@ def render_dd_operations(data):
             with st.expander(f"Cancellations by Store ({len(store_cancel)} stores)"):
                 st.dataframe(store_cancel.head(50), width="stretch", height=300)
 
+        # Detailed cancellations table
+        detail_cols = [c for c in ["Store ID", store_col, cat_col, desc_col, "Count of Orders",
+                       "_date", "Start Date", "End Date"] if c and c in cancel_df.columns]
+        if detail_cols:
+            with st.expander("Detailed Cancellations Data"):
+                st.dataframe(cancel_df[detail_cols].sort_values("Count of Orders", ascending=False).head(200),
+                           width="stretch", height=400)
+
     # === Downtime ===
     if downtime_df is not None and not downtime_df.empty:
         st.markdown("#### Downtime")
@@ -540,6 +571,14 @@ def render_dd_operations(data):
             with st.expander(f"Downtime by Store ({len(store_dt)} stores)"):
                 st.dataframe(store_dt.head(50), width="stretch", height=300)
 
+        # Detailed downtime table
+        detail_cols = [c for c in ["Store ID", store_col, cat_col, desc_col, "Minutes Downtime",
+                       "_date", "Start Date", "End Date"] if c and c in downtime_df.columns]
+        if detail_cols:
+            with st.expander("Detailed Downtime Data"):
+                st.dataframe(downtime_df[detail_cols].sort_values("Minutes Downtime", ascending=False).head(200),
+                           width="stretch", height=400)
+
     # === Missing / Incorrect ===
     if missing_df is not None and not missing_df.empty:
         st.markdown("#### Missing & Incorrect Items")
@@ -558,6 +597,14 @@ def render_dd_operations(data):
                 fig = _plotly_bar(store_err, store_col, "Count of Item Errors", "Top 15 Stores by Item Errors")
                 fig.update_layout(xaxis_tickangle=-45)
                 st.plotly_chart(fig)
+
+        # Detailed missing/incorrect table
+        detail_cols = [c for c in ["Store ID", store_col, err_col, "Error Description", "Count of Item Errors",
+                       "_date", "Start Date", "End Date"] if c and c in missing_df.columns]
+        if detail_cols:
+            with st.expander("Detailed Missing & Incorrect Items Data"):
+                st.dataframe(missing_df[detail_cols].sort_values("Count of Item Errors", ascending=False).head(200),
+                           width="stretch", height=400)
 
 
 # =============================================================================
@@ -719,24 +766,46 @@ def render_gh_operations(data):
 
     # Store-level ops
     if "store_name" in df.columns:
-        store_ops = df.groupby("store_name").agg(
-            Orders=("total_orders", "sum"),
-            Canceled=("total_canceled_orders", "sum"),
-            Avoidable=("avoidable_canceled_orders", "sum"),
-            Avg_Driver_Wait=("avg_driver_time_at_store_min", "mean") if "avg_driver_time_at_store_min" in df.columns else ("total_orders", "count"),
-            Ratings=("ratings_all", "sum"),
-        ).reset_index()
-        store_ops["Cancel_Rate"] = (store_ops["Canceled"] / store_ops["Orders"].replace(0, np.nan) * 100).round(1)
-        store_ops = store_ops.sort_values("Cancel_Rate", ascending=False)
+        agg_dict = {
+            "total_orders": ("total_orders", "sum"),
+            "total_canceled_orders": ("total_canceled_orders", "sum"),
+            "avoidable_canceled_orders": ("avoidable_canceled_orders", "sum"),
+            "ratings_all": ("ratings_all", "sum"),
+        }
+        if "avg_driver_time_at_store_min" in df.columns:
+            agg_dict["Avg_Driver_Wait"] = ("avg_driver_time_at_store_min", "mean")
+        store_ops = df.groupby("store_name").agg(**{k: v for k, v in agg_dict.items() if v[0] in df.columns}).reset_index()
+        store_ops.rename(columns={"total_orders": "Orders", "total_canceled_orders": "Canceled",
+                                   "avoidable_canceled_orders": "Avoidable", "ratings_all": "Ratings"}, inplace=True)
+        if "Canceled" in store_ops.columns and "Orders" in store_ops.columns:
+            store_ops["Cancel_Rate"] = (store_ops["Canceled"] / store_ops["Orders"].replace(0, np.nan) * 100).round(1)
+        store_ops = store_ops.sort_values("Cancel_Rate" if "Cancel_Rate" in store_ops.columns else "Orders", ascending=False)
+
+        # Add grubhub_store_id if available
+        if "grubhub_store_id" in df.columns:
+            id_map = df.groupby("store_name")["grubhub_store_id"].first().reset_index()
+            store_ops = store_ops.merge(id_map, on="store_name", how="left")
+            cols = ["grubhub_store_id"] + [c for c in store_ops.columns if c != "grubhub_store_id"]
+            store_ops = store_ops[cols]
 
         st.markdown("#### Store Operations Scorecard")
         st.dataframe(store_ops.head(50), width="stretch", height=350)
 
-        worst = store_ops[store_ops["Orders"] >= 3].head(15)
-        if not worst.empty:
+        worst = store_ops[store_ops["Orders"] >= 3].head(15) if "Cancel_Rate" in store_ops.columns else store_ops.head(15)
+        if not worst.empty and "Cancel_Rate" in worst.columns:
             fig = _plotly_bar(worst, "store_name", "Cancel_Rate", "Highest Cancellation Rate Stores (3+ orders)")
             fig.update_layout(xaxis_tickangle=-45)
             st.plotly_chart(fig)
+
+        # Detailed weekly data per store
+        detail_cols = [c for c in ["grubhub_store_id", "store_name", "week_start_date",
+                       "total_orders", "total_canceled_orders", "avoidable_canceled_orders",
+                       "new_customer_orders", "gh_plus_customer_orders",
+                       "ratings_all", "ratings_5_stars",
+                       "avg_driver_time_at_store", "avg_order_to_delivery_time"] if c in df.columns]
+        if detail_cols:
+            with st.expander("Detailed Weekly Operations Data"):
+                st.dataframe(df[detail_cols].head(200), width="stretch", height=400)
 
     # Ratings distribution
     if "ratings_5_stars" in df.columns:
@@ -821,17 +890,47 @@ def render_ue_sales(data):
     if "Order Status" in df.columns:
         status_counts = df["Order Status"].value_counts().reset_index()
         status_counts.columns = ["Status", "Count"]
-        col_a, col_b = st.columns(2)
-        with col_a:
-            fig = _plotly_pie(status_counts, "Status", "Count", "Order Status Breakdown")
-            st.plotly_chart(fig)
-        with col_b:
-            # Channel breakdown
-            if "Order Channel" in df.columns:
-                channel_counts = df["Order Channel"].value_counts().reset_index()
-                channel_counts.columns = ["Channel", "Count"]
-                fig = _plotly_pie(channel_counts, "Channel", "Count", "Orders by Channel")
-                st.plotly_chart(fig)
+        fig = _plotly_pie(status_counts, "Status", "Count", "Order Status Breakdown")
+        st.plotly_chart(fig)
+
+        # Cancellation drill-down
+        cancel_mask = df["Order Status"].str.contains("cancel", case=False, na=False)
+        canceled_df = df[cancel_mask]
+        if not canceled_df.empty:
+            cancel_pct = len(canceled_df) / len(df) * 100
+            with st.expander(f"Cancellation Details — {len(canceled_df)} orders ({cancel_pct:.1f}%)"):
+                st.markdown("#### Cancellations by Store")
+                store_col_c = "Store" if "Store" in canceled_df.columns else "Store name"
+                if store_col_c in canceled_df.columns:
+                    cancel_by_store = canceled_df.groupby(store_col_c).agg(
+                        Canceled_Orders=(store_col_c, "count"),
+                    ).reset_index().sort_values("Canceled_Orders", ascending=False)
+                    # Add total orders per store for cancel rate
+                    if store_col_c in df.columns:
+                        total_by_store = df.groupby(store_col_c).size().reset_index(name="Total_Orders")
+                        cancel_by_store = cancel_by_store.merge(total_by_store, on=store_col_c, how="left")
+                        cancel_by_store["Cancel_Rate_%"] = (cancel_by_store["Canceled_Orders"] / cancel_by_store["Total_Orders"] * 100).round(1)
+                    st.dataframe(cancel_by_store.head(30), width="stretch", height=300)
+
+                    fig = _plotly_bar(cancel_by_store.head(15), store_col_c, "Canceled_Orders", "Top Stores by Cancellations")
+                    fig.update_layout(xaxis_tickangle=-45)
+                    st.plotly_chart(fig)
+
+                # Show cancellation reasons if available
+                for reason_col in ["Cancellation Reason", "Cancel Reason", "Order Status"]:
+                    if reason_col in canceled_df.columns and reason_col != "Order Status":
+                        reason_counts = canceled_df[reason_col].value_counts().reset_index()
+                        reason_counts.columns = ["Reason", "Count"]
+                        st.markdown("#### Cancellation Reasons")
+                        st.dataframe(reason_counts, width="stretch")
+                        break
+
+                # Show raw detail table
+                detail_cols = [c for c in [store_col_c, "Order ID", "Order Status", "Ticket Size",
+                               "Time Customer Ordered", "City"] if c in canceled_df.columns]
+                if detail_cols:
+                    st.markdown("#### Cancelled Order Details")
+                    st.dataframe(canceled_df[detail_cols].head(100), width="stretch", height=300)
 
     # Subscription impact
     if "Subscription Pass" in df.columns:
@@ -957,6 +1056,15 @@ def render_ue_operations(data):
             fig = _plotly_bar(item_issues, "Issue Detail", "Count", "Top Item Issues", horizontal=True)
             st.plotly_chart(fig)
 
+        # Detailed inaccurate orders table
+        detail_cols = [c for c in [store_col, "Shop ID", "External Store ID", "Order ID", "Order Issue",
+                       "Inaccurate Items", "Item Issue Details", "Customer Refunded",
+                       "Refund Covered by Merchant", "Ticket Size", "_date",
+                       "Time Customer Ordered"] if c in df.columns]
+        if detail_cols:
+            with st.expander("Detailed Inaccurate Orders Data"):
+                st.dataframe(df[detail_cols].head(200), width="stretch", height=400)
+
     # === Paused Details ===
     if pause_df is not None and not pause_df.empty:
         st.markdown("---")
@@ -998,8 +1106,9 @@ def render_ue_operations(data):
                 st.plotly_chart(fig)
 
         st.markdown("#### Pause Details")
-        show_cols = [c for c in ["Store", "City", "Pause Start", "Pause Duration", "Reason For Pausing"] if c in df.columns]
-        st.dataframe(df[show_cols] if show_cols else df, width="stretch", height=300)
+        show_cols = [c for c in ["Store", "Shop ID", "External Store ID", "City",
+                     "Pause Start", "Pause Duration", "Reason For Pausing", "_date"] if c in df.columns]
+        st.dataframe(df[show_cols] if show_cols else df, width="stretch", height=400)
 
 
 def render_ue_marketing(_data):
@@ -1016,23 +1125,67 @@ def render_cross_platform_summary(all_data):
         payload = all_data.get(key)
         if not payload:
             continue
-        fin = payload.get("financial_df")
-        if fin is None or fin.empty:
-            continue
-        orders = len(fin)
-        # Try to get sales amount
-        for col in ["Subtotal", "Ticket Size", "subtotal_sales", "Gross Sales"]:
-            if col in fin.columns:
-                sales = pd.to_numeric(fin[col], errors="coerce").fillna(0).sum()
-                break
-        else:
-            sales = 0
-        aov = (sales / orders) if orders else 0
+
+        # Use the best source per platform for accurate totals
+        orders = 0
+        sales = 0
         stores = 0
-        for col in ["Store name", "Store Name", "Store", "store_name"]:
-            if col in fin.columns:
-                stores = fin[col].nunique()
-                break
+
+        if key == "doordash":
+            # Prefer raw sales_aggregate_df for accurate store-level totals
+            raw_agg = payload.get("sales_aggregate_df")
+            fin = raw_agg if (raw_agg is not None and not raw_agg.empty) else payload.get("financial_df")
+            if fin is None or fin.empty:
+                continue
+            if "Total Delivered or Picked Up Orders" in fin.columns:
+                orders = int(pd.to_numeric(fin["Total Delivered or Picked Up Orders"], errors="coerce").fillna(0).sum())
+            elif "Subtotal" in fin.columns:
+                orders = len(fin)
+            for col in ["Gross Sales", "Subtotal"]:
+                if col in fin.columns:
+                    sales = pd.to_numeric(fin[col], errors="coerce").fillna(0).sum()
+                    break
+            for col in ["Store Name", "Store name"]:
+                if col in fin.columns:
+                    stores = fin[col].nunique()
+                    break
+
+        elif key == "grubhub":
+            fin = payload.get("financial_df")
+            if fin is None or fin.empty:
+                continue
+            if "total_orders" in fin.columns:
+                orders = int(pd.to_numeric(fin["total_orders"], errors="coerce").fillna(0).sum())
+            else:
+                orders = len(fin)
+            for col in ["subtotal_sales", "Subtotal"]:
+                if col in fin.columns:
+                    sales = pd.to_numeric(fin[col], errors="coerce").fillna(0).sum()
+                    break
+            if "store_name" in fin.columns:
+                stores = fin["store_name"].nunique()
+
+        elif key == "uber_eats":
+            fin = payload.get("financial_df")
+            if fin is None or fin.empty:
+                continue
+            # For UE order history, count completed orders; for payout, use row count
+            if "Order Status" in fin.columns:
+                orders = int((fin["Order Status"] == "completed").sum())
+                if orders == 0:
+                    orders = len(fin)
+            else:
+                orders = len(fin)
+            for col in ["Ticket Size", "Subtotal"]:
+                if col in fin.columns:
+                    sales = pd.to_numeric(fin[col], errors="coerce").fillna(0).sum()
+                    break
+            for col in ["Store", "Store name"]:
+                if col in fin.columns:
+                    stores = fin[col].nunique()
+                    break
+
+        aov = (sales / orders) if orders else 0
         rows.append({"Platform": label, "Orders": orders, "Sales": sales, "AOV": round(aov, 2), "Stores": stores})
 
     if not rows:
@@ -1177,6 +1330,42 @@ def _render_sidebar_upload():
     return accumulated, all_uploads, run_btn
 
 
+def _render_sidebar_date_filter(data_loaded):
+    """Render date range filter in sidebar. Returns (date_start, date_end) or (None, None)."""
+    import airtable_filters as af
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### Date Filter")
+    if not data_loaded:
+        st.sidebar.caption("Run **Run Analysis** to enable date filtering.")
+        return None, None
+
+    min_date, max_date = af.get_date_range_from_data(data_loaded)
+    if min_date is None or max_date is None:
+        st.sidebar.caption("No date information found in loaded data.")
+        return None, None
+
+    min_d = min_date.date() if hasattr(min_date, "date") else min_date
+    max_d = max_date.date() if hasattr(max_date, "date") else max_date
+
+    st.sidebar.caption(f"Data covers: **{min_d.strftime('%b %d, %Y')}** to **{max_d.strftime('%b %d, %Y')}**")
+
+    use_date_filter = st.sidebar.checkbox("Filter by date range", value=False, key="use_date_filter")
+    if not use_date_filter:
+        return None, None
+
+    date_range = st.sidebar.date_input(
+        "Select date range",
+        value=(min_d, max_d),
+        min_value=min_d,
+        max_value=max_d,
+        key="date_range_filter",
+    )
+    if isinstance(date_range, (list, tuple)) and len(date_range) == 2:
+        return date_range[0], date_range[1]
+    return None, None
+
+
 def _render_sidebar_airtable_filters(merged: pd.DataFrame):
     """
     Multi-select filters from unique Airtable dimension values.
@@ -1185,7 +1374,7 @@ def _render_sidebar_airtable_filters(merged: pd.DataFrame):
     import airtable_filters as af
 
     st.sidebar.markdown("---")
-    st.sidebar.markdown("### Airtable filters")
+    st.sidebar.markdown("### Airtable Filters")
     mapping_err = st.session_state.get("mapping_error")
     if mapping_err:
         st.sidebar.warning("Store mapping could not load; filters are unavailable.")
@@ -1211,6 +1400,29 @@ def _render_sidebar_airtable_filters(merged: pd.DataFrame):
             key=af.multiselect_widget_key(f"{label}|{col}"),
         )
         selections[col] = list(picked)
+    # Store ID filter - extract IDs from Airtable columns
+    store_id_labels = {
+        "Doordash StoreID": "DoorDash Store ID",
+        "UberEats UUID": "Uber Eats Store ID",
+        "Grubhub CID": "Grubhub Store ID",
+    }
+    for at_col, display_label in store_id_labels.items():
+        resolved = af.resolve_filter_column(merged, at_col)
+        if resolved and resolved in merged.columns:
+            all_ids = []
+            for v in merged[resolved].tolist():
+                all_ids.extend(af._cell_to_match_strings(v))
+            all_ids = sorted(set(all_ids), key=lambda x: x.lower())
+            if all_ids:
+                picked = st.sidebar.multiselect(
+                    display_label,
+                    options=all_ids,
+                    default=[],
+                    key=af.multiselect_widget_key(f"storeid|{at_col}"),
+                )
+                if picked:
+                    selections[resolved] = list(picked)
+
     filtering_active = any(bool(v) for v in selections.values())
     return selections, filtering_active
 
@@ -1435,6 +1647,12 @@ def main():
     data_loaded = st.session_state.get("analysis_data")
     mapping_df_cached = st.session_state.get("mapping_df")
     view_dfs_base = st.session_state.get("mapping_view_dfs") or {}
+
+    # Date filter (before Airtable filters so date-filtered data is used everywhere)
+    date_start, date_end = _render_sidebar_date_filter(data_loaded)
+    if date_start is not None or date_end is not None:
+        data_loaded = af.apply_date_filter_to_data(data_loaded, date_start, date_end)
+
     merged_airtable = af.merge_store_mapping_views_for_filters(view_dfs_base)
     filter_selections, filtering_active = _render_sidebar_airtable_filters(merged_airtable)
 
@@ -1489,12 +1707,32 @@ def main():
     with top_tabs[1]:
         _render_tab_mapping(mapping_matrix, mapping_preview_export)
     with top_tabs[2]:
+        # Show active filter context
+        filter_notes = []
         if filtering_active:
             nrec = len(filtered_merged) if filtered_merged is not None else 0
-            st.caption(
-                f"Airtable filters active — **{nrec}** matching record(s); "
-                "analysis is limited to store IDs from those rows."
-            )
+            filter_notes.append(f"Airtable filters active — **{nrec}** matching record(s)")
+            # Show selected Account Name prominently
+            acct_col = af.resolve_filter_column(merged_airtable, "Account Name") if merged_airtable is not None and not merged_airtable.empty else None
+            if acct_col and filter_selections.get(acct_col):
+                acct_names = ", ".join(filter_selections[acct_col])
+                filter_notes.append(f"Account: **{acct_names}**")
+        if date_start is not None or date_end is not None:
+            ds = date_start.strftime('%b %d, %Y') if date_start else "start"
+            de = date_end.strftime('%b %d, %Y') if date_end else "end"
+            filter_notes.append(f"Date range: **{ds}** to **{de}**")
+
+        # Show data date range
+        orig_data = st.session_state.get("analysis_data")
+        data_min, data_max = af.get_date_range_from_data(orig_data)
+        if data_min is not None:
+            dm = data_min.strftime('%b %d, %Y') if hasattr(data_min, 'strftime') else str(data_min)
+            dx = data_max.strftime('%b %d, %Y') if hasattr(data_max, 'strftime') else str(data_max)
+            st.info(f"Data period: **{dm}** to **{dx}**")
+
+        if filter_notes:
+            st.caption(" · ".join(filter_notes))
+
         if _render_tab_analysis(data_for_analysis):
             return
 

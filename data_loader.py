@@ -327,6 +327,8 @@ def load_doordash_from_paths(financial_paths, marketing_paths, operations_paths)
             if "SALES" in p_str and ("VIEWBYSTORE" in p_str or "AGGREGATE" in p_str):
                 # Keep the raw aggregate for the Sales tab
                 raw_df = _read_csv_path_or_buffer(p)
+                if "Start Date" in raw_df.columns:
+                    raw_df["_date"] = pd.to_datetime(raw_df["Start Date"], errors="coerce").dt.normalize()
                 sales_aggregate_dfs.append(raw_df)
                 df, err = load_doordash_sales_aggregate(p)
             else:

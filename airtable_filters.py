@@ -25,6 +25,7 @@ from airtable import (
 FILTER_DIMENSION_LABELS: Tuple[str, ...] = (
     "Account Name",
     "Licensed Virtual Brand",
+    "Brand Status",
     "City",
     "State",
     "QA Auditor (from Account Name)",
@@ -249,6 +250,86 @@ def _filter_gh_df(df: Optional[pd.DataFrame], allowed: Set[str]) -> Optional[pd.
         return df.iloc[0:0].copy()
     nid = df[col].map(_normalize_id)
     return df[nid.isin(allowed)].copy()
+
+
+def _filter_df_by_date(df: Optional[pd.DataFrame], start: Any, end: Any) -> Optional[pd.DataFrame]:
+    """Filter a DataFrame by _date column within [start, end]."""
+    if df is None or df.empty:
+        return df
+    if "_date" not in df.columns:
+        return df
+    mask = pd.Series(True, index=df.index)
+    dates = pd.to_datetime(df["_date"], errors="coerce")
+    if start is not None:
+        mask = mask & (dates >= pd.Timestamp(start))
+    if end is not None:
+        mask = mask & (dates <= pd.Timestamp(end))
+    return df[mask].copy()
+
+
+def get_date_range_from_data(data_loaded: Optional[Dict[str, Any]]) -> Tuple[Optional[Any], Optional[Any]]:
+    """Extract min/max dates across all loaded platform data."""
+    if not data_loaded:
+        return None, None
+    all_dates = []
+    for key in ("doordash", "uber_eats", "grubhub"):
+        payload = data_loaded.get(key)
+        if not payload:
+            continue
+        for df_key in ("financial_df", "sales_aggregate_df", "operations_df", "inaccurate_df", "downtime_df"):
+            df = payload.get(df_key)
+            if df is not None and not df.empty and "_date" in df.columns:
+                valid = pd.to_datetime(df["_date"], errors="coerce").dropna()
+                if not valid.empty:
+                    all_dates.extend([valid.min(), valid.max()])
+        ops = payload.get("operations")
+        if isinstance(ops, dict):
+            for odf in ops.values():
+                if odf is not None and not odf.empty and "_date" in odf.columns:
+                    valid = pd.to_datetime(odf["_date"], errors="coerce").dropna()
+                    if not valid.empty:
+                        all_dates.extend([valid.min(), valid.max()])
+    if not all_dates:
+        return None, None
+    return min(all_dates), max(all_dates)
+
+
+def apply_date_filter_to_data(
+    data_loaded: Optional[Dict[str, Any]],
+    date_start: Any,
+    date_end: Any,
+) -> Optional[Dict[str, Any]]:
+    """Apply date range filter to all DataFrames in the analysis payload."""
+    if not data_loaded or (date_start is None and date_end is None):
+        return data_loaded
+    out: Dict[str, Any] = {}
+    dd = data_loaded.get("doordash")
+    if dd:
+        out["doordash"] = {
+            "financial_df": _filter_df_by_date(dd.get("financial_df"), date_start, date_end),
+            "sales_aggregate_df": _filter_df_by_date(dd.get("sales_aggregate_df"), date_start, date_end),
+            "promo_df": _filter_df_by_date(dd.get("promo_df"), date_start, date_end),
+            "ads_df": _filter_df_by_date(dd.get("ads_df"), date_start, date_end),
+            "operations": {
+                "cancellations": _filter_df_by_date(dd.get("operations", {}).get("cancellations"), date_start, date_end),
+                "downtime": _filter_df_by_date(dd.get("operations", {}).get("downtime"), date_start, date_end),
+                "missing_incorrect": _filter_df_by_date(dd.get("operations", {}).get("missing_incorrect"), date_start, date_end),
+            },
+        }
+    ue = data_loaded.get("uber_eats")
+    if ue:
+        out["uber_eats"] = {
+            "financial_df": _filter_df_by_date(ue.get("financial_df"), date_start, date_end),
+            "inaccurate_df": _filter_df_by_date(ue.get("inaccurate_df"), date_start, date_end),
+            "downtime_df": _filter_df_by_date(ue.get("downtime_df"), date_start, date_end),
+        }
+    gh = data_loaded.get("grubhub")
+    if gh:
+        out["grubhub"] = {
+            "financial_df": _filter_df_by_date(gh.get("financial_df"), date_start, date_end),
+            "operations_df": _filter_df_by_date(gh.get("operations_df"), date_start, date_end),
+        }
+    return out
 
 
 def filter_analysis_data(

@@ -1,4 +1,6 @@
 .env
+# Local Streamlit secrets (use secrets.toml.example as a template)
+.streamlit/secrets.toml
 *.pyc
 __pycache__/
 .venv/
